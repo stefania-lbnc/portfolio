@@ -1,0 +1,36 @@
+@media (min-width: 200px){
+    .prj-container{
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin: 20px 0;
+    }
+}
+@media (min-width: 600px){
+    .prj-container{
+        display:grid;
+        grid-template-columns: 2fr 4fr;
+        gap: 20px;
+        margin-top: 40px;
+        margin-right: 80px;
+    }
+}
+.cv{
+    display: grid;
+    padding: 0 20px;
+}
+.cover-letter{
+    border: solid black;
+    padding: 0 20px;
+    margin: 0;
+}
+.cover-letter > p{
+    padding: 20px;
+    margin: 0;
+}
+.push-bottom{
+    align-self: end;
+}
+.history> ul, li{
+    margin: 20px; !important;
+}

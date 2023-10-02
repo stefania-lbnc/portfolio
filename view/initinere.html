@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INITINERE</title>
+    <!--START EDITABLE HEAD-->
+    <link rel="stylesheet" href="../style/style-sheet.css">
+    <link rel="stylesheet" href="../style/img-style-sheet.css">
+    <link rel="stylesheet" href="../style/prj-style-sheet.css">
+    <!--link navigation bar-->
+    <link rel="stylesheet" href="../style/side-bar-style.css">
+    <!--Icon font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <!--END EDITABLE HEAD-->
+</head>
+<body>
+<!--Navigation menu-->
+<nav class="side-bar">
+    <ul>
+        <li class="my-name title"><a href="index.html">Stefania Lo Bianco</a></li>
+        <li>
+            <button onclick="openNav()" class="border-none">
+                <i class="push material-symbols-outlined" style="font-size: 48px">chevron_right</i>
+            </button>
+        </li>
+    </ul>
+</nav>
+<!--page content-->
+    <div class="content-container">
+        <div class="prj-container">
+            <div class="text">
+                <div class="info">
+                    <div class="subtitle">INITINERE _artist's book</div>
+                    <div class="profession" style="margin-top: 20px">Love After Love</div>
+                        </br>
+                    <p> The time will come</br>
+                        when, with elation</br>
+                        you will greet yourself arriving</br>
+                        at your own door, in your own mirror</br>
+                        and each will smile at the other's welcome,</br>
+                        and say, sit here. Eat.</br>
+                        You will love again the stranger who was your self.</br>
+                        Give wine. Give bread. Give back your heart</br>
+                        to itself, to the stranger who has loved you</br>
+                        all your life, whom you ignored</br>
+                        for another, who knows you by heart.</br>
+                        Take down the love letters from the bookshelf,</br>
+                        the photographs, the desperate notes,</br>
+                        peel your own image from the mirror.</br>
+                        Sit. Feast on your life.</br>
+                        </br>
+                        <span class="italic" style="text-align: right">Derek Walcott</span>
+                    </p>
+                </div>
+                <ul>
+                    <li><span class="link">_what</span><span class="paragraph" style="padding-left: 20px">Illustration</span></li>
+                    <li class="paragraph" style="padding-left: 55px">Lineography</li>
+                </ul>
+                <ul class="push-bottom">
+                    <li><span class="link">_where</span><span class="italic" style="padding-left: 20px">Italy</span></li>
+                    <li><span class="link">_when</span><span class="italic" style="padding-left: 20px">2016</span></li>
+                    <li><span class="link">_owner</span><span class="italic" style="padding-left: 20px">Stefania Lo Bianco</span></li>
+                    </br><li class="italic">Academy of Fine Arts, Rome</li>
+                </ul>
+            </div>
+            <div class="visual-info" style="background-color: black">
+                <img src="../assets/imgs/initinere/01.jpg">
+                <img src="../assets/imgs/initinere/02.png">
+                <img src="../assets/imgs/initinere/04.png">
+                <img src="../assets/imgs/initinere/05.jpg">
+                <img src="../assets/imgs/initinere/06.jpg">
+                <img src="../assets/imgs/initinere/08.png">
+            </div>
+        </div>
+        <!--go back button-->
+        <button class="back-button" type="button" value="Go back!" onclick="history.back()">
+            <i class="material-symbols-outlined" style="font-size: 36px">arrow_back</i>
+            <!--<span class="italic">back</span>-->
+        </button>
+        <!--footer-->
+        <div>
+            <ul class="custom-footer">
+                <li class="title" style="font-size: 14px">Stefania Lo Bianco</li>
+                <li class="profession">Graphic Designer / UI Designer</li>
+                <li class="push-left link darkYellow"><a href="mailto:lobiancostefania@gmail.com">lobiancostefania@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+<!--moving panel menu-->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="material-symbols-outlined cross" onclick="closeNav()" style="font-size: 36px">close</a>
+    <div class="grid">
+        <ul class="menu-items">
+            <li class="section">
+                <a href="index.html#section-portfolio">Portfolio</a>
+            </li>
+            <li class="section">
+                <a href="about-me.html">About Me</a>
+            </li>
+            <li class="section">
+                <a href="contact-me.html">Contact Me</a>
+            </li>
+        </ul>
+        <ul class="push menu-items">
+            <li class="link">
+                <a href="mailto:lobiancostefania@gmail.com">_mail</a>
+            </li>
+            <li class="link">
+                <a href="www.behance.net/stefanialobiancobe">_behance</a>
+            </li>
+            <li class="link">
+                <a href="www.linkedin.com/in/stefania-lo-bianco/">_linkedin</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="../components/index.js"></script>
+</body>
+</html>

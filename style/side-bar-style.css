@@ -1,0 +1,103 @@
+
+.my-name{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 40px 15px;
+    margin: 0;
+    color: black;
+}
+.my-name a:hover, nav i:hover{
+    color: #584700;
+}
+
+/* -- Media Queries -- */
+
+@media (max-width: 300px) {
+    .content-container {
+        max-width: 200px;
+    }
+    .sidenav{
+        position: fixed;
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .content-container {
+        max-width: 100%;
+        margin: 30px auto 0;
+    }
+}
+/*.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 30%;
+    z-index: 1;
+}
+
+*/
+
+/*my CSS*/
+.side-bar{
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    width: 80px;
+    background-color: white;
+    align-content: center;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+.sidenav{
+    position: fixed;
+    display: grid;
+    height: 100%;
+    width: 0; /* 0 width - change this with JavaScript */
+    margin: 0;
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    left: 80px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    align-content: start;
+}
+.grid{
+    display: grid;
+    height: 90vh;
+    align-content: space-between;
+}
+
+.menu-items{
+    display: grid;
+    padding: 40px 15px;
+    margin: 0;
+}
+
+.menu-items:hover{
+    color: #584700;
+}
+
+.cross{
+    color: black;
+}
+.cross:hover{
+    color: #584700;
+}
+
+#section-portfolio {
+    background-color: white;
+}
+
+nav {
+    display: grid;
+}

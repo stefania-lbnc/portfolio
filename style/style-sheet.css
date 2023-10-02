@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.content-container{
+    background-color: white;
+    z-index: 0;
+    margin-left: 80px;
+}
+.brightYellow{
+    color: #E7BB20;
+}
+.darkYellow{
+    color: #584700;
+}
+.title{
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+.subtitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight:600; /*semibold*/
+    text-align: left;
+    color: black;
+}
+.section{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight:600; /*semibold*/
+    text-align: left;
+    color: black;
+}
+.link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300; /*light*/
+    text-align: left;
+    color: #584700;
+}
+a{
+    text-decoration: none;
+}
+li.link>a{
+    color: #584700;
+}
+li>a{
+   color: black;
+   padding-bottom: 20px !important
+}
+
+.dates{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600; /*semibold*/
+    text-align: left;
+    color: #584700;
+}
+.profession{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600; /*semibold*/
+    text-align: left;
+    color: black;
+}
+.paragraph, p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300; /*light*/
+    text-align: justify;
+    color: black;
+}
+.italic{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-align: justify;
+    color: black;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.push{
+    margin-bottom: auto !important;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/imgs/nordwood-themes-2JyITHXZpaw-unsplash.jpg");
+    background-size: cover;
+    height: 70vh;
+    margin-bottom: 20px;
+}
+
+.custom-footer{
+    display: flex;
+    list-style: none;
+    margin-right: 80px;
+}
+.custom-footer > li {
+    margin: 20px;
+}
+.push-left{
+    margin-left: auto !important;
+}
+
+
+button{
+    color: black;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+
+button:hover{
+    color: #584700;
+}
+.history{
+    margin: 20px 0 20px 0;
+}
+.cover-letter{
+    margin: 0 20px 0 20px ;
+}
+
+.cv{
+    display: grid;
+    align-content: space-between;
+}
+.signature{
+    float: right;
+    height: 10%;
+}
+.underline{
+    text-decoration-line: underline;
+    text-decoration-color: #e7bb20;
+}
+/*hovering overlay*/
+
+.project{
+    position: relative;
+}
+.box>img{
+    display: block;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgb(231,187,32,0.1);
+}
+
+.prj-name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+.project:hover .box {
+    opacity: 0.3;
+}
+
+.overlay li{
+    text-align: center;
+}
+
+.back-button{
+    position: fixed;
+    top: 10%;
+    width: fit-content;
+    margin-left: 80%;
+    z-index: 100;
+}
