@@ -16,8 +16,13 @@
     gap: 20px;
     width: 60vw;
 }
-.item-style{
+.item-height-30{
     height: 30vh;
+    align-content: center;
+    justify-content: center;
+}
+.item-height-50{
+    height: 50vh;
     align-content: center;
     justify-content: center;
 }
@@ -45,6 +50,17 @@
 .item-5clm{
     grid-column-start: 1;
     grid-column-end: 6;
+}
+.screen {
+    display: inline-flex;
+    column-gap: 20px;
+    width: fit-content;
+    box-shadow: 2px 2px 2px #DFEBF4;
+}
+.try-it-btn {
+    padding: 10px;
+    text-align: center;
+    width: 60vw;
 }
 /**Single Page Properties**/
 .desktop-hero{
