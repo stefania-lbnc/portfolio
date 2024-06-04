@@ -36,6 +36,13 @@ a{
     transition: all 500ms ease;
 }
 /**Navigation Bar Properties**/
+header{
+    position: fixed;
+    width: 60vw;
+    height: 10vh;
+    display: inline;
+    align-content: end;
+}
 nav{
     position: fixed;
     top: 0;
@@ -51,13 +58,9 @@ nav ul{
     height: 20vh;
     background-color: #EDDCA0;
 }
-button{
-    width: 8vw;
-    height: 30px;
-}
-.nav-desktop-home button{
-    background-color: #EDDCA0;
-    border: 0;
+.nav-desktop{
+    height: 10vh;
+    justify-content: end;
 }
 /**Text Properties**/
 .name{
@@ -186,7 +189,6 @@ p{
     height: 20vh;
     width: 60vw;
     align-content: end;
-    overflow: clip;
 }
 .negative-space{
     height: 20vh;
@@ -206,13 +208,41 @@ p{
     display: inline-flex;
     justify-content: space-between;
 }
-.info-inline{
+.cv-dates{
     margin-top: 10px;
     display: inline-flex;
     justify-content: start;
     column-gap: 20px;
 }
+/**buttons**/
+button .menu{
+    text-align: right;
+}
+button{
+    width: 8vw;
+    height: 30px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+.nav-desktop button{
+    justify-content: end;
+}
+.buttons-inline{
+    position: fixed;
+    bottom: 0;
+    height: 30vh;
+    width: 100vw;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.arrow-btn{
+    display: inline-flex;
+    align-items: center;
+}
 /**media queries**/
 .mobile{
+    display: none;
+}
+.section-mobile-container{
     display: none;
 }

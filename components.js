@@ -26,6 +26,12 @@ class desktopHeader extends HTMLElement {
         this.innerHTML = `
             <nav  class="nav-desktop">
                 <ul>
+                    <li style="width: 36vw"></li>
+                    <li>
+                    <button class="menu">
+                            <a href="index.html">home</a>
+                        </button>
+                    </li>
                     <li>
                         <button class="menu">
                             <a href="index.html#profile">profile</a>
@@ -61,7 +67,11 @@ class Footer extends HTMLElement {
     }
 }
 
+class Buttons extends HTMLElement{
+}
+
 customElements.define('footer-component', Footer);
 customElements.define('nav-bar', homeHeader);
 customElements.define('nav-desk', desktopHeader);
 customElements.define('mobile-nav-bar', mobileHeader);
+customElements.define('projects', Buttons);

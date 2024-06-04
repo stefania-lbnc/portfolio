@@ -7,12 +7,25 @@
     }
 }
 @media screen and (max-width: 1500px){
+    .info-inline-space{
+        display: grid;
+    }
+    .contact-info{
+        display: grid;
+    }
+}
+@media screen and (max-width: 1500px){
     .desktop{
         display: none;
     }
     .mobile{
         display: block;
     }
+    .section-mobile-container{
+        display: inline-flex;
+    }
+}
+@media screen and (max-width: 1500px){
     .item-left-3clm{
         grid-column-start: 1;
         grid-column-end: 6;
