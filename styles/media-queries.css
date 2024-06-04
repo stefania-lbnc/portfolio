@@ -1,0 +1,32 @@
+@media screen and (max-width: 1500px){
+    .nav-desktop-home{
+        display: none;
+    }
+    .nav-mobile-home{ /**this class does not exist yet**/
+        display: block;
+    }
+}
+@media screen and (max-width: 1500px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .item-left-3clm{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .item-right-3clm{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .item-left-2clm{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .item-right-2clm{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+}
