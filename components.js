@@ -24,7 +24,7 @@ class mobileHeader extends HTMLElement {
 class desktopHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav  class="nav-desktop">
+            <nav class="nav-desktop">
                 <ul>
                     <li style="width: 36vw"></li>
                     <li>
@@ -43,6 +43,28 @@ class desktopHeader extends HTMLElement {
                         </button>
                     </li>
                 </ul>
+            </nav>
+            <nav class="nav-background">
+                <div class="nav-desktop">
+                    <ul>
+                        <li style="width: 36vw"></li>
+                        <li>
+                        <button class="menu">
+                                <a href="index.html">home</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu">
+                                <a href="index.html#profile">profile</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu">
+                                <a href="index.html#projects">projects</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         `;
     }

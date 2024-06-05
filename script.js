@@ -1,5 +1,13 @@
-$(window).scroll(function(){
-    if($(document).scrollTop() > 200){//Here 200 may be not be exactly 200px
-        $('.buttons-inline').hide();
+// Get the button:
+let mynav = document.getElementsByClassName("nav-background");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mynav.style.display = "inline-flex";
+    } else {
+        mynav.style.display = "none";
     }
-});
+}
