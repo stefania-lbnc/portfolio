@@ -37,7 +37,8 @@ a{
 }
 /**Navigation Bar Properties**/
 header{
-    position: fixed;
+    position: absolute;
+    z-index: 1;
     top: 0;
     height: 10vh;
     width: 100vw;
@@ -210,8 +211,11 @@ p{
     width: 60vw;
     align-content: end;
 }
-.negative-space{
+.negative-space-20{
     height: 20vh;
+}
+.negative-space-10{
+    height: 10vh;
 }
 .contact-info{
     margin-top: 20px;

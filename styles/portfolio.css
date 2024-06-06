@@ -7,7 +7,7 @@
 /**Portfolio Grid Properties**/
 .portfolio{
     display: grid;
-    /**grid-template-columns: repeat(5, 1fr);**/
+    grid-template-columns: repeat(5, 12vw);
     gap: 20px;
 }
 .item-height-30{
@@ -20,49 +20,35 @@
     align-content: center;
     justify-content: center;
 }
-.item-large{
-    width: 36vw;
-}
-.item-small{
-    width: 24vw;
-}
 .brackets{
     border-right:1px solid black;
     border-left:1px solid black;
     margin: 40px;
 }
 .item-left-3clm{
-    width: 36vw;
-    /**grid-column-start: 1;
-    grid-column-end: 4;**/
+    grid-column: 1 / 4;
 }
 .item-right-3clm{
-    grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column: 3 / 6;
 }
 .item-left-2clm{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
 }
 .item-right-2clm{
-    width: 24vw;
-    /**grid-column-start: 4;
-    grid-column-end: 6;**/
+    grid-column: 4 / 6;
 }
 .item-5clm{
-    grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column: 1 / 6;
+}
+.logo-display{
+    object-fit: contain;
+    width: 20vw;
 }
 .screen {
     display: inline-flex;
     column-gap: 20px;
     width: fit-content;
     box-shadow: 2px 2px 2px #DFEBF4;
-}
-.scroll-btn{
-    width: 8vw;
-    height: 30px;
-    text-align: center;
 }
 .try-it-btn {
     padding: 10px;
@@ -72,34 +58,36 @@
 /**Single Page Properties**/
 .hero-container{
     top: 0;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
     height: 80vh;
     width: 100vw;
 }
-.hero{
-    grid-row-start: 1;
-    grid-row-end: 6;
+.img-hero{
+    height: 80vh;
     z-index: -2;
+}
+.logo-hero{
+    position: absolute;
+    object-fit: contain;
+    left: 32%;
+    width: 36%;
+    z-index: 0;
 }
 .color-box{
     display: inline-flex;
     height: 5vh;
+    width: 12vw;
     justify-content: space-between;
 }
+/**lope color**/
 .lope-color-01{
-    width: 12vw;
     background-color: #02011C;
 }
 .lope-color-02{
-    width: 12vw;
     background-color: #003268;
 }
 .lope-color-03{
-    width: 12vw;
     background-color: #DFEBF4;
 }
 .lope-color-04{
-    width: 12vw;
     background-color: #D66BB5;
 }

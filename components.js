@@ -72,7 +72,7 @@ class desktopHeader extends HTMLElement {
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="negative-space">
+            <footer class="negative-space-20">
                 <ul class="contact-info">
                     <li class="link">
                         <a href="mailto:lobiancostefania@gmail.com">lobiancostefania@gmail.com</a>
