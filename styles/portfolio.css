@@ -12,12 +12,12 @@
 }
 .item-height-30{
     height: 30vh;
-    align-content: center;
+    /**align-content: center;**/
     justify-content: center;
 }
 .item-height-50{
     height: 50vh;
-    align-content: center;
+    /**align-content: center;**/
     justify-content: center;
 }
 .brackets{
@@ -41,6 +41,7 @@
     grid-column: 1 / 6;
 }
 .logo-display{
+    text-align: center;
     object-fit: contain;
     width: 20vw;
 }

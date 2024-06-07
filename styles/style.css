@@ -217,6 +217,9 @@ p{
 .negative-space-10{
     height: 10vh;
 }
+.negative-space-5{
+    height: 5vh;
+}
 .contact-info{
     margin-top: 20px;
     width: 60vw;

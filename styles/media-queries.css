@@ -24,6 +24,9 @@
     .section-mobile-container{
         display: inline-flex;
     }
+    .item-height-50{
+        height: 30vh;
+    }
 }
 @media screen and (max-width: 1500px){
     .item-left-3clm{
