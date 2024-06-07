@@ -6,8 +6,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mynav.style.display = "inline-flex";
+        mynav[0].style.display = 'inline-flex';
     } else {
-        mynav.style.display = "none";
+        mynav[0].style.display = 'none';
     }
 }
