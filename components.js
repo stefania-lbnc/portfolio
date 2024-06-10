@@ -1,21 +1,23 @@
 class homeHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav  class="nav-desktop-home">
-                <ul>
-                    <li style="width: 44vw"></li>
-                    <li>
-                        <button class="menu">
-                            <a href="index.html#profile">profile</a>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="menu">
-                            <a href="index.html#projects">projects</a>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+            <nav class="nav-background-home">
+                <nav  class="nav-desktop-home">
+                    <ul>
+                        <li style="width: 44vw"></li>
+                        <li>
+                            <button class="menu">
+                                <a href="index.html#profile">profile</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu">
+                                <a href="index.html#projects">projects</a>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+</nav>
         `;
     }
 }
@@ -24,7 +26,7 @@ class mobileHeader extends HTMLElement {
 class desktopHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="nav-desktop">
+            <nav class="nav-desktop desktop">
                 <ul>
                     <li style="width: 36vw"></li>
                     <li>
@@ -44,7 +46,7 @@ class desktopHeader extends HTMLElement {
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-background">
+            <nav class="nav-background desktop">
                 <div class="nav-desktop">
                     <ul>
                         <li style="width: 36vw"></li>
@@ -69,10 +71,10 @@ class desktopHeader extends HTMLElement {
         `;
     }
 }
-class Footer extends HTMLElement {
+class desktopFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="negative-space-20">
+            <footer class="negative-space-10 desktop">
                 <ul class="contact-info">
                     <li class="link">
                         <a href="mailto:lobiancostefania@gmail.com">lobiancostefania@gmail.com</a>
@@ -88,11 +90,32 @@ class Footer extends HTMLElement {
             `;
     }
 }
-
+class mobileFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <footer class="negative-space-10 mobile" style="border-top: 1px solid black;">
+                <ul class="contact-info">
+                    <li class="material-symbols-outlined">
+                        <a href="mailto:lobiancostefania@gmail.com">mail</a>
+                    </li>
+                    <li class="icon">
+                        <a onclick="window.open('https://www.behance.net/stefanialobiancobe')">
+                        <img src="assets/behance.svg"></a>
+                    </li>
+                    <li class="icon">
+                        <a onClick="window.open('https://www.linkedin.com/in/stefania-lo-bianco/')">
+                        <img src="assets/linkedin.svg"></a>
+                    </li>
+                </ul>
+            </footer>
+            `;
+    }
+}
 class Buttons extends HTMLElement{
 }
 
-customElements.define('footer-component', Footer);
+customElements.define('footer-desktop', desktopFooter);
+customElements.define('footer-mobile', mobileFooter);
 customElements.define('nav-bar', homeHeader);
 customElements.define('nav-desk', desktopHeader);
 customElements.define('mobile-nav-bar', mobileHeader);
