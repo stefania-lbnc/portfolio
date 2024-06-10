@@ -14,10 +14,7 @@
         display: block;
     }
     .section-mobile-container{
-        display: inline-flex;
-    }
-    .item-height-50{
-        height: 30vh;
+        display: grid;
     }
 }
 @media screen and (max-width: 1500px){
