@@ -7,14 +7,6 @@
     }
 }
 @media screen and (max-width: 1500px){
-    .info-inline-space{
-        display: grid;
-    }
-    .contact-info{
-        display: grid;
-    }
-}
-@media screen and (max-width: 1500px){
     .desktop{
         display: none;
     }
@@ -26,6 +18,11 @@
     }
     .item-height-50{
         height: 30vh;
+    }
+}
+@media screen and (max-width: 1500px){
+    .skill-inline-space{
+        display: grid;
     }
 }
 @media screen and (max-width: 1500px){

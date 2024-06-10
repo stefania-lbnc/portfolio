@@ -32,6 +32,9 @@ a:visited{
     text-decoration:none;
     color: black;
 }
+:link { color: black; }
+:visited { color: black; }
+:link:active, :visited:active { color: #584700; }
 a{
     transition: all 500ms ease;
 }
@@ -60,30 +63,12 @@ nav ul{
     width: 60vw;
     background-color: #EDDCA0;
 }
-.nav-desktop{
-    height: 10vh;
-    width: 60vw;
-    align-content: end;
-    left: 20%;
-}
-.nav-background{
-    /*position: fixed;*/
-    background-color: rgba(255,255,255, 0.9);
-    /**width: 100vw;**/
-    height: 10vh;
+.nav-background-home{
+    background-color: #EDDCA0;
+    height: 20vh;
     left: 0;
     right: 0;
     top: 0;
-    justify-content: space-between;
-    display: none;
-}
-.page-name{
-    position: fixed;
-    top: 3.5vh;
-    height: 5vh;
-    /* width: 36vw; */
-    left: 20%;
-    z-index: 2;
 }
 /**Text Properties**/
 .name{
@@ -177,7 +162,7 @@ p{
     text-align: center;
     text-transform: uppercase;
 }
-.info-inline-space p{
+.info-desktop p{
     font-style: italic;
 }
 /**Color Properties**/
@@ -205,8 +190,8 @@ p{
 }
 /**My Name**/
 .my-name{
-    position: sticky; !important;
-    position: -webkit-sticky;
+    /**position: sticky; !important;**/
+   /** position: -webkit-sticky;**/
     top: 0; /* required */
     left: 20%;
     height: 20vh;
@@ -232,10 +217,20 @@ p{
     display: grid;
     padding-top: 20px;
 }
-.info-inline-space{
+.skill-inline-space{
     width: 60vw;
     display: inline-flex;
     justify-content: space-between;
+}
+.info-desktop{
+    width: 60vw;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.info-mobile{
+    width: 60vw;
+    text-align: right; !important;
+    justify-content: end;
 }
 .cv-dates{
     margin-top: 10px;
@@ -267,6 +262,11 @@ button{
 .arrow-btn{
     display: inline-flex;
     align-items: center;
+}
+.icon{
+    scale: 0.8;
+    height: 18px;
+    width: 30px;
 }
 /**media queries**/
 .mobile{
