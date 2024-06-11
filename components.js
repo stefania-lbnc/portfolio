@@ -21,7 +21,40 @@ class homeHeader extends HTMLElement {
         `;
     }
 }
-class mobileHeader extends HTMLElement {
+class mobileHome extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <nav id="mobile-header" class=" nav-background-home mobile">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onClick="toggleMenu()">
+                    <!-- these three span are going to be the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links collapsible">
+                    <ul>
+                        <li>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#home">home</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#profile">profile</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#projects">projects</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        `;
+    }
 }
 class desktopHeader extends HTMLElement {
     connectedCallback() {
@@ -71,6 +104,34 @@ class desktopHeader extends HTMLElement {
         `;
     }
 }
+class mobileHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <nav class="nav-desktop mobile">
+                <ul>
+                    <li style="width: 36vw"></li>
+                    <li>
+                    <button class="menu-mobile">
+                            <a href="index.html">home</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav-background mobile">
+                <div class="nav-desktop">
+                    <ul>
+                        <li style="width: 36vw"></li>
+                        <li>
+                        <button class="menu">
+                                <a href="index.html">home</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        `;
+    }
+}
 class desktopFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -111,12 +172,10 @@ class mobileFooter extends HTMLElement {
             `;
     }
 }
-class Buttons extends HTMLElement{
-}
 
 customElements.define('footer-desktop', desktopFooter);
 customElements.define('footer-mobile', mobileFooter);
 customElements.define('nav-bar', homeHeader);
+customElements.define('nav-mobile-bar', mobileHome);
 customElements.define('nav-desk', desktopHeader);
-customElements.define('mobile-nav-bar', mobileHeader);
-customElements.define('projects', Buttons);
+customElements.define('mobile-bar', mobileHeader);

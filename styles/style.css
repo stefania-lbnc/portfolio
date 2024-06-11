@@ -213,6 +213,8 @@ p{
     width: 60vw;
     display: inline-flex;
     justify-content: space-between;
+    position: relative;
+    z-index: -1;
 }
 .section{
     display: grid;

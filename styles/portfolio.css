@@ -29,7 +29,7 @@
 /**Portfolio Grid Properties**/
 .portfolio{
     display: grid;
-    grid-template-columns: repeat(5, 12vw);
+    grid-template-columns: repeat(5, 10vw);
     gap: 20px;
 }
 .item-height-30{
@@ -100,17 +100,4 @@
     height: 5vh;
     width: 12vw;
     justify-content: space-between;
-}
-/**lope color**/
-.lope-color-01{
-    background-color: #02011C;
-}
-.lope-color-02{
-    background-color: #003268;
-}
-.lope-color-03{
-    background-color: #DFEBF4;
-}
-.lope-color-04{
-    background-color: #D66BB5;
 }

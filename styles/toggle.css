@@ -1,0 +1,76 @@
+.menu-btn{
+    display: flex;
+    height: 80px;
+    width: 11.6vw;
+    background-color: #EDDCA0;
+    align-items: center;
+    justify-content: center;
+}
+/** Hamburger Nav **/
+#mobile-header ul{
+    width: 36vw;
+    display: grid;
+}
+#mobile-header{
+    height: 20vh;
+    justify-content: end;
+}
+.hamburger-menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 60px;
+    background-color: #EDDCA0;
+    margin-left: 60%;
+}
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 40px;
+}
+#mobile-header .menu-btn{
+    display: contents;
+    height: 40px;
+    width: 12px;
+    background-color: #EDDCA0;
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3ms ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    background-color: #EDDCA0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3ms ease-in-out;
+    border-radius: 0px 0 10px 10px;
+}
+.menu-links a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3ms ease-in-out;
+}
+.menu-links.open{
+    padding: 20px 0;
+    width: 100vw;
+    max-height: 1000px;
+}
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 10px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -10px);
+}

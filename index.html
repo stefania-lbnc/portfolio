@@ -11,6 +11,7 @@
     <!--Style Sheets-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/toggle.css">
     <!--Media Queries-->
     <link rel="stylesheet" href="styles/media-queries.css">
     <!--favIcon-->
@@ -19,17 +20,18 @@
 </head>
 <body style="background-color: #EDDCA0">
     <nav-bar></nav-bar>
+    <nav-mobile-bar></nav-mobile-bar>
     <div class="negative-space-20" id="home"></div>
     <div class="page-width">
             <div class="brackets page-box">
-                <a href="index.html#home" class="desktop">
+                <a href="index.html#home">
                     <ul class="my-name desktop">
                         <li class="name">Stefania Lo Bianco</li>
                         <li class="title">Graphic and Visual Designer</li>
                     </ul>
                     <ul class="my-name mobile">
-                        <li class="name-mobile">Stefania Lo Bianco</li>
-                        <li class="title-mobile">Graphic and Visual Designer</li>
+                        <li class="name-mobile mobile">Stefania Lo Bianco</li>
+                        <li class="title-mobile mobile">Graphic and Visual Designer</li>
                     </ul>
                 </a>
             </div>
@@ -137,7 +139,8 @@
                     <div class="position">Bachelor’s Degree in Industrial Design at University of Rome “La Sapienza”</div>
                 </div>
             </div>
-        <div class="negative-space-10"></div>
+        <div class="negative-space-10 desktop"></div>
+        <div class="negative-space-5 mobile"></div>
         <ul class="info-desktop desktop">
                 <li class="link">
                     <a href="mailto:lobiancostefania@gmail.com">lobiancostefania@gmail.com</a>
@@ -164,9 +167,6 @@
                 <li class="icon">
                     <a onClick="window.open('https://www.linkedin.com/in/stefania-lo-bianco/')">
                         <img src="assets/linkedin.svg"></a>
-                </li>
-                <li class="link">
-                    <a onclick="window.open('assets/stefania-lobianco-resume.pdf')"><span class="material-symbols-outlined">file_save</span>CV</a>
                 </li>
             </ul>
         </div>
@@ -239,6 +239,7 @@
         </div>
     <footer-desktop></footer-desktop>
     <footer-mobile></footer-mobile>
+<script src="script.js"></script>
 <script src="components.js"></script>
 </body>
 </html>
