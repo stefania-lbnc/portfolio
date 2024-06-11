@@ -79,7 +79,7 @@ class desktopHeader extends HTMLElement {
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-background desktop">
+            <nav class="top-bar-background desktop">
                 <div class="nav-desktop">
                     <ul>
                         <li style="width: 36vw"></li>
@@ -117,7 +117,7 @@ class mobileHeader extends HTMLElement {
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-background mobile">
+            <nav class="top-bar-background mobile">
                 <div class="nav-desktop">
                     <ul>
                         <li style="width: 36vw"></li>
