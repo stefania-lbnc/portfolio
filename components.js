@@ -24,7 +24,7 @@ class homeHeader extends HTMLElement {
 class mobileHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav id="mobile-header" class=" nav-background-home mobile">
+            <nav id="mobile-header-home" class=" nav-background-home mobile">
             <div class="hamburger-menu">
                 <div class="hamburger-icon" onClick="toggleMenu()">
                     <!-- these three span are going to be the lines of the hamburger menu-->
@@ -107,28 +107,35 @@ class desktopHeader extends HTMLElement {
 class mobileHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="nav-desktop mobile">
-                <ul>
-                    <li style="width: 36vw"></li>
-                    <li>
-                    <button class="menu-mobile">
-                            <a href="index.html">home</a>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="top-bar-background mobile">
-                <div class="nav-desktop">
+            <nav id="mobile-header" class="top-bar-background mobile">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onClick="toggleMenu()">
+                    <!-- these three span are going to be the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links collapsible">
                     <ul>
-                        <li style="width: 36vw"></li>
                         <li>
-                        <button class="menu">
-                                <a href="index.html">home</a>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#home">home</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#profile">profile</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu-mobile menu-btn">
+                                <a href="index.html#projects">projects</a>
                             </button>
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         `;
     }
 }

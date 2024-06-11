@@ -7,12 +7,20 @@
     justify-content: center;
 }
 /** Hamburger Nav **/
+#mobile-header-home ul{
+    width: 36vw;
+    display: grid;
+}
+#mobile-header-home{
+    height: 20vh;
+    justify-content: end;
+}
 #mobile-header ul{
     width: 36vw;
     display: grid;
 }
 #mobile-header{
-    height: 20vh;
+    height: 10vh;
     justify-content: end;
 }
 .hamburger-menu{
@@ -32,7 +40,7 @@
     height: 40px;
     width: 40px;
 }
-#mobile-header .menu-btn{
+#mobile-header-home .menu-btn{
     display: contents;
     height: 40px;
     width: 12px;
