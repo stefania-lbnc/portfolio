@@ -136,35 +136,6 @@ class mobileHeader extends HTMLElement {
                 </div>
             </div>
             </nav>
-            <nav id="mobile-header" class="mobile">
-                <div class="hamburger-menu">
-                <div class="hamburger-icon" onClick="toggleMenu()">
-                    <!-- these three span are going to be the lines of the hamburger menu-->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links collapsible" style="background-color: white">
-                    <ul>
-                        <li>
-                            <button class="menu-mobile menu-btn">
-                                <a href="index.html#home">home</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-mobile menu-btn">
-                                <a href="index.html#profile">profile</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-mobile menu-btn">
-                                <a href="index.html#projects">projects</a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            </nav>
         `;
     }
 }
