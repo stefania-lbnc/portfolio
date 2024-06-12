@@ -1,8 +1,7 @@
 .menu-btn{
     display: flex;
     height: 80px;
-    width: 11.6vw;
-    background-color: #EDDCA0;
+    width: 35vw;
     align-items: center;
     justify-content: center;
 }
@@ -30,7 +29,6 @@
     align-items: center;
     width: 12vw;
     height: 60px;
-    background-color: #EDDCA0;
     margin-left: 60%;
 }
 .hamburger-icon{
@@ -59,7 +57,6 @@
     max-height: 0;
     overflow: hidden;
     transition: all 0.3ms ease-in-out;
-    border-radius: 0px 0 10px 10px;
 }
 .menu-links a{
     display: block;
@@ -69,8 +66,8 @@
     transition: all 0.3ms ease-in-out;
 }
 .menu-links.open{
+    box-shadow: 5px 5px 5px rgba(88, 71, 0, 0.2);
     padding: 20px 0;
-    width: 100vw;
     max-height: 1000px;
 }
 .hamburger-icon.open span:first-child{
