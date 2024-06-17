@@ -98,6 +98,6 @@
 .color-box{
     display: inline-flex;
     height: 5vh;
-    width: 12vw;
+    width: 10vw;
     justify-content: space-between;
 }
