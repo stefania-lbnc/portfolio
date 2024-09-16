@@ -23,6 +23,9 @@
     }
 }
 @media screen and (max-width: 1500px){
+    .page-width{
+        width: 80vw;
+    }
     .item-left-3clm{
         grid-column-start: 1;
         grid-column-end: 6;

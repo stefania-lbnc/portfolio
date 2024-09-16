@@ -66,7 +66,7 @@ nav ul{
 }
 .nav-background-home{
     background-color: #EDDCA0;
-    height: 20vh;
+    /**height: 20vh;**/
     left: 0;
     right: 0;
     top: 0;
@@ -81,7 +81,7 @@ nav ul{
 .name-mobile{
     display: none;
     font-family: Montserrat, sans-serif;
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
     text-align: left;
 }
@@ -95,7 +95,7 @@ nav ul{
 .title-mobile{
     display: none;
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 500;/**medium?**/
     text-align: left;
     text-transform: uppercase;
@@ -121,13 +121,13 @@ p{
 }
 .dates{
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    font-weight: 600;/**semi-bold**/
+    font-size: 14px;
+    font-weight: 500;/**semi-bold**/
     text-align: left;
 }
 .position{
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     font-style: italic;
     text-align: left;
@@ -208,9 +208,12 @@ p{
 .negative-space-5{
     height: 5vh;
 }
+.negative-space-2{
+    height: 2vh;
+}
 .contact-info{
     margin-top: 20px;
-    width: 60vw;
+    width: 80vw;
     display: inline-flex;
     justify-content: space-between;
     position: relative;
@@ -221,7 +224,7 @@ p{
     padding-top: 20px;
 }
 .skill-inline-space{
-    width: 60vw;
+
     display: inline-flex;
     justify-content: space-between;
 }
@@ -240,6 +243,13 @@ p{
     display: inline-flex;
     justify-content: start;
     column-gap: 20px;
+}
+.cv-dates-mobile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: start;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 /**buttons**/
 button .menu{
@@ -270,6 +280,9 @@ button{
     scale: 0.8;
     height: 18px;
     width: 30px;
+}
+.icon img{
+    object-fit: contain;
 }
 /**media queries**/
 .mobile{
