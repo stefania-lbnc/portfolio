@@ -10,9 +10,9 @@
 }
 .top-bar-background{
     /*position: fixed;*/
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 1);
     /**width: 100vw;**/
-    height: 10vh; !important;
+    height: 12vh; !important;
     left: 0; !important;
     right: 0;
     top: 0;
@@ -22,9 +22,9 @@
 .page-name{
     position: fixed;
     top: 3.5vh;
-    height: 5vh;
+    /* height: 5vh; */
     /* width: 36vw; */
-    left: 20%;
+    left: 10%;
     z-index: 2;
 }
 /**Portfolio Grid Properties**/
@@ -79,6 +79,19 @@
     padding: 10px;
     text-align: center;
     width: 60vw;
+}
+.scroll-container-mobile{
+    overflow: auto;
+}
+
+.scroll-box .brackets {
+    width: 20vw;
+    margin-right: 5px;
+}
+
+.scroll-box {
+    display: flex;
+    flex-wrap: nowrap;
 }
 /**Single Page Properties**/
 .hero-container{

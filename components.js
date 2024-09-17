@@ -121,7 +121,7 @@ class mobileHeader extends HTMLElement {
 class desktopFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="negative-space-10 desktop">
+            <footer class="negative-space-10 desktop" style="border-top: 1px solid black;">
                 <ul class="contact-info">
                     <li class="link">
                         <a href="mailto:lobiancostefania@gmail.com">lobiancostefania@gmail.com</a>

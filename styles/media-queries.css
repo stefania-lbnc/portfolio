@@ -16,6 +16,9 @@
     .section-mobile-container{
         display: grid;
     }
+    .scroll-container-mobile{
+        display: inline-flex;
+    }
 }
 @media screen and (max-width: 1500px){
     .skill-inline-space{

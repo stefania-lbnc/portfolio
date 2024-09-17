@@ -27,9 +27,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12vw;
-    height: 60px;
-    margin-left: 60%;
+    /*width: 12vw;*/
+    height: 200px;
+    margin-left: 70%;
 }
 .hamburger-icon{
     display: flex;
