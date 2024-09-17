@@ -79,28 +79,7 @@ class desktopHeader extends HTMLElement {
                     </li>
                 </ul>
             </nav>
-            <nav class="top-bar-background desktop">
-                <div class="nav-desktop">
-                    <ul>
-                        <li style="width: 36vw"></li>
-                        <li>
-                        <button class="menu">
-                                <a href="index.html">home</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu">
-                                <a href="index.html#profile">profile</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu">
-                                <a href="index.html#projects">projects</a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <nav class="top-bar-background desktop"></nav>
         `;
     }
 }

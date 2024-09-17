@@ -284,6 +284,9 @@ button{
 .icon img{
     object-fit: contain;
 }
+.contact-info li{
+    scale: 150%;
+}
 /**media queries**/
 .mobile{
     display: none;
@@ -291,4 +294,5 @@ button{
 .section-mobile-container{
     grid-template-columns: repeat(2, 30vw);
     display: none;
+    justify-content: space-between;
 }

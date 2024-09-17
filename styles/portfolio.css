@@ -6,6 +6,7 @@
     width: 60vw;
     align-content: end;
     left: 20%;
+    z-index: 2;
 }
 .top-bar-background{
     /*position: fixed;*/
@@ -30,7 +31,8 @@
 .portfolio{
     display: grid;
     grid-template-columns: repeat(5, 10vw);
-    gap: 20px;
+    gap: 30px;
+    justify-content: space-between;
 }
 .item-height-30{
     height: 30vh;
