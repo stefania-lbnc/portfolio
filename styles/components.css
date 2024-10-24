@@ -1,0 +1,46 @@
+nav{
+    position: fixed;
+}
+.desk-nav{
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 16vh;
+    width: 100vw;
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+}
+.mobile-nav{
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 12vh;
+    width: 100vw;
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+}
+nav ul {
+    display: inline-flex;
+    justify-content: end;
+    gap: 30px;
+}
+footer{
+    color: white;
+    display: grid;
+    background-color: black;
+    width: 100vw;
+    justify-content: center;
+    padding: 30px;
+}
+.connection{
+    width: 80vw;
+    display: grid;
+    align-content: space-around;
+}
+.footer-width{
+    width: 80vw;
+    display: inline-flex;
+    justify-content: space-between;
+}

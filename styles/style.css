@@ -1,0 +1,210 @@
+/**General Properties**/
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    display: grid;
+    row-gap: 30px;
+    justify-content: center;
+    justify-items: center;
+}
+li{
+    list-style: none;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/** Hover and Visited transition **/
+a:link{text-decoration:none; text-decoration-color: black;}
+a:hover{color: #584700;}
+a:visited{text-decoration:none; color: black;}
+:link { color: black; }
+:visited { color: black; }
+:link:active, :visited:active { color: #584700; }
+a{transition: all 500ms ease;}
+/**Text Properties**/
+.name{
+    font-family: Montserrat, sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 80%;
+}
+.roles{
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: left;
+    text-transform: uppercase;
+}
+.menu{
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title{
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+}
+p{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+.positions{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: left;
+}
+.dates{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+/**General Properties**/
+.mobile{
+    display: none;
+}
+.profile-width{
+    width: 60vw;
+}
+.page-width{
+    width: 80vw;
+}
+.logo{
+    /**display: grid;
+    gap: 15px;**/
+    margin-top: 30vh;
+    margin-left: -30vw;
+    width: 27vw;
+    z-index: 1;
+}
+.logo-name{
+    margin-left: 3vw;
+}
+.section {
+    display: grid;
+    padding-top: 30px;
+}
+.ul-inline {
+    display: inline-flex;
+    justify-content: space-between;
+}
+.box-inline {
+    display: inline-flex;
+    justify-content: space-between;
+}
+.jobs-dates {
+    display: inline-flex;
+    grid-column-gap: 30px;
+}
+/**Button Properties**/
+button {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+.menu-btn{
+    height: 30px;
+    width: 180px;
+}
+.brackets{
+    border-right:2px solid black;
+    border-left:2px solid black;
+}
+.projects-btn{
+    justify-content: center;
+    text-align: center;
+    width: 27vw;
+}
+.arrows{
+    position: fixed;
+    bottom: 0;
+    height: 20vh;
+    width: 100vw;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.single-arrow{
+    padding-top: 9vh;
+    width: 10vw;
+    padding-bottom: 6vh;
+}
+/**Divider Properties**/
+.fifteen{
+    height: 15px;
+}
+.thirty{
+    height: 30px;
+}
+.sixty{
+    height: 60px;
+}
+.a-third{
+    height: 30vh;
+}
+.line-solid{
+    border-top: 2px solid;
+    border-color: black;
+    width: 60vw;
+}
+/**Color Properties**/
+.bright-yellow{
+    background-color: #E7BB20;
+}
+.dark-yellow{
+    background-color: #584700;
+}
+.light-yellow{
+    background-color: #EDDCA0;
+}
+/**ProjectsPages Properties**/
+.hero{
+    width: 100vw;
+    height: 80vh;
+}
+.img-contain{
+    object-fit: contain;
+}
+.img-logo{
+    margin-left: 10vw;
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+}
+.img-hero{
+    z-index: 0;
+}
+.h-3-thirds{
+    width: 46vw;
+}
+.h-2-thirds{
+    width: 30vw;
+}
+.o-1-fifth{
+    height: 20vh;
+}
+.color-box{
+    width: 16vw;
+    height: 3vh;
+}
+.screens{
+    border-radius: 5px;
+    width: 15vw;
+}

@@ -1,0 +1,32 @@
+@media screen and (max-width: 1300px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .img-logo{
+        width: 40vw;
+    }
+    .brackets .menu{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .ul-inline{
+        display: grid;
+    }
+    .projects-btn{
+       width: 60vw;
+    }
+    .h-3-thirds{
+        width: 80vw;
+    }
+    .h-2-thirds{
+        width: 80vw;
+    }
+}
