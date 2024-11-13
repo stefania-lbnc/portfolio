@@ -6,12 +6,12 @@ class deskHome extends HTMLElement {
                         <li></li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#profile">profile</a>
+                                <a class="menu" href="index.html#profile">about me</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#projects">projects</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                     </ul>
@@ -31,12 +31,12 @@ class deskNav extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#profile">profile</a>
+                                <a class="menu" href="index.html#profile">about me</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#projects">projects</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                     </ul>
@@ -51,12 +51,12 @@ class mobileHome extends HTMLElement {
                     <ul class="page-width" style="justify-content: space-between">
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#profile">profile</a>
+                                <a class="menu" href="index.html#profile">about me</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#projects">projects</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                     </ul>
@@ -76,12 +76,12 @@ class mobileNav extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#profile">profile</a>
+                                <a class="menu" href="index.html#profile">about me</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn brackets">
-                                <a class="menu" href="index.html#projects">projects</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                     </ul>
