@@ -133,8 +133,10 @@ class mobFooter extends HTMLElement {
                         <ul style="font-size: 32px">
                             <il class="dates">Contact me</il>
                             <il><p>lobiancostefania@gmail.com</p></il>
-                            <il><p>www.behance.net/stefanialobiancobe</p></il>
-                            <il><p>https://www.linkedin.com/in/stefania-lo-bianco/</p></il>
+                            <div class="jobs-dates">
+                            <il><a href="https://www.behance.net/stefanialobiancobe"><img class="img-contain" src="assets/behance.svg" style="width: 40px"></a></il>
+                            <il><a href="https://www.linkedin.com/in/stefania-lo-bianco/"><img class="img-contain" src="assets/linkedin.svg" style="width: 40px"></a></il>
+</div>
                         </ul>
                     </div>
                 </div>
