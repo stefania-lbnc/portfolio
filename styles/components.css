@@ -7,6 +7,21 @@ nav{
     width: 100vw;
     height: 30vh;
 }
+footer{
+    background-color: black;
+    width: 100vw;
+    height: 60vh;
+    padding: 5vh 10vw;
+}
+/**Button Properties**/
+button {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+.project-btn {
+    width: 50vw;
+    align-content: center;
+}
 .menu-li{
     padding-right: 5vh;
     justify-items: center;
@@ -18,4 +33,34 @@ nav{
     text-align: right;
     height: 30px;
     width: 180px;
+}
+/**Bracket**/
+.bracket-container {
+    position: relative;
+}
+.bracket-content{
+    padding: 20px 30px;
+}
+.corner {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    border: 10px solid;
+}
+.top-left {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+.arrow-down {
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
 }
