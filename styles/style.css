@@ -79,6 +79,9 @@ p{
 .projects-width p{
     text-align: center;
 }
+.info-container p{
+    text-align: justify;
+}
 footer p{
     color: #EBE6D6;
 }
@@ -93,6 +96,20 @@ footer .corner{
 .content-width{
     justify-items: center;
     width: 80vw;
+}
+.hero-container{
+    width: 100vw;
+    height: 70vh;
+}
+.hero-logo{
+    position: absolute;
+    left: 40vw;
+    z-index: 0;
+    object-fit: contain;
+    width: 20vw;
+}
+.hero{
+    z-index: -1;
 }
 .projects-width{
     display: inline-flex;
@@ -116,6 +133,18 @@ footer .corner{
     height: 40px;
     justify-items: center;
     justify-content: center;
+}
+.presentation{
+    display: inline-flex;
+    gap: 30px;
+    width: 80vw;
+}
+.info-container{
+    position: sticky;
+    width: 36vw;
+}
+.mockup-container{
+    width: 46vw;
 }
 /**Divider Properties**/
 .fifteen{
