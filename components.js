@@ -16,7 +16,7 @@ class navBarHome extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html">contact</a>
+                                <a class="menu" href="index.html#contacts">contact</a>
                             </button>
                         </li>
                     </ul>
@@ -46,7 +46,7 @@ class navBar extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html">contact</a>
+                                <a class="menu" href="index.html#contacts">contact</a>
                             </button>
                         </li>
                     </ul>
@@ -58,40 +58,38 @@ class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer>
-                <div class="bracket-container">
+                <div class="projects-width" style="justify-content: space-between;">
+                <div class="bracket-container" style="height: fit-content">
                     <div class="corner top-left"></div>
                     <div class="corner bottom-right"></div>
                     <div class="bracket-content">
                         <p style="text-align: left" class="subtitle">GRAPHIC</br>& VISUAL</br>DESIGNER</p>
                     </div>
                 </div>
-                    <ul class="menu-li">
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html"><p>home</p></a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#profile"><p>about me</p></a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#projects"><p>works</p></a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html"><p>contact</p></a>
-                            </button>
-                        </li>
-                    </ul>
-                    <ul class="social-container">
+                <ul class="menu-li project-btn" style="display: grid; height:50vh; align-content: space-between;">
+                    <li>
+                        <a href="mailto:lobiancostefania@gmail.com">
+                            <img class="social-content" src="assets/chat-bubble-white.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
+                            <p class="social">Bē</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
+                            <p class="social">in</p>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+                <div class="a-third"></div>
+                <ul class="social-container" style="align-content: start">
                     <li><p>Rome, Italy</p></li>
                     <li><a href="mailto:lobiancostefania@gmail.com"><p>lobiancostefania@gmail.com</p></a></li>
                     <li><a><p>Download Resume</p></a></li>
-</ul>
+                </ul>
             </footer>
         `;
     }
