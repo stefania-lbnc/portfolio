@@ -136,15 +136,25 @@ footer .corner{
 }
 .presentation{
     display: inline-flex;
-    gap: 30px;
+    gap: 60px;
     width: 80vw;
 }
 .info-container{
-    position: sticky;
-    width: 36vw;
+    width: 33%;
+    padding-right: 30px;
+}
+.boards-container{
+    display: grid;
+    gap: 15px;
+    width: 66%;
 }
 .mockup-container{
-    width: 46vw;
+    display: inline-flex;
+    gap: 15px;
+}
+.brand-color{
+    width: 15%;
+    height: 60px;
 }
 /**Divider Properties**/
 .fifteen{

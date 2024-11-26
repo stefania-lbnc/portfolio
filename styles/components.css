@@ -10,9 +10,9 @@ nav{
 footer{
     display: grid;
     background-color: black;
-    width: 90vw;
+    width: 100vw;
     padding: 5vh 10vw;
-    /**justify-items: center;**/
+    justify-items: center;
 }
 /**Button Properties**/
 button {
@@ -29,6 +29,11 @@ button {
     align-content: space-evenly;
     width:10vw;
     height: 30vh;
+}
+.footer-li{
+    display: grid;
+    height: 30vh;
+    justify-items: end;
 }
 .menu-btn{
     text-align: right;

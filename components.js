@@ -66,7 +66,7 @@ class footHome extends HTMLElement {
                         <p style="text-align: left" class="subtitle">GRAPHIC</br>& VISUAL</br>DESIGNER</p>
                     </div>
                 </div>
-                <ul class="menu-li project-btn" style="display: grid; height:50vh; align-content: space-between;">
+                <ul class="footer-li">
                     <li>
                         <a href="mailto:lobiancostefania@gmail.com">
                             <img class="social-content" src="assets/chat-bubble-white.svg">
@@ -84,7 +84,7 @@ class footHome extends HTMLElement {
                     </li>
                 </ul>
                 </div>
-                <div class="a-third"></div>
+                <div class="sixty"></div>
                 <ul class="social-container" style="align-content: start">
                     <li><p>Rome, Italy</p></li>
                     <li><a href="mailto:lobiancostefania@gmail.com"><p>lobiancostefania@gmail.com</p></a></li>
@@ -98,3 +98,4 @@ class footHome extends HTMLElement {
 customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
 customElements.define('foot-home', footHome);
+
