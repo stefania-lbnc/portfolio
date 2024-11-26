@@ -63,7 +63,7 @@ class footHome extends HTMLElement {
                     <div class="corner top-left"></div>
                     <div class="corner bottom-right"></div>
                     <div class="bracket-content">
-                        <p style="text-align: left" class="subtitle">GRAPHIC</br>& VISUAL</br>DESIGNER</p>
+                        <p style="text-align: left" class="title">GRAPHIC</br>& VISUAL</br>DESIGNER</p>
                     </div>
                 </div>
                 <ul class="footer-li">

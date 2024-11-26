@@ -72,7 +72,7 @@ p{
 }
 .social{
     font-family: Montserrat, sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
 }
@@ -151,6 +151,10 @@ footer .corner{
 .mockup-container{
     display: inline-flex;
     gap: 15px;
+}
+.mockup{
+    width: 50%;
+    object-fit: contain;
 }
 .brand-color{
     width: 15%;
