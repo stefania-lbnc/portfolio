@@ -1,16 +1,16 @@
 nav{
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 2;
     justify-items: end;
-    width: 100vw;
+    width: 30vw;
     height: 30vh;
 }
 footer{
     display: grid;
     background-color: black;
-    width: 100vw;
+    /**width: 100vw;**/
     padding: 5vh 10vw;
     justify-items: center;
 }

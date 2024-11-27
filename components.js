@@ -99,3 +99,29 @@ customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
 customElements.define('foot-home', footHome);
 
+window.addEventListener('scroll', () => {
+    const infoContainer = document.querySelector('.info-container');
+    const presentation = document.querySelector('.presentation');
+    const boardsContainer = document.querySelector('.boards-container');
+
+    const infoContainerInitialWidth = getComputedStyle(infoContainer).width; // Initial width of info-container
+    const boardsContainerInitialWidth = getComputedStyle(boardsContainer).width; // Initial width of info-container
+    const presentationTop = presentation.getBoundingClientRect().top;
+
+    // When the info-container reaches the top of the viewport
+    if (presentationTop <= 0) {
+        infoContainer.style.position = 'fixed';
+        infoContainer.style.top = '21px';
+        infoContainer.style.right = '10vw';
+        infoContainer.style.width = infoContainerInitialWidth; // Retain the initial width
+        boardsContainer.style.width = boardsContainerInitialWidth; // Retain the initial width
+        infoContainer.style.zIndex = '10'; // Ensure it stays on top
+    } else {
+        // When scrolling back up, revert to original position and layout
+        infoContainer.style.position = 'relative';
+        infoContainer.style.top = '';
+        infoContainer.style.right = '';
+        infoContainer.style.width = ''; // Let the CSS control the width
+        infoContainer.style.zIndex = ''; // Remove z-index when not fixed
+    }
+});
