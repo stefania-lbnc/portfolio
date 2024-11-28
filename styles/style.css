@@ -8,7 +8,6 @@ html{
 body{
     overflow-x: hidden;
     display: grid;
-    row-gap: 30px;
     justify-content: center;
     justify-items: center;
 }
@@ -32,7 +31,7 @@ a{transition: all 500ms ease;}
     background-color: #EDDCA0;
 }
 .light-background{
-    background-color: #EBE6D6;
+    background-color: #FFFEF2;
 }
 /**Text Properties**/
 .name{
@@ -157,7 +156,7 @@ footer .corner{
 }
 .mockup{
     width: 50%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .background {
     display: flex;
