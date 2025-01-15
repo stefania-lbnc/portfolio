@@ -53,6 +53,12 @@ button {
     height: 3em;
     border: 10px solid;
 }
+.corner-btn {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border: 10px solid;
+}
 .top-left {
     top: 0;
     left: 0;

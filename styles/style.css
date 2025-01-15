@@ -145,6 +145,11 @@ footer .corner{
     text-align: justify;
     z-index: 10; /* Ensure it remains above other content */
 }
+.button-container{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
 .boards-container{
     display: grid;
     gap: 15px;
