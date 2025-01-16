@@ -161,7 +161,6 @@ footer .corner{
 }
 .mockup{
     width: 50%;
-    object-fit: cover;
 }
 .background {
     display: flex;
