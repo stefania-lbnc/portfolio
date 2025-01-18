@@ -95,9 +95,32 @@ class footHome extends HTMLElement {
     }
 }
 
+class arrowBtn extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div class="button-container">
+                <div class="bracket-container">
+                    <div class="corner-btn top-left"></div>
+                    <div class="bracket-content">
+                        <div class="menu-btn menu" onclick="goBack()" style="text-align: left">Back</div>
+                    </div>
+                </div>
+                <div class="bracket-container">
+                    <div class="corner-btn bottom-right"></div>
+                    <div class="bracket-content">
+                        <div class="menu-btn menu" onclick="goForward()">Next</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
 customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
 customElements.define('foot-home', footHome);
+customElements.define('arrow-btn', arrowBtn);
+
 
 window.addEventListener('scroll', () => {
     const infoContainer = document.querySelector('.info-container');
