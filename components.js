@@ -58,7 +58,7 @@ class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer>
-                <div class="projects-width" style="justify-content: space-between;">
+                <div class="footer-width" style="justify-content: space-between;">
                 <div class="bracket-container" style="height: fit-content">
                     <div class="corner top-left"></div>
                     <div class="corner bottom-right"></div>

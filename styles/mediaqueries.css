@@ -1,0 +1,17 @@
+@media (max-width: 1300px) {
+    .logo-name, .content-width, .social-container, .mockup, .boards-container{
+        width: 60vw;
+    }
+    .project-btn {
+        width: 80vw;
+    }
+    .projects-width, .mockup-container{
+        display: grid;
+    }
+    .mobile, .presentation{
+        display: grid;
+    }
+    .display{
+        display: none;
+    }
+}

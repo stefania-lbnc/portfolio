@@ -59,7 +59,7 @@ a{transition: all 500ms ease;}
 p{
     font-family: Montserrat, sans-serif;
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: normal;
     text-align: justify;
 }
 .menu{
@@ -92,6 +92,9 @@ footer .corner{
 .mobile{
     display: none;
 }
+.display{
+    display: grid;
+}
 .content-width{
     justify-items: center;
     width: 80vw;
@@ -111,6 +114,11 @@ footer .corner{
     z-index: -1;
 }
 .projects-width{
+    display: inline-flex;
+    column-gap: 30px;
+    width: 80vw;
+}
+.footer-width{
     display: inline-flex;
     column-gap: 30px;
     width: 80vw;
@@ -138,6 +146,10 @@ footer .corner{
     gap: 60px;
     width: 80vw;
 }
+.info-container-mobile {
+    padding-right: 30px;
+    text-align: justify;
+}
 .info-container {
     position: relative; /* Default state */
     width: 33%; /* Maintain responsive width */
@@ -155,6 +167,10 @@ footer .corner{
     gap: 15px;
     width: 66%;
 }
+.color-container{
+     display: inline-flex;
+     gap: 15px;
+ }
 .mockup-container{
     display: inline-flex;
     gap: 15px;
