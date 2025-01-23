@@ -148,3 +148,33 @@ window.addEventListener('scroll', () => {
         infoContainer.style.zIndex = ''; // Remove z-index when not fixed
     }
 });
+
+function goBack() {
+    window.history.back(); // Goes back to the previous page
+}
+
+// Pre-established order of pages
+const pageOrder = [
+    "lope.html",        // First page
+    "artlist.html",     // Second page
+    "terraviva.html",   // Third page
+    "equipe.html",      // Fourth page
+    "brochure.html",
+    "magazine.html",
+    "initinere.html",
+   // "anaderosa.html",
+    "frimm.html",
+    "ooom.html"
+];
+
+// Function to navigate forward based on the current URL
+function goForward() {
+    const currentURL = window.location.pathname.split("/").pop(); // Get the current page name
+    const currentIndex = pageOrder.indexOf(currentURL); // Find the current page in the array
+
+    if (currentIndex >= 0) {
+        // Navigate to the next page in the order, looping back to the first page
+        const nextIndex = (currentIndex + 1) % pageOrder.length;
+        window.location.href = pageOrder[nextIndex];
+    }
+}
