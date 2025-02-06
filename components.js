@@ -121,7 +121,6 @@ customElements.define('nav-works', navBar);
 customElements.define('foot-home', footHome);
 customElements.define('arrow-btn', arrowBtn);
 
-
 window.addEventListener('scroll', () => {
     const infoContainer = document.querySelector('.info-container');
     const presentation = document.querySelector('.presentation');
@@ -155,9 +154,9 @@ function goBack() {
 
 // Pre-established order of pages
 const pageOrder = [
-    "lope.html",        // First page
-    "artlist.html",     // Second page
-    "terraviva.html",   // Third page
+    "terraviva.html",        // First page
+    "lope.html",     // Second page
+    "artlist.html",   // Third page
     "equipe.html",      // Fourth page
     "brochure.html",
     "magazine.html",

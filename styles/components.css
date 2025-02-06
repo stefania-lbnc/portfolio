@@ -76,3 +76,43 @@ button {
     border-top: none;
     transform: rotate(45deg);
 }
+
+/* bar - usability test */
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.chart {
+    padding: 15px;
+    border-radius: 8px;
+}
+.bar-container {
+    margin-top: 10px;
+}
+.bar {
+    height: 10px;
+    background: #b36ba2;
+    margin: 5px 0;
+}
+.findings {
+    margin-top: 30px;
+}
+.chart-container p{
+    font-size: 12px;
+}
+.findings p{
+    font-size: 12px;
+}
+.bar-container li{
+    list-style: decimal;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: justify;
+}
+.screen{
+    border-radius: 20px;
+    /*width: 20%;*/
+    height: fit-content;
+}
