@@ -194,8 +194,8 @@ footer .corner{
     object-fit: contain; /* Ensures the logo retains aspect ratio */
 }
 .brand-color{
-    width: 15%;
-    height: 60px;
+    height: 15vh;
+    border-radius: 10px;
 }
 /**Divider Properties**/
 .fifteen{
