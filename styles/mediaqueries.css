@@ -1,9 +1,19 @@
 @media (max-width: 1300px) {
-    .logo-name, .content-width, .social-container, .mockup, .boards-container{
+    .logo-name, .profile-container, .project-btn, .mockup-container,
+    .bracket-container, .content-width, .mockup, .boards-container,
+    .color-container{
+        width: 80vw;
+    }
+    .profile {
+        padding: 30px
+    }
+    .hero-logo {
         width: 60vw;
     }
-    .project-btn {
-        width: 80vw;
+    .social-container, .link-container {
+        width: 30vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
     .projects-width, .mockup-container{
         display: grid;
@@ -14,4 +24,16 @@
     .display{
         display: none;
     }
+    .social, .subtitle{
+        font-size: 36px;
+    }
+    .menu{
+        font-size: 21px;
+    }
+    .brand-color{
+        height: 7vh;
+    }
+    .menu-li {
+        padding-right: 10vw;
+        padding-top: 2vh;
 }

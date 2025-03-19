@@ -155,6 +155,7 @@ footer .corner{
     width: 80vw;
 }
 .info-container-mobile {
+    width: 80vw;
     padding-right: 30px;
     text-align: justify;
 }
