@@ -14,11 +14,6 @@ class navBarHome extends HTMLElement {
                                 <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#contacts">contact</a>
-                            </button>
-                        </li>
                     </ul>
             </nav>
         `;
@@ -44,11 +39,6 @@ class navBar extends HTMLElement {
                                 <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#contacts">contact</a>
-                            </button>
-                        </li>
                     </ul>
             </nav>
         `;
@@ -57,19 +47,11 @@ class navBar extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer>
-                <div class="footer-width" style="justify-content: space-between;">
-                <div class="bracket-container" style="height: fit-content">
-                    <div class="corner top-left"></div>
-                    <div class="corner bottom-right"></div>
-                    <div class="bracket-content">
-                        <p style="text-align: left" class="title">GRAPHIC</br>& VISUAL</br>DESIGNER</p>
-                    </div>
-                </div>
-                <ul class="footer-li">
+            <footer class="light-yellow">
+                <ul class="social-container">
                     <li>
                         <a href="mailto:lobiancostefania@gmail.com">
-                            <img class="social-content" src="assets/chat-bubble-white.svg">
+                            <img class="social-content" src="assets/chat-bubble-black.svg">
                         </a>
                     </li>
                     <li>
@@ -84,11 +66,41 @@ class footHome extends HTMLElement {
                     </li>
                 </ul>
                 </div>
-                <div class="sixty"></div>
-                <ul class="social-container" style="align-content: start">
-                    <li><p>Rome, Italy</p></li>
-                    <li><a href="mailto:lobiancostefania@gmail.com"><p>lobiancostefania@gmail.com</p></a></li>
-                    <li><a><p>Download Resume</p></a></li>
+                <ul class="link-container">
+                    <li><p style="text-align: right">Rome, Italy</p></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a class="menu" href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p style="text-align: right">Download Resume</p></a></li>
+                </ul>
+            </footer>
+        `;
+    }
+}
+class footWorks extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <footer class="light-background">
+                <ul class="social-container">
+                    <li>
+                        <a href="mailto:lobiancostefania@gmail.com">
+                            <img class="social-content" src="assets/chat-bubble-black.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
+                            <p class="social">Bē</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
+                            <p class="social">in</p>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+                <ul class="link-container">
+                    <li><p style="text-align: right">Rome, Italy</p></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a><p style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
@@ -99,13 +111,13 @@ class arrowBtn extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="button-container">
-                <div class="bracket-container">
+                <div style="position: relative;">
                     <div class="corner-btn top-left"></div>
                     <div class="bracket-content">
                         <div class="menu-btn menu" onclick="goBack()" style="text-align: left">Back</div>
                     </div>
                 </div>
-                <div class="bracket-container">
+                <div style="position: relative;">
                     <div class="corner-btn bottom-right"></div>
                     <div class="bracket-content">
                         <div class="menu-btn menu" onclick="goForward()">Next</div>
@@ -119,6 +131,7 @@ class arrowBtn extends HTMLElement {
 customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
 customElements.define('foot-home', footHome);
+customElements.define('foot-works', footWorks);
 customElements.define('arrow-btn', arrowBtn);
 
 window.addEventListener('scroll', () => {
@@ -177,3 +190,19 @@ function goForward() {
         window.location.href = pageOrder[nextIndex];
     }
 }
+//hover effect
+const buttons = document.querySelectorAll('.my-projects'); // Select all project links
+
+buttons.forEach(button => {
+    const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
+    const subtitle = button.querySelector('.social');
+
+    button.addEventListener('mouseover', () => {                                                               
+        if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
+        if (subtitle) subtitle.classList.add('hover-effect'); // Add effect to subtitle
+    });                                                                                                        
+    button.addEventListener('mouseout', () => {                                                                     
+        if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
+        if (subtitle) subtitle.classList.remove('hover-effect'); // Remove effect from subtitle
+    });
+});

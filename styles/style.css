@@ -23,8 +23,8 @@ img{
 a:link{text-decoration:none; text-decoration-color: black;}
 a:hover{color: #EBE6D6;}
 a:visited{text-decoration:none; color: black;}
-a:link { color: black; }
-a:visited { color: black; }
+a:link {color: black;}
+a:visited {color: black;}
 a{transition: all 500ms ease;}
 /**Brand Color**/
 .light-yellow{
@@ -51,14 +51,23 @@ a{transition: all 500ms ease;}
 }
 .title{
     font-family: Montserrat, sans-serif;
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 48px;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
 }
-p{
+.profile{
+    padding: 5vh;
     font-family: Montserrat, sans-serif;
     font-size: 18px;
+    line-height: 1.8;
+    font-weight: normal;
+    text-align: justify;
+}
+p{
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     font-weight: normal;
     text-align: justify;
 }
@@ -71,18 +80,16 @@ p{
 }
 .social{
     font-family: Montserrat, sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
 }
 .projects-width p{
     text-align: center;
 }
 .info-container p{
     text-align: justify;
-}
-footer p{
-    color: #EBE6D6;
 }
 footer .corner{
     color: #EBE6D6;
@@ -118,11 +125,6 @@ footer .corner{
     column-gap: 30px;
     width: 80vw;
 }
-.footer-width{
-    display: inline-flex;
-    column-gap: 30px;
-    width: 80vw;
-}
 .logo-name{
     padding-top:30vh;
     width: 80vw;
@@ -131,13 +133,19 @@ footer .corner{
 }
 .social-container{
     display: inline-flex;
-    justify-content: space-evenly;
-    width: 40vw;
-    align-content: center;
+    padding-left: 15vh;
+    justify-content: space-between;
+    width: 10vw;
+    align-content: start;
+}
+.link-container{
+    padding-right: 10vh;
+    display: inline-grid;
+    align-content: end;
 }
 .social-content{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     justify-items: center;
     justify-content: center;
 }
@@ -151,6 +159,8 @@ footer .corner{
     text-align: justify;
 }
 .info-container {
+    overflow: scroll;
+    height: 80vh;
     position: relative; /* Default state */
     width: 33%; /* Maintain responsive width */
     padding-right: 30px;
@@ -158,7 +168,7 @@ footer .corner{
     z-index: 10; /* Ensure it remains above other content */
 }
 .button-container{
-    width: 100%;
+    width: 24vw;
     display: inline-flex;
     justify-content: space-between;
 }

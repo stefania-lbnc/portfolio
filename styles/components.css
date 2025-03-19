@@ -4,15 +4,19 @@ nav{
     right: 0;
     z-index: 2;
     justify-items: end;
-    width: 30vw;
-    height: 30vh;
+    width: 100vw;
 }
 footer{
-    display: grid;
-    background-color: black;
-    /**width: 100vw;**/
-    padding: 5vh 10vw;
-    justify-items: center;
+    display: inline-flex;
+    width: 100vw;
+    padding: 2vh 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 13;
 }
 /**Button Properties**/
 button {
@@ -24,16 +28,8 @@ button {
     align-content: center;
 }
 .menu-li{
-    padding-right: 5vh;
-    justify-items: center;
-    align-content: space-evenly;
-    width:10vw;
-    height: 30vh;
-}
-.footer-li{
-    display: grid;
-    height: 30vh;
-    justify-items: end;
+    padding-right: 10vh;
+    padding-top: 5vh;
 }
 .menu-btn{
     text-align: right;
@@ -41,7 +37,12 @@ button {
     width: 180px;
 }
 /**Bracket**/
+.profile-container {
+    width: 48vw;
+    position: relative;
+}
 .bracket-container {
+    width: 24vw;
     position: relative;
 }
 .bracket-content{
@@ -115,4 +116,29 @@ button {
     border-radius: 15px;
     /*width: 20%;*/
     height: fit-content;
+}
+.my-projects{
+    display: flex;
+    gap: 15px;
+    width: -webkit-fill-available;
+    align-items: baseline;
+}
+.my-projects .social{
+    text-transform: uppercase;
+}
+.social.hover-effect {
+    font-family: Montserrat, sans-serif;
+    font-size: 51px;
+    font-weight: 700;
+    transition: opacity 0.3s ease-in-out;
+    align-items: end;
+}
+.type-hover{
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+.type-hover.show {
+    display: block;/* Visible on hover */
+    align-items: end;
 }
