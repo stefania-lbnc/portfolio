@@ -160,11 +160,12 @@ footer .corner{
     text-align: justify;
 }
 .info-container {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 80vh;
     position: relative; /* Default state */
     width: 33%; /* Maintain responsive width */
-    padding-right: 30px;
+    /*padding-right: 30px;*/
     text-align: justify;
     z-index: 10; /* Ensure it remains above other content */
 }
