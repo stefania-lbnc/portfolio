@@ -50,11 +50,6 @@ class footHome extends HTMLElement {
             <footer class="light-yellow">
                 <ul class="social-container">
                     <li>
-                        <a href="mailto:lobiancostefania@gmail.com">
-                            <img class="social-content" src="assets/chat-bubble-black.svg">
-                        </a>
-                    </li>
-                    <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
                             <p class="social">Bē</p>
                         </a>
@@ -78,13 +73,10 @@ class footHome extends HTMLElement {
 class footWorks extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
+            <div class="ninety"></div>
+            <div class="ninety mobile"></div>
             <footer class="light-background">
                 <ul class="social-container">
-                    <li>
-                        <a href="mailto:lobiancostefania@gmail.com">
-                            <img class="social-content" src="assets/chat-bubble-black.svg">
-                        </a>
-                    </li>
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
                             <p class="social">Bē</p>
@@ -113,13 +105,13 @@ class arrowBtn extends HTMLElement {
             <div class="button-container">
                 <div style="position: relative;">
                     <div class="corner-btn top-left"></div>
-                    <div class="bracket-content">
+                    <div class="border-btn btn-content">
                         <div class="menu-btn menu" onclick="goBack()" style="text-align: left">Back</div>
                     </div>
                 </div>
                 <div style="position: relative;">
                     <div class="corner-btn bottom-right"></div>
-                    <div class="bracket-content">
+                    <div class="border-btn btn-content">
                         <div class="menu-btn menu" onclick="goForward()">Next</div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ button {
 .menu-btn{
     text-align: right;
     height: 30px;
-    width: 100px;
+    width: -webkit-fill-available;
 }
 /**Bracket**/
 .profile-container {
@@ -48,6 +48,9 @@ button {
 .bracket-content{
     padding: 20px 30px;
 }
+.btn-content{
+    padding: 10px;
+}
 .corner {
     position: absolute;
     width: 3em;
@@ -59,6 +62,10 @@ button {
     width: 2em;
     height: 2em;
     border: 10px solid;
+}
+.border-btn{
+    margin: 10px;
+    border: 1px solid;
 }
 .top-left {
     top: 0;
