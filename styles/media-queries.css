@@ -1,8 +1,11 @@
 @media (max-width: 1300px) {
     .logo-name, .profile-container, .project-btn, .mockup-container,
     .bracket-container, .content-width, .mockup, .boards-container,
-    .color-container{
+    .color-container, .button-container{
         width: 80vw;
+    }
+    .half-mobile{
+        width: 40vw;
     }
     .profile {
         padding: 30px
@@ -17,6 +20,9 @@
     }
     .projects-width, .mockup-container{
         display: grid;
+    }
+    .mobile-mockup-container{
+        display: inline-flex;
     }
     .mobile, .presentation{
         display: grid;
@@ -38,3 +44,4 @@
         padding-top: 2vh;
     }
 }
+

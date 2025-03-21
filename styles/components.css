@@ -12,7 +12,7 @@ footer{
     padding: 2vh 0;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 6vh;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -31,10 +31,13 @@ button {
     padding-right: 10vh;
     padding-top: 5vh;
 }
-.menu-btn{
-    text-align: right;
+.menu-btn {
+    text-align: center;
     height: 30px;
     width: -webkit-fill-available;
+}
+.menu-li .menu-btn{
+    text-align: right;
 }
 /**Bracket**/
 .profile-container {
@@ -122,7 +125,7 @@ button {
 .screen{
     border-radius: 15px;
     /*width: 20%;*/
-    height: fit-content;
+    /*height: fit-content;*/
 }
 .my-projects{
     display: flex;
