@@ -59,30 +59,29 @@ a{transition: all 500ms ease;}
 .profile{
     padding: 5vh;
     font-family: Montserrat, sans-serif;
-    font-size: 18px;
+    font-size: 1.3rem;
     line-height: 1.8;
     font-weight: normal;
     text-align: justify;
 }
 p{
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
+    font-size: 1.3rem;
     line-height: 1.5;
     font-weight: normal;
     text-align: justify;
 }
 .menu{
     font-family: Montserrat, sans-serif;
-    font-size: 18px;
+    font-size: 1.3rem;
     font-weight: normal;
     text-transform: uppercase;
 }
 .social{
     font-family: Montserrat, sans-serif;
-    font-size: 28px;
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.2;
-    text-align: left;
 }
 .projects-width p{
     text-align: center;
@@ -130,14 +129,8 @@ footer .corner{
     justify-items: start;
     justify-content: left;
 }
-.social-container{
-    display: inline-flex;
-    padding-left: 15vh;
-    justify-content: space-between;
-    width: 10vw;
-    align-content: start;
-}
 .link-container{
+    padding-left: 10vh;
     padding-right: 10vh;
     display: inline-grid;
     align-content: end;

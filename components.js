@@ -48,15 +48,15 @@ class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer class="light-yellow">
-                <ul class="social-container">
+                <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
-                            <p class="social">Bē</p>
+                            <p class="menu">Bēhance</p>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
-                            <p class="social">in</p>
+                            <p class="menu">LinkedIn</p>
                         </a>
                     </li>
                 </ul>
@@ -76,15 +76,15 @@ class footWorks extends HTMLElement {
             <div class="ninety"></div>
             <div class="ninety mobile"></div>
             <footer class="light-background">
-                <ul class="social-container">
+                <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
-                            <p class="social">Bē</p>
+                            <p class="menu">Bēhance</p>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
-                            <p class="social">in</p>
+                            <p class="menu">LinkedIn</p>
                         </a>
                     </li>
                 </ul>
@@ -92,7 +92,7 @@ class footWorks extends HTMLElement {
                 <ul class="link-container">
                     <li><p style="text-align: right">Rome, Italy</p></li>
                     <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a><p style="text-align: right">Download Resume</p></a></li>
+                    <li><a class="menu" href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;

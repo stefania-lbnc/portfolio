@@ -128,10 +128,11 @@ button {
     /*height: fit-content;*/
 }
 .my-projects{
-    display: flex;
-    gap: 15px;
+    display: grid;
+    gap: 5px;
     width: -webkit-fill-available;
     align-items: baseline;
+    justify-content: center;
 }
 .my-projects .social{
     text-transform: uppercase;
@@ -150,5 +151,4 @@ button {
 }
 .type-hover.show {
     display: block;/* Visible on hover */
-    align-items: end;
 }
