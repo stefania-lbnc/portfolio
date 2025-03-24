@@ -161,11 +161,11 @@ function goBack() {
 const pageOrder = [
     "terraviva.html",        // First page
     "lope.html",     // Second page
-    "artlist.html",   // Third page
+    //"artlist.html",   // Third page
     "equipe.html",      // Fourth page
     "brochure.html",
     "magazine.html",
-    "initinere.html",
+   // "initinere.html",
    // "anaderosa.html",
     "frimm.html",
     "ooom.html"

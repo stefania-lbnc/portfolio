@@ -36,7 +36,7 @@ a{transition: all 500ms ease;}
 /**Text Properties**/
 .name{
     font-family: Montserrat, sans-serif;
-    font-size: 72px;
+    font-size: 5.2rem;
     font-weight: 900;
     text-align: left;
     text-transform: uppercase;
@@ -44,25 +44,20 @@ a{transition: all 500ms ease;}
 }
 .subtitle{
     font-family: Montserrat, sans-serif;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 .title{
     font-family: Montserrat, sans-serif;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 .profile{
     padding: 5vh;
-    font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    font-weight: normal;
-    text-align: justify;
 }
 p{
     font-family: Montserrat, sans-serif;
@@ -101,7 +96,6 @@ footer .corner{
     display: grid;
 }
 .content-width{
-    justify-items: center;
     width: 80vw;
 }
 .hero-container{
@@ -153,10 +147,10 @@ footer .corner{
 }
 .info-container {
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: clip;
     height: 80vh;
     position: relative; /* Default state */
-    width: 33%; /* Maintain responsive width */
+    width: 26vw; !important;/* Maintain responsive width */
     /*padding-right: 30px;*/
     text-align: justify;
     z-index: 10; /* Ensure it remains above other content */
@@ -169,7 +163,7 @@ footer .corner{
 .boards-container{
     display: grid;
     gap: 15px;
-    width: 66%;
+    width: 52vw;
 }
 .color-container{
      display: inline-flex;
