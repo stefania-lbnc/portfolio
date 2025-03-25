@@ -36,7 +36,7 @@ a{transition: all 500ms ease;}
 /**Text Properties**/
 .name{
     font-family: Montserrat, sans-serif;
-    font-size: 72px;
+    font-size: 4rem;
     font-weight: 900;
     text-align: left;
     text-transform: uppercase;
@@ -44,45 +44,49 @@ a{transition: all 500ms ease;}
 }
 .subtitle{
     font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
 }
 .title{
     font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 550;
+    text-align: left;
+    line-height: 2.4rem;
     text-transform: uppercase;
 }
-.profile{
+.skills{
     padding: 5vh;
-    font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    font-weight: normal;
     text-align: justify;
+    display: none; /* Nasconde tutti i div inizialmente */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.skills.active {
+    display: block; /* Mostra solo il div attivo */
+    opacity: 1;
 }
 p{
     font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     font-weight: normal;
     text-align: justify;
 }
 .menu{
     font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-weight: normal;
     text-transform: uppercase;
 }
-.social{
+/**.social{
     font-family: Montserrat, sans-serif;
-    font-size: 1.8rem;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 1.2;
-}
+}**/
 .projects-width p{
     text-align: center;
 }
@@ -92,7 +96,6 @@ p{
 footer .corner{
     color: #EBE6D6;
 }
-
 /**General Properties**/
 .mobile{
     display: none;
@@ -101,7 +104,7 @@ footer .corner{
     display: grid;
 }
 .content-width{
-    justify-items: center;
+    justify-items: left;
     width: 80vw;
 }
 .hero-container{
@@ -202,17 +205,17 @@ footer .corner{
     border-radius: 10px;
 }
 /**Divider Properties**/
-.fifteen{
-    height: 15px;
+.sixteen{
+    height: 16px;
 }
 .thirty{
-    height: 30px;
+    height: 32px;
 }
 .sixty{
-    height: 60px;
+    height: 64px;
 }
 .ninety{
-    height: 90px;
+    height: 96px;
 }
 .a-third{
     height: 30vh;

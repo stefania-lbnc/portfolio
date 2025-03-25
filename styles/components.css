@@ -41,7 +41,7 @@ button {
 }
 /**Bracket**/
 .profile-container {
-    width: 48vw;
+    width: 64vw;
     position: relative;
 }
 .bracket-container {
@@ -56,14 +56,14 @@ button {
 }
 .corner {
     position: absolute;
-    width: 3em;
-    height: 3em;
+    width: 2.4rem;
+    height: 2.4rem;
     border: 10px solid;
 }
 .corner-btn {
     position: absolute;
-    width: 2em;
-    height: 2em;
+    width: 1.6rem;
+    height: 1.6rem;
     border: 10px solid;
 }
 .border-btn{
@@ -128,18 +128,17 @@ button {
     /*height: fit-content;*/
 }
 .my-projects{
-    display: grid;
-    gap: 5px;
+    display: flex;
+    padding-top: 0.8rem;
+    gap: 16px;
     width: -webkit-fill-available;
-    align-items: baseline;
-    justify-content: center;
+    align-items: center;
+    justify-content: left;
 }
-.my-projects .social{
-    text-transform: uppercase;
-}
-.social.hover-effect {
+
+.title.hover-effect {
     font-family: Montserrat, sans-serif;
-    font-size: 51px;
+    font-size: 3.2rem;
     font-weight: 700;
     transition: opacity 0.3s ease-in-out;
     align-items: end;
