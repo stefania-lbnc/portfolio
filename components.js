@@ -187,14 +187,34 @@ const buttons = document.querySelectorAll('.my-projects'); // Select all project
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
-    const subtitle = button.querySelector('.social');
+    const title = button.querySelector('.title');
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
-        if (subtitle) subtitle.classList.add('hover-effect'); // Add effect to subtitle
+        if (title) title.classList.add('hover-effect'); // Add effect to title
     });                                                                                                        
     button.addEventListener('mouseout', () => {                                                                     
         if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
-        if (subtitle) subtitle.classList.remove('hover-effect'); // Remove effect from subtitle
+        if (title) title.classList.remove('hover-effect'); // Remove effect from title
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const skills = document.querySelectorAll(".skills");
+    let index = 0;
+
+    function showNextSkill() {
+        skills.forEach((skill, i) => {
+            skill.classList.remove("active");
+            skill.style.display = "none";
+        });
+
+        skills[index].classList.add("active");
+        skills[index].style.display = "block";
+
+        index = (index + 1) % skills.length; // Passa al prossimo
+    }
+
+    showNextSkill(); // Mostra il primo all'inizio
+    setInterval(showNextSkill, 3000); // Cambia ogni 3 secondi
 });

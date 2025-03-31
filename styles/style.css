@@ -36,7 +36,11 @@ a{transition: all 500ms ease;}
 /**Text Properties**/
 .name{
     font-family: Montserrat, sans-serif;
+<<<<<<< HEAD
     font-size: 5.2rem;
+=======
+    font-size: 4rem;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
     font-weight: 900;
     text-align: left;
     text-transform: uppercase;
@@ -44,40 +48,64 @@ a{transition: all 500ms ease;}
 }
 .subtitle{
     font-family: Montserrat, sans-serif;
+<<<<<<< HEAD
     font-size: 3rem;
     font-weight: 600;
     text-align: left;
+=======
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
     text-transform: uppercase;
 }
 .title{
     font-family: Montserrat, sans-serif;
+<<<<<<< HEAD
     font-size: 3rem;
     font-weight: 700;
     text-align: left;
+=======
+    font-size: 2.4rem;
+    font-weight: 550;
+    text-align: left;
+    line-height: 2.4rem;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
     text-transform: uppercase;
 }
-.profile{
+.skills{
     padding: 5vh;
+<<<<<<< HEAD
+=======
+    text-align: justify;
+    display: none; /* Nasconde tutti i div inizialmente */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.skills.active {
+    display: block; /* Mostra solo il div attivo */
+    opacity: 1;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
 }
 p{
     font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     font-weight: normal;
     text-align: justify;
 }
 .menu{
     font-family: Montserrat, sans-serif;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-weight: normal;
     text-transform: uppercase;
 }
-.social{
+/**.social{
     font-family: Montserrat, sans-serif;
-    font-size: 1.8rem;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 1.2;
-}
+}**/
 .projects-width p{
     text-align: center;
 }
@@ -87,7 +115,6 @@ p{
 footer .corner{
     color: #EBE6D6;
 }
-
 /**General Properties**/
 .mobile{
     display: none;
@@ -96,6 +123,10 @@ footer .corner{
     display: grid;
 }
 .content-width{
+<<<<<<< HEAD
+=======
+    justify-items: left;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
     width: 80vw;
 }
 .hero-container{
@@ -196,17 +227,17 @@ footer .corner{
     border-radius: 10px;
 }
 /**Divider Properties**/
-.fifteen{
-    height: 15px;
+.sixteen{
+    height: 16px;
 }
 .thirty{
-    height: 30px;
+    height: 32px;
 }
 .sixty{
-    height: 60px;
+    height: 64px;
 }
 .ninety{
-    height: 90px;
+    height: 96px;
 }
 .a-third{
     height: 30vh;

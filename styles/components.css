@@ -56,14 +56,14 @@ button {
 }
 .corner {
     position: absolute;
-    width: 3em;
-    height: 3em;
+    width: 2.4rem;
+    height: 2.4rem;
     border: 10px solid;
 }
 .corner-btn {
     position: absolute;
-    width: 2em;
-    height: 2em;
+    width: 1.6rem;
+    height: 1.6rem;
     border: 10px solid;
 }
 .border-btn{
@@ -128,6 +128,7 @@ button {
     /*height: fit-content;*/
 }
 .my-projects{
+<<<<<<< HEAD
     display: inline-flex;
     gap: 1rem;
     width: -webkit-fill-available;
@@ -138,6 +139,20 @@ button {
     font-family: Montserrat, sans-serif;
     font-size: 3.5rem;
     font-weight: 800;
+=======
+    display: flex;
+    padding-top: 0.8rem;
+    gap: 16px;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: left;
+}
+
+.title.hover-effect {
+    font-family: Montserrat, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+>>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
     transition: opacity 0.3s ease-in-out;
     align-items: end;
 }
