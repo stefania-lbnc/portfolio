@@ -1,5 +1,5 @@
 @media (max-width: 1300px) {
-    .logo-name, .profile-container, .project-btn, .mockup-container,
+    .logo-name, .four-columns, .project-btn, .mockup-container,
     .bracket-container, .content-width, .mockup, .boards-container,
     .color-container, .button-container{
         width: 80vw;
@@ -30,7 +30,7 @@
     .display{
         display: none;
     }
-    .social, .subtitle{
+    .social, .big-p{
         font-size: 36px;
     }
     .menu{

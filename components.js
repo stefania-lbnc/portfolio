@@ -1,17 +1,17 @@
 class navBarHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav>
-                    <ul class="menu-li">
+            <nav class="light-yellow">
+                    <ul class="link-container">
                         <li></li>
-                        <li>
+                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">about me</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#projects">works</a>
+                                <a class="menu" href="index.html#profile">get in touch</a>
                             </button>
                         </li>
                     </ul>
@@ -22,21 +22,21 @@ class navBarHome extends HTMLElement {
 class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav>
-                    <ul class="menu-li">
+            <nav class="light-yellow">
+                    <ul class="link-container">
                         <li>
-                            <button class="menu-btn">
+                        <button class="menu-btn">
                                 <a class="menu" href="index.html">home</a>
                             </button>
                         </li>
-                        <li>
+                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">about me</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#projects">works</a>
+                                <a class="menu" href="index.html#profile">get in touch</a>
                             </button>
                         </li>
                     </ul>
@@ -62,9 +62,8 @@ class footHome extends HTMLElement {
                 </ul>
                 </div>
                 <ul class="link-container">
-                    <li><p style="text-align: right">Rome, Italy</p></li>
-                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a class="menu" href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p style="text-align: right">Download Resume</p></a></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
@@ -88,11 +87,9 @@ class footWorks extends HTMLElement {
                         </a>
                     </li>
                 </ul>
-                </div>
                 <ul class="link-container">
-                    <li><p style="text-align: right">Rome, Italy</p></li>
-                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a class="menu" href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p style="text-align: right">Download Resume</p></a></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
@@ -187,7 +184,7 @@ const buttons = document.querySelectorAll('.my-projects'); // Select all project
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
-    const title = button.querySelector('.title');
+    const title = button.querySelector('.role');
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
@@ -204,17 +201,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let index = 0;
 
     function showNextSkill() {
-        skills.forEach((skill, i) => {
+        skills.forEach(skill => {
             skill.classList.remove("active");
             skill.style.display = "none";
         });
 
         skills[index].classList.add("active");
-        skills[index].style.display = "block";
+        skills[index].style.display = "flex";
 
-        index = (index + 1) % skills.length; // Passa al prossimo
+        index = (index + 1) % skills.length;
     }
 
-    showNextSkill(); // Mostra il primo all'inizio
-    setInterval(showNextSkill, 3000); // Cambia ogni 3 secondi
+    showNextSkill();
+    setInterval(showNextSkill, 3000);
 });

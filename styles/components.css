@@ -2,8 +2,12 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
+    height: 6vh;
+    padding: 2vh;
+    z-index: 15;
     justify-items: end;
+    display: inline-flex;
+    justify-content: end;
     width: 100vw;
 }
 footer{
@@ -27,22 +31,31 @@ button {
     width: 50vw;
     align-content: center;
 }
-.menu-li{
-    padding-right: 10vh;
-    padding-top: 5vh;
-}
 .menu-btn {
     text-align: center;
     height: 30px;
     width: -webkit-fill-available;
 }
-.menu-li .menu-btn{
-    text-align: right;
+.skills{
+    display: none; /* Nasconde tutti i div inizialmente */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    align-items: end;
+}
+.skills.active {
+    display: flex; /* Mostra solo il div attivo */
+    opacity: 1;
+    gap: 1.2rem;
 }
 /**Bracket**/
-.profile-container {
-    width: 64vw;
+.four-columns {
+    flex: 2;
+    width: 50vw;
     position: relative;
+}
+.two-columns{
+    flex: 1;
+    width: 25vw;
 }
 .bracket-container {
     width: 24vw;
@@ -58,7 +71,7 @@ button {
     position: absolute;
     width: 2.4rem;
     height: 2.4rem;
-    border: 10px solid;
+    border: 1.2rem solid;
 }
 .corner-btn {
     position: absolute;
@@ -135,7 +148,7 @@ button {
     align-items: baseline;
     justify-content: left;
 }
-.subtitle.hover-effect {
+.big-p.hover-effect {
     font-family: Montserrat, sans-serif;
     font-size: 3.5rem;
     font-weight: 800;
@@ -148,7 +161,7 @@ button {
     justify-content: left;
 }
 
-.title.hover-effect {
+.role.hover-effect {
     font-family: Montserrat, sans-serif;
     font-size: 3.2rem;
     font-weight: 700;

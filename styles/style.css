@@ -34,78 +34,42 @@ a{transition: all 500ms ease;}
     background-color: #FFFEF2;
 }
 /**Text Properties**/
-.name{
-    font-family: Montserrat, sans-serif;
-<<<<<<< HEAD
-    font-size: 5.2rem;
-=======
-    font-size: 4rem;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-    font-weight: 900;
-    text-align: left;
-    text-transform: uppercase;
-    /**line-height: 80%;**/
-}
-.subtitle{
-    font-family: Montserrat, sans-serif;
-<<<<<<< HEAD
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: left;
-=======
-    font-size: 2.4rem;
-    font-weight: 700;
-    text-align: center;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-    text-transform: uppercase;
-}
-.title{
-    font-family: Montserrat, sans-serif;
-<<<<<<< HEAD
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: left;
-=======
-    font-size: 2.4rem;
-    font-weight: 550;
-    text-align: left;
-    line-height: 2.4rem;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-    text-transform: uppercase;
-}
-.skills{
-    padding: 5vh;
-<<<<<<< HEAD
-=======
-    text-align: justify;
-    display: none; /* Nasconde tutti i div inizialmente */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-.skills.active {
-    display: block; /* Mostra solo il div attivo */
-    opacity: 1;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-}
 p{
     font-family: Montserrat, sans-serif;
     font-size: 0.8rem;
-    line-height: 1.5;
     font-weight: normal;
     text-align: justify;
 }
 .menu{
     font-family: Montserrat, sans-serif;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: normal;
     text-transform: uppercase;
 }
-/**.social{
+.name{
     font-family: Montserrat, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    line-height: 1.2;
-}**/
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+    /**line-height: 80%;**/
+}
+.big-p{
+    font-family: Montserrat, sans-serif;
+    font-size: 5.6rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+}
+.role{
+    font-family: Montserrat, sans-serif;
+    font-size: 7.2rem;
+    font-weight: 900;
+    text-align: left;
+    line-height: 6rem;
+    text-transform: uppercase;
+}
 .projects-width p{
     text-align: center;
 }
@@ -123,11 +87,8 @@ footer .corner{
     display: grid;
 }
 .content-width{
-<<<<<<< HEAD
-=======
     justify-items: left;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-    width: 80vw;
+    width: 75vw;
 }
 .hero-container{
     width: 100vw;
@@ -149,6 +110,8 @@ footer .corner{
     width: 80vw;
 }
 .logo-name{
+    display: grid;
+    gap: 1.2rem;
     padding-top:30vh;
     width: 80vw;
     justify-items: start;
@@ -157,14 +120,8 @@ footer .corner{
 .link-container{
     padding-left: 10vh;
     padding-right: 10vh;
-    display: inline-grid;
-    align-content: end;
-}
-.social-content{
-    width: 30px;
-    height: 30px;
-    justify-items: center;
-    justify-content: center;
+    display: inline-flex;
+    grid-column-gap: 1.6rem;
 }
 .presentation{
     display: inline-flex;
