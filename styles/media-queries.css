@@ -1,6 +1,6 @@
 @media (max-width: 1300px) {
     .logo-name, .four-columns, .project-btn, .mockup-container,
-    .bracket-container, .content-width, .mockup, .boards-container,
+    .bracket-container, .content-width, .mockup, .four-columns,
     .color-container, .button-container{
         width: 80vw;
     }
@@ -24,7 +24,7 @@
     .mobile-mockup-container{
         display: inline-flex;
     }
-    .mobile, .presentation{
+    .mobile, .my-projects{
         display: grid;
     }
     .display{

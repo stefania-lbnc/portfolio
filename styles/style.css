@@ -54,6 +54,9 @@ p{
     text-transform: uppercase;
     /**line-height: 80%;**/
 }
+.title .name{
+    text-align: right;
+}
 .big-p{
     font-family: Montserrat, sans-serif;
     font-size: 5.6rem;
@@ -91,7 +94,7 @@ footer .corner{
     width: 75vw;
 }
 .hero-container{
-    width: 100vw;
+    width: 75vw;
     height: 70vh;
 }
 .hero-logo{
@@ -118,40 +121,16 @@ footer .corner{
     justify-content: left;
 }
 .link-container{
-    padding-left: 10vh;
-    padding-right: 10vh;
+    padding-left: 8vw;
+    padding-right: 8vw;
     display: inline-flex;
     grid-column-gap: 1.6rem;
 }
-.presentation{
-    display: inline-flex;
-    gap: 60px;
-    width: 80vw;
-}
-.info-container-mobile {
-    width: 80vw;
-    padding-right: 30px;
-    text-align: justify;
-}
-.info-container {
-    overflow-y: scroll;
-    overflow-x: clip;
-    height: 80vh;
-    position: relative; /* Default state */
-    width: 26vw; !important;/* Maintain responsive width */
-    /*padding-right: 30px;*/
-    text-align: justify;
-    z-index: 10; /* Ensure it remains above other content */
-}
+
 .button-container{
     width: 24vw;
     display: inline-flex;
     justify-content: space-between;
-}
-.boards-container{
-    display: grid;
-    gap: 15px;
-    width: 52vw;
 }
 .color-container{
      display: inline-flex;
@@ -184,17 +163,17 @@ footer .corner{
     border-radius: 10px;
 }
 /**Divider Properties**/
-.sixteen{
-    height: 16px;
+.one-two-rem{
+    height: 1.2rem;
 }
-.thirty{
-    height: 32px;
+.one-six-rem{
+    height: 1.6rem;
 }
-.sixty{
-    height: 64px;
+.five-six-rem{
+    height: 5.6rem;
 }
-.ninety{
-    height: 96px;
+.seven-two-rem{
+    height: 7.2rem;
 }
 .a-third{
     height: 30vh;

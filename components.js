@@ -11,7 +11,7 @@ class navBarHome extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">get in touch</a>
+                                <a class="menu" href="contacts.html">get in touch</a>
                             </button>
                         </li>
                     </ul>
@@ -22,7 +22,7 @@ class navBarHome extends HTMLElement {
 class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="light-yellow">
+            <nav class="light-background">
                     <ul class="link-container">
                         <li>
                         <button class="menu-btn">
@@ -36,9 +36,30 @@ class navBar extends HTMLElement {
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">get in touch</a>
+                                <a class="menu" href="contacts.html">get in touch</a>
                             </button>
                         </li>
+                    </ul>
+            </nav>
+        `;
+    }
+}
+class navBarContacts extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <nav style="background-color: black">
+                    <ul class="link-container">
+                        <li>
+                        <button class="menu-btn">
+                                <a class="menu" href="index.html" style="color: #FFFEF2">home</a>
+                            </button>
+                        </li>
+                         <li>
+                            <button class="menu-btn">
+                                <a class="menu" href="index.html#projects" style="color: #FFFEF2">works</a>
+                            </button>
+                        </li>
+                        <li></li>
                     </ul>
             </nav>
         `;
@@ -72,8 +93,8 @@ class footHome extends HTMLElement {
 class footWorks extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <div class="ninety"></div>
-            <div class="ninety mobile"></div>
+            <div class="seven-two-rem"></div>
+            <div class="seven-two-rem mobile"></div>
             <footer class="light-background">
                 <ul class="link-container">
                     <li>
@@ -119,14 +140,15 @@ class arrowBtn extends HTMLElement {
 
 customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
+customElements.define('nav-contacts', navBarContacts);
 customElements.define('foot-home', footHome);
 customElements.define('foot-works', footWorks);
 customElements.define('arrow-btn', arrowBtn);
 
 window.addEventListener('scroll', () => {
     const infoContainer = document.querySelector('.info-container');
-    const presentation = document.querySelector('.presentation');
-    const boardsContainer = document.querySelector('.boards-container');
+    const presentation = document.querySelector('.my-projects');
+    const boardsContainer = document.querySelector('.four-columns');
 
     const infoContainerInitialWidth = getComputedStyle(infoContainer).width; // Initial width of info-container
     const boardsContainerInitialWidth = getComputedStyle(boardsContainer).width; // Initial width of info-container
@@ -156,16 +178,13 @@ function goBack() {
 
 // Pre-established order of pages
 const pageOrder = [
-    "terraviva.html",        // First page
-    "lope.html",     // Second page
-    //"artlist.html",   // Third page
-    "equipe.html",      // Fourth page
-    "brochure.html",
     "magazine.html",
-   // "initinere.html",
-   // "anaderosa.html",
+    "",
+    "terraviva.html",
+    "equipe.html",      // Fourth page
+    "lope.html",
+    "",
     "frimm.html",
-    "ooom.html"
 ];
 
 // Function to navigate forward based on the current URL
@@ -184,15 +203,15 @@ const buttons = document.querySelectorAll('.my-projects'); // Select all project
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
-    const title = button.querySelector('.role');
+    const projects = button.querySelector('.big-p');
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
-        if (title) title.classList.add('hover-effect'); // Add effect to title
+        if (projects) projects.classList.add('hover-effect'); // Add effect to projects
     });                                                                                                        
     button.addEventListener('mouseout', () => {                                                                     
         if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
-        if (title) title.classList.remove('hover-effect'); // Remove effect from title
+        if (projects) projects.classList.remove('hover-effect'); // Remove effect from projects
     });
 });
 

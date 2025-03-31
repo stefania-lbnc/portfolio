@@ -2,7 +2,7 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
-    height: 6vh;
+    height: 4vh;
     padding: 2vh;
     z-index: 15;
     justify-items: end;
@@ -16,7 +16,7 @@ footer{
     padding: 2vh 0;
     justify-content: space-between;
     align-items: center;
-    height: 6vh;
+    height: 4vh;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -48,6 +48,18 @@ button {
     gap: 1.2rem;
 }
 /**Bracket**/
+.title{
+    padding-top: 8vh;
+    align-items: end;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.profile-width {
+    display: grid;
+    gap: 1.2rem;
+    width: 50vw;
+    position: relative;
+}
 .four-columns {
     flex: 2;
     width: 50vw;
@@ -141,38 +153,28 @@ button {
     /*height: fit-content;*/
 }
 .my-projects{
-<<<<<<< HEAD
-    display: inline-flex;
-    gap: 1rem;
-    width: -webkit-fill-available;
-    align-items: baseline;
-    justify-content: left;
+    display: flex;
+    gap: 1.2rem;
+    width: 75vw;
+    justify-content: space-between;
+    align-items: end;
 }
 .big-p.hover-effect {
     font-family: Montserrat, sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-=======
+    font-size: 7.2rem;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
     display: flex;
-    padding-top: 0.8rem;
-    gap: 16px;
+    gap: 1.2rem;
     width: -webkit-fill-available;
-    align-items: center;
-    justify-content: left;
-}
-
-.role.hover-effect {
-    font-family: Montserrat, sans-serif;
-    font-size: 3.2rem;
-    font-weight: 700;
->>>>>>> 5d08f083de57d829e376fb59d601500a20c529ba
-    transition: opacity 0.3s ease-in-out;
     align-items: end;
+    justify-content: space-between;
+    transition: opacity 0.3s ease-in-out;
 }
 .type-hover{
     display: none; /* Initially hidden */
     transition: opacity 0.3s ease-in-out;
-    text-align: center;
 }
 .type-hover.show {
     display: block;/* Visible on hover */
