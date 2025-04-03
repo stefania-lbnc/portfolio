@@ -94,18 +94,25 @@ footer .corner{
     width: 75vw;
 }
 .hero-container{
-    width: 75vw;
-    height: 70vh;
+    /**width: 75vw;
+    height: 70vh;**/
 }
 .hero-logo{
     position: absolute;
     left: 40vw;
+    width: 20vw;
+    top: 10vh;
     z-index: 0;
     object-fit: contain;
     width: 20vw;
 }
 .hero{
     z-index: -1;
+}
+.presentation{
+    display: grid;
+    gap: 1.2rem;
+    width: 40vw;
 }
 .projects-width{
     display: inline-flex;
@@ -125,12 +132,6 @@ footer .corner{
     padding-right: 8vw;
     display: inline-flex;
     grid-column-gap: 1.6rem;
-}
-
-.button-container{
-    width: 24vw;
-    display: inline-flex;
-    justify-content: space-between;
 }
 .color-container{
      display: inline-flex;
