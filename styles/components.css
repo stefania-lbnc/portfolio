@@ -121,7 +121,6 @@ button {
     border-top: none;
     transform: rotate(45deg);
 }
-
 /* bar - usability test */
 .chart-container {
     display: grid;
