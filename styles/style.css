@@ -94,14 +94,14 @@ footer .corner{
     width: 75vw;
 }
 .hero-container{
-    /**width: 75vw;
-    height: 70vh;**/
+    width: 75vw;
+    height: 56vh;
 }
 .hero-logo{
     position: absolute;
     left: 40vw;
     width: 20vw;
-    top: 10vh;
+    top: 4vh;
     z-index: 0;
     object-fit: contain;
     width: 20vw;
