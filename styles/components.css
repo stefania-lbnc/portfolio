@@ -69,7 +69,6 @@ button {
     width: 25vw;
 }
 .bracket-container {
-    width: 24vw;
     position: relative;
 }
 .bracket-content{
@@ -127,7 +126,6 @@ button {
     border-top: none;
     transform: rotate(45deg);
 }
-
 /* bar - usability test */
 .chart-container {
     display: grid;
