@@ -95,20 +95,18 @@ footer .corner{
     height: 56vh;
 }
 .hero-logo{
+    top: 8vh;
+    left: 38vw;
     position: absolute;
-    left: 40vw;
-    width: 20vw;
-    top: 4vh;
-    z-index: 0;
+    z-index: 1;
+    width: 24%;
     object-fit: contain;
-    width: 20vw;
 }
 .hero{
     z-index: -1;
 }
 .presentation{
     display: grid;
-    gap: 1.2rem;
     width: 40vw;
 }
 .projects-width{
@@ -130,16 +128,16 @@ footer .corner{
     display: inline-flex;
     grid-column-gap: 1.6rem;
 }
-.color-container{
-     display: inline-flex;
-     gap: 15px;
- }
 .mockup-container{
     display: inline-flex;
-    gap: 15px;
+   /* gap: 15px;*/
 }
 .mockup{
     width: 50%;
+}
+.brand-color{
+    height: 8vh;
+    align-items: baseline;
 }
 .background {
     display: flex;
@@ -155,10 +153,6 @@ footer .corner{
     z-index: 2;
     width: 20vw; /* Adjust the width as needed */
     object-fit: contain; /* Ensures the logo retains aspect ratio */
-}
-.brand-color{
-    height: 15vh;
-    border-radius: 10px;
 }
 /**Divider Properties**/
 .one-two-rem{
