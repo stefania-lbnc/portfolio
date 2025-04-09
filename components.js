@@ -116,7 +116,6 @@ class footWorks extends HTMLElement {
         `;
     }
 }
-
 class arrowBtn extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -175,7 +174,6 @@ window.addEventListener('scroll', () => {
 function goBack() {
     window.history.back(); // Goes back to the previous page
 }
-
 // Pre-established order of pages
 const pageOrder = [
     "magazine.html",
@@ -183,7 +181,7 @@ const pageOrder = [
     "terraviva.html",
     "equipe.html",      // Fourth page
     "lope.html",
-    "",
+    "iccrom.html",
     "frimm.html",
 ];
 
