@@ -133,6 +133,15 @@ footer .corner{
 .mockup{
     width: 50%;
 }
+.gallery{
+    display: grid;
+    grid-template-columns: 64% 32%;
+    /**grid-template-rows: 64% 32%;**/
+    column-gap: 2vh;
+    row-gap: 2vw;
+    background-color: black ;
+    padding: 6vh 6vw;
+}
 .brand-color{
     height: 8vh;
     align-items: baseline;
