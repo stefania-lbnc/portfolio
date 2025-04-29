@@ -1,7 +1,7 @@
 @media (max-width: 1300px) {
     .logo-name, .four-columns, .project-btn, .mockup-container,
     .bracket-container, .content-width, .mockup, .four-columns,
-    .color-container, .button-container{
+    .screen-container, .button-container{
         width: 80vw;
     }
     .half-mobile{
