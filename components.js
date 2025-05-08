@@ -177,7 +177,7 @@ function goBack() {
 // Pre-established order of pages
 const pageOrder = [
     "magazine.html",
-    "",
+    //"",
     "terraviva.html",
     "equipe.html",      // Fourth page
     "lope.html",
