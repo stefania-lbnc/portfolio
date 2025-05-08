@@ -2,8 +2,12 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
+    height: 4vh;
+    padding: 2vh;
+    z-index: 15;
     justify-items: end;
+    display: inline-flex;
+    justify-content: end;
     width: 100vw;
 }
 footer{
@@ -12,7 +16,7 @@ footer{
     padding: 2vh 0;
     justify-content: space-between;
     align-items: center;
-    height: 6vh;
+    height: 4vh;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -27,43 +31,78 @@ button {
     width: 50vw;
     align-content: center;
 }
-.menu-li{
-    padding-right: 10vh;
-    padding-top: 5vh;
-}
 .menu-btn {
     text-align: center;
-    height: 30px;
     width: -webkit-fill-available;
 }
-.menu-li .menu-btn{
-    text-align: right;
+.skills{
+    display: none; /* Nasconde tutti i div inizialmente */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    align-items: end;
+}
+.skills.active {
+    display: flex; /* Mostra solo il div attivo */
+    opacity: 1;
+    gap: 1.2rem;
 }
 /**Bracket**/
-.profile-container {
-    width: 48vw;
+.title{
+    padding-top: 8vh;
+    align-items: end;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.profile-width {
+    display: grid;
+    gap: 1.2rem;
+    width: 50vw;
     position: relative;
 }
+.four-columns {
+    flex: 2;
+    width: 50vw;
+    position: relative;
+}
+.two-columns{
+    flex: 1;
+    width: 25vw;
+}
 .bracket-container {
-    width: 24vw;
     position: relative;
 }
 .bracket-content{
     padding: 20px 30px;
+}
+.button-container{
+    display: inline-flex;
+    width: 90vw;
+    padding: 0 8vh;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 32vh;
+    right: 0;
+    left: 0;
+    z-index: 13;
+}
+.prototype-container{
+    justify-content: center;
+    display: inline-flex;
+    padding: 0 8vh;
 }
 .btn-content{
     padding: 10px;
 }
 .corner {
     position: absolute;
-    width: 3em;
-    height: 3em;
-    border: 10px solid;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1.2rem solid;
 }
 .corner-btn {
     position: absolute;
-    width: 2em;
-    height: 2em;
+    width: 1.6rem;
+    height: 1.6rem;
     border: 10px solid;
 }
 .border-btn{
@@ -87,7 +126,6 @@ button {
     border-top: none;
     transform: rotate(45deg);
 }
-
 /* bar - usability test */
 .chart-container {
     display: grid;
@@ -123,32 +161,33 @@ button {
     text-align: justify;
 }
 .screen{
-    border-radius: 15px;
+    border-radius: 5px;
     /*width: 20%;*/
     /*height: fit-content;*/
 }
 .my-projects{
     display: flex;
-    gap: 15px;
-    width: -webkit-fill-available;
-    align-items: baseline;
-}
-.my-projects .social{
-    text-transform: uppercase;
-}
-.social.hover-effect {
-    font-family: Montserrat, sans-serif;
-    font-size: 51px;
-    font-weight: 700;
-    transition: opacity 0.3s ease-in-out;
+    gap: 1.2rem;
+    width: 75vw;
+    justify-content: space-between;
     align-items: end;
+}
+.big-p.hover-effect {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1.2rem;
+    width: -webkit-fill-available;
+    align-items: end;
+    justify-content: space-between;
+    transition: opacity 0.3s ease-in-out;
 }
 .type-hover{
     display: none; /* Initially hidden */
     transition: opacity 0.3s ease-in-out;
-    text-align: center;
 }
 .type-hover.show {
     display: block;/* Visible on hover */
-    align-items: end;
 }

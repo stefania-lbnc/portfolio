@@ -1,17 +1,17 @@
 class navBarHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav>
-                    <ul class="menu-li">
+            <nav class="light-yellow">
+                    <ul class="link-container">
                         <li></li>
-                        <li>
+                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">about me</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
                         <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#projects">works</a>
+                                <a class="menu" href="contacts.html">get in touch</a>
                             </button>
                         </li>
                     </ul>
@@ -22,23 +22,44 @@ class navBarHome extends HTMLElement {
 class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav>
-                    <ul class="menu-li">
+            <nav class="light-background">
+                    <ul class="link-container">
                         <li>
-                            <button class="menu-btn">
+                        <button class="menu-btn">
                                 <a class="menu" href="index.html">home</a>
                             </button>
                         </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#profile">about me</a>
-                            </button>
-                        </li>
-                        <li>
+                         <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
+                        <li>
+                            <button class="menu-btn">
+                                <a class="menu" href="contacts.html">get in touch</a>
+                            </button>
+                        </li>
+                    </ul>
+            </nav>
+        `;
+    }
+}
+class navBarContacts extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <nav style="background-color: black">
+                    <ul class="link-container">
+                        <li>
+                        <button class="menu-btn">
+                                <a class="menu" href="index.html" style="color: #FFFEF2">home</a>
+                            </button>
+                        </li>
+                         <li>
+                            <button class="menu-btn">
+                                <a class="menu" href="index.html#projects" style="color: #FFFEF2">works</a>
+                            </button>
+                        </li>
+                        <li></li>
                     </ul>
             </nav>
         `;
@@ -48,23 +69,22 @@ class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer class="light-yellow">
-                <ul class="social-container">
+                <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
-                            <p class="social">Bē</p>
+                            <p class="menu">Bēhance</p>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
-                            <p class="social">in</p>
+                            <p class="menu">LinkedIn</p>
                         </a>
                     </li>
                 </ul>
                 </div>
                 <ul class="link-container">
-                    <li><p style="text-align: right">Rome, Italy</p></li>
-                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a class="menu" href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p style="text-align: right">Download Resume</p></a></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
@@ -73,32 +93,29 @@ class footHome extends HTMLElement {
 class footWorks extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <div class="ninety"></div>
-            <div class="ninety mobile"></div>
+            <div class="seven-two-rem"></div>
+            <div class="seven-two-rem mobile"></div>
             <footer class="light-background">
-                <ul class="social-container">
+                <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
-                            <p class="social">Bē</p>
+                            <p class="menu">Bēhance</p>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/stefania-lo-bianco/" target="_blank" class="social-content">
-                            <p class="social">in</p>
+                            <p class="menu">LinkedIn</p>
                         </a>
                     </li>
                 </ul>
-                </div>
                 <ul class="link-container">
-                    <li><p style="text-align: right">Rome, Italy</p></li>
-                    <li><a href="mailto:lobiancostefania@gmail.com"><p style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a><p style="text-align: right">Download Resume</p></a></li>
+                    <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
+                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
     }
 }
-
 class arrowBtn extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -122,14 +139,15 @@ class arrowBtn extends HTMLElement {
 
 customElements.define('nav-home', navBarHome);
 customElements.define('nav-works', navBar);
+customElements.define('nav-contacts', navBarContacts);
 customElements.define('foot-home', footHome);
 customElements.define('foot-works', footWorks);
 customElements.define('arrow-btn', arrowBtn);
 
 window.addEventListener('scroll', () => {
     const infoContainer = document.querySelector('.info-container');
-    const presentation = document.querySelector('.presentation');
-    const boardsContainer = document.querySelector('.boards-container');
+    const presentation = document.querySelector('.my-projects');
+    const boardsContainer = document.querySelector('.four-columns');
 
     const infoContainerInitialWidth = getComputedStyle(infoContainer).width; // Initial width of info-container
     const boardsContainerInitialWidth = getComputedStyle(boardsContainer).width; // Initial width of info-container
@@ -156,19 +174,15 @@ window.addEventListener('scroll', () => {
 function goBack() {
     window.history.back(); // Goes back to the previous page
 }
-
 // Pre-established order of pages
 const pageOrder = [
-    "terraviva.html",        // First page
-    "lope.html",     // Second page
-    "artlist.html",   // Third page
-    "equipe.html",      // Fourth page
-    "brochure.html",
     "magazine.html",
-    "initinere.html",
-   // "anaderosa.html",
+    //"",
+    "terraviva.html",
+    "equipe.html",      // Fourth page
+    "lope.html",
+    "iccrom.html",
     "frimm.html",
-    "ooom.html"
 ];
 
 // Function to navigate forward based on the current URL
@@ -187,14 +201,34 @@ const buttons = document.querySelectorAll('.my-projects'); // Select all project
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
-    const subtitle = button.querySelector('.social');
+    const projects = button.querySelector('.big-p');
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
-        if (subtitle) subtitle.classList.add('hover-effect'); // Add effect to subtitle
+        if (projects) projects.classList.add('hover-effect'); // Add effect to projects
     });                                                                                                        
     button.addEventListener('mouseout', () => {                                                                     
         if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
-        if (subtitle) subtitle.classList.remove('hover-effect'); // Remove effect from subtitle
+        if (projects) projects.classList.remove('hover-effect'); // Remove effect from projects
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const skills = document.querySelectorAll(".skills");
+    let index = 0;
+
+    function showNextSkill() {
+        skills.forEach(skill => {
+            skill.classList.remove("active");
+            skill.style.display = "none";
+        });
+
+        skills[index].classList.add("active");
+        skills[index].style.display = "flex";
+
+        index = (index + 1) % skills.length;
+    }
+
+    showNextSkill();
+    setInterval(showNextSkill, 3000);
 });

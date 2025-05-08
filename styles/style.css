@@ -34,66 +34,51 @@ a{transition: all 500ms ease;}
     background-color: #FFFEF2;
 }
 /**Text Properties**/
-.name{
-    font-family: Montserrat, sans-serif;
-    font-size: 72px;
-    font-weight: 900;
-    text-align: left;
-    text-transform: uppercase;
-    /**line-height: 80%;**/
-}
-.subtitle{
-    font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-}
-.title{
-    font-family: Montserrat, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-}
-.profile{
-    padding: 5vh;
-    font-family: Montserrat, sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    font-weight: normal;
-    text-align: justify;
-}
 p{
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 0.8rem;
     font-weight: normal;
     text-align: justify;
 }
 .menu{
     font-family: Montserrat, sans-serif;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: normal;
     text-transform: uppercase;
 }
-.social{
+.name{
     font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 1.6rem;
+    font-weight: normal;
     text-align: left;
+    text-transform: uppercase;
+    /**line-height: 80%;**/
+}
+.title .name{
+    text-align: right;
+}
+.big-p{
+    font-family: Montserrat, sans-serif;
+    font-size: 5.6rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+}
+.role{
+    font-family: Montserrat, sans-serif;
+    font-size: 7.2rem;
+    font-weight: 900;
+    text-align: left;
+    line-height: 6rem;
+    text-transform: uppercase;
 }
 .projects-width p{
     text-align: center;
 }
-.info-container p{
-    text-align: justify;
-}
 footer .corner{
     color: #EBE6D6;
 }
-
 /**General Properties**/
 .mobile{
     display: none;
@@ -102,22 +87,25 @@ footer .corner{
     display: grid;
 }
 .content-width{
-    justify-items: center;
-    width: 80vw;
+    justify-items: left;
+    width: 75vw;
 }
 .hero-container{
-    width: 100vw;
-    height: 70vh;
+    width: 75vw;
+    height: 56vh;
 }
 .hero-logo{
+    top: 6vh;
     position: absolute;
-    left: 40vw;
-    z-index: 0;
+    z-index: 1;
     object-fit: contain;
-    width: 20vw;
 }
 .hero{
     z-index: -1;
+}
+.presentation{
+    display: grid;
+    width: 40vw;
 }
 .projects-width{
     display: inline-flex;
@@ -125,69 +113,33 @@ footer .corner{
     width: 80vw;
 }
 .logo-name{
+    display: grid;
+    gap: 1.2rem;
     padding-top:30vh;
     width: 80vw;
     justify-items: start;
     justify-content: left;
 }
-.social-container{
-    display: inline-flex;
-    padding-left: 15vh;
-    justify-content: space-between;
-    width: 10vw;
-    align-content: start;
-}
 .link-container{
-    padding-right: 10vh;
-    display: inline-grid;
-    align-content: end;
-}
-.social-content{
-    width: 30px;
-    height: 30px;
-    justify-items: center;
-    justify-content: center;
-}
-.presentation{
+    padding-left: 8vw;
+    padding-right: 8vw;
     display: inline-flex;
-    gap: 60px;
-    width: 80vw;
+    grid-column-gap: 1.6rem;
 }
-.info-container-mobile {
-    width: 80vw;
-    padding-right: 30px;
-    text-align: justify;
-}
-.info-container {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 80vh;
-    position: relative; /* Default state */
-    width: 33%; /* Maintain responsive width */
-    /*padding-right: 30px;*/
-    text-align: justify;
-    z-index: 10; /* Ensure it remains above other content */
-}
-.button-container{
-    width: 24vw;
-    display: inline-flex;
-    justify-content: space-between;
-}
-.boards-container{
-    display: grid;
-    gap: 15px;
-    width: 66%;
-}
-.color-container{
-     display: inline-flex;
-     gap: 15px;
- }
 .mockup-container{
     display: inline-flex;
-    gap: 15px;
+   /* gap: 15px;*/
 }
 .mockup{
     width: 50%;
+}
+.brand-color{
+    height: 24vh;
+    align-items: baseline;
+}
+.screen-container{
+    grid-gap: 1.2rem;
+    grid-template-columns: repeat(5, auto);
 }
 .background {
     display: flex;
@@ -204,22 +156,18 @@ footer .corner{
     width: 20vw; /* Adjust the width as needed */
     object-fit: contain; /* Ensures the logo retains aspect ratio */
 }
-.brand-color{
-    height: 15vh;
-    border-radius: 10px;
-}
 /**Divider Properties**/
-.fifteen{
-    height: 15px;
+.one-two-rem{
+    height: 1.2rem;
 }
-.thirty{
-    height: 30px;
+.one-six-rem{
+    height: 1.6rem;
 }
-.sixty{
-    height: 60px;
+.five-six-rem{
+    height: 5.6rem;
 }
-.ninety{
-    height: 90px;
+.seven-two-rem{
+    height: 7.2rem;
 }
 .a-third{
     height: 30vh;
