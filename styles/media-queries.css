@@ -1,14 +1,21 @@
 @media (max-width: 1300px) {
-    .logo-name, .four-columns, .project-btn, .mockup-container,
-    .bracket-container, .content-width, .mockup, .four-columns,
-    .screen-container, .button-container{
+    .logo-name, .project-btn, .mockup-container,
+    .bracket-container, .mockup, .screen-container, .button-container{
         width: 80vw;
+    }
+    .chart-container{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .four-columns, .two-columns{
+        width: 75vw;
+    }
+    .intro, .skills{
+        flex-direction: column;
     }
     .half-mobile{
         width: 40vw;
-    }
-    .skills {
-        padding: 30px
     }
     .hero-logo {
         width: 60vw;
@@ -30,18 +37,18 @@
     .display{
         display: none;
     }
-    .social, .big-p{
-        font-size: 36px;
-    }
-    .menu{
-        font-size: 21px;
-    }
     .brand-color{
         height: 7vh;
     }
     .menu-li {
         padding-right: 10vw;
         padding-top: 2vh;
+    }
+    .profile-width, .presentation{
+        width: auto;
+    }
+    .skills.active{
+        display: block;
     }
 }
 

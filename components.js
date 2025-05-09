@@ -84,7 +84,7 @@ class footHome extends HTMLElement {
                 </div>
                 <ul class="link-container">
                     <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
+                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;
@@ -110,7 +110,7 @@ class footWorks extends HTMLElement {
                 </ul>
                 <ul class="link-container">
                     <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
+                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
                 </ul>
             </footer>
         `;

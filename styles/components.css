@@ -38,7 +38,11 @@ button {
 .skills{
     display: none; /* Nasconde tutti i div inizialmente */
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 3s ease-in-out;
+    align-items: end;
+}
+.intro{
+    display: flex;
     align-items: end;
 }
 .skills.active {
