@@ -20,7 +20,11 @@
     .hero-logo {
         width: 60vw;
     }
-    .social-container, .link-container {
+    .link-container{
+        width: 80vw;
+        justify-content: space-between;
+    }
+    .social-container{
         width: 30vw;
         padding-left: 10vw;
         padding-right: 10vw;
@@ -49,6 +53,14 @@
     }
     .skills.active{
         display: block;
+    }
+}
+@media (max-width: 1300px) {
+    .name{
+        font-size: 2.4rem;
+    }
+    .menu{
+        font-size: 1.6rem;
     }
 }
 
