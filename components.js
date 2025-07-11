@@ -119,7 +119,7 @@ class footWorks extends HTMLElement {
 class arrowBtn extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <div class="button-container">
+            <div class="button-container display">
                 <div style="position: relative;">
                     <div class="corner-btn top-left"></div>
                     <div class="border-btn btn-content">
@@ -232,3 +232,30 @@ document.addEventListener("DOMContentLoaded", function() {
     showNextSkill();
     setInterval(showNextSkill, 3000);
 });
+
+//swipe
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', function (event) {
+    touchStartX = event.changedTouches[0].screenX;
+}, false);
+
+document.addEventListener('touchend', function (event) {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    const swipeThreshold = 30;
+
+    if (touchEndX - touchStartX > swipeThreshold) {
+        // Swipe a destra (indietro)
+        if (window.prevButton) window.prevButton.click();
+    }
+
+    if (touchStartX - touchEndX > swipeThreshold) {
+        // Swipe a sinistra (avanti)
+        if (window.nextButton) window.nextButton.click();
+    }
+}
