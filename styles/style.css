@@ -157,6 +157,9 @@ footer .corner{
     object-fit: contain; /* Ensures the logo retains aspect ratio */
 }
 /**Divider Properties**/
+.point-eight{
+    height: 0.8rem;
+}
 .one-two-rem{
     height: 1.2rem;
 }

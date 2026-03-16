@@ -5,6 +5,11 @@ class navBarHome extends HTMLElement {
                     <ul class="link-container">
                         <li></li>
                          <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">about</a>
+                            </button>
+                        </li>
+                         <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html#projects">works</a>
                             </button>
@@ -84,7 +89,7 @@ class footHome extends HTMLElement {
                 </div>
                 <ul class="link-container display">
                     <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
+                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Résumé</p></a></li>
                 </ul>
             </footer>
         `;
@@ -110,7 +115,7 @@ class footWorks extends HTMLElement {
                 </ul>
                 <ul class="link-container display">
                     <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Download Resume</p></a></li>
+                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Résumé</p></a></li>
                 </ul>
             </footer>
         `;
@@ -224,13 +229,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         skills[index].classList.add("active");
-        skills[index].style.display = "flex";
+        skills[index].style.display = "grid";
 
         index = (index + 1) % skills.length;
     }
 
     showNextSkill();
-    setInterval(showNextSkill, 3000);
+    setInterval(showNextSkill, 4000);
 });
 
 //swipe
