@@ -60,7 +60,7 @@ button {
 .profile-width {
     display: grid;
     gap: 1.2rem;
-    width: 50vw;
+    /*width: 50vw;*/
     position: relative;
 }
 .four-columns {
