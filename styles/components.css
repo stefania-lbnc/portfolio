@@ -35,20 +35,9 @@ button {
     text-align: center;
     width: -webkit-fill-available;
 }
-.skills{
-    display: none; /* Nasconde tutti i div inizialmente */
-    opacity: 0;
-    transition: opacity 3s ease-in-out;
-    align-items: end;
-}
 .intro{
     display: flex;
     align-items: end;
-}
-.skills.active {
-    display: flex; /* Mostra solo il div attivo */
-    opacity: 1;
-    gap: 1.2rem;
 }
 /**Bracket**/
 .title{
@@ -59,7 +48,6 @@ button {
 }
 .profile-width {
     display: grid;
-    gap: 1.2rem;
     /*width: 50vw;*/
     position: relative;
 }
