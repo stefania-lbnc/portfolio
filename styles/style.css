@@ -1,6 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: justify;
+    gap: 3.2rem;
+    font-family: Montserrat, sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -35,46 +38,36 @@ a{transition: all 500ms ease;}
 }
 /**Text Properties**/
 p{
-    font-family: Montserrat, sans-serif;
     font-size: 0.8rem;
     font-weight: normal;
-    text-align: justify;
 }
 .menu{
-    font-family: Montserrat, sans-serif;
     font-size: 1.2rem;
     font-weight: normal;
     text-transform: uppercase;
 }
 .name{
-    font-family: Montserrat, sans-serif;
     font-size: 1.6rem;
     font-weight: normal;
-    text-align: left;
     text-transform: uppercase;
     /**line-height: 80%;**/
 }
-.title .name{
-    text-align: right;
+.areas{
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .big-p{
-    font-family: Montserrat, sans-serif;
     font-size: 5.6rem;
     font-weight: 700;
-    text-align: left;
     line-height: 4.8rem;
     text-transform: uppercase;
 }
 .role{
-    font-family: Montserrat, sans-serif;
     font-size: 7.2rem;
     font-weight: 900;
-    text-align: left;
     line-height: 6rem;
     text-transform: uppercase;
-}
-.projects-width p{
-    text-align: center;
 }
 footer .corner{
     color: #EBE6D6;
@@ -109,12 +102,11 @@ footer .corner{
 }
 .projects-width{
     display: inline-flex;
-    column-gap: 30px;
+    column-gap: 3.2rem;
     width: 80vw;
 }
 .logo-name{
     display: grid;
-    gap: 1.2rem;
     padding-top:56vh;
     /*width: 80vw;*/
     justify-items: start;
@@ -138,7 +130,7 @@ footer .corner{
     align-items: baseline;
 }
 .screen-container{
-    grid-gap: 1.2rem;
+    /**grid-gap: 1.2rem;**/
     grid-template-columns: repeat(5, auto);
 }
 .background {
@@ -165,6 +157,9 @@ footer .corner{
 }
 .one-six-rem{
     height: 1.6rem;
+}
+.three-two-rem{
+    height: 3.2rem;
 }
 .five-six-rem{
     height: 5.6rem;
