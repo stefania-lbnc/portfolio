@@ -40,7 +40,7 @@ button {
     align-items: end;
 }
 /**Bracket**/
-.title{
+.project-title{
     padding-top: 8vh;
     align-items: end;
     display: inline-flex;
@@ -117,6 +117,30 @@ button {
     border-left: none;
     border-top: none;
     transform: rotate(45deg);
+}
+/*brand color*/
+.swatches {
+    display: flex;
+    gap: 0;
+    height: 4rem;
+    width: 100%;
+}
+.swatch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.swatch:last-child {
+    flex: 1.5; /* 0.8 più largo = rapporto 1.5 : 1 */
+}
+.swatch-color {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: 4rem;
+}
+.swatch p {
+    padding: 8px 4px 0;
 }
 /* bar - usability test */
 .chart-container {
