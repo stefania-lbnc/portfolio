@@ -159,9 +159,14 @@ button {
 }
 .my-projects{
     display: flex;
-    gap: 1.2rem;
-    width: 75vw;
+    /*gap: 1.2rem;*/
+    width: 80vw;
     justify-content: space-between;
+    align-items: end;
+}
+.my-works{
+    display: inline-flex;
+    gap: 1.6rem;
     align-items: end;
 }
 .big-p.hover-effect {
