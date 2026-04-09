@@ -18,58 +18,38 @@
 </head>
 <body class="light-background">
 <nav-works></nav-works>
-<div class="content-width">
-    <div class="project-title">
-        <p class="role four-columns">ICCROM</p>
-        <p class="big-p two-columns display" style="text-align: right">2019</p>
-    </div>
-    <div class="one-two-rem"></div>
-    <p>Accademia d'Egitto a Roma - Flyer</p>
-    <div class="one-two-rem"></div>
-    <div class="hero-container">
-        <img src="assets/iccrom/presentazione.png">
-    </div>
-    <div class="one-two-rem"></div>
-    <div class="intro content-width">
-        <div class="big-p four-columns">Youth in the driver's seat</div>
-        <div class="two-columns">
-            <p>This expert meeting brought together young professionals and experts from across Africa to discuss the evolving role of youth in the field of cultural heritage conservation.
-                <br><br>Organized by ICCROM in partnership with the Egyptian Academy in Rome, the event provided a platform to amplify youth voices, share innovative practices, and reinforce Africa’s leadership in safeguarding its own heritage.
-                <br><br>The poster is a compelling visual representation of the event's core message — empowerment through youth engagement. Featuring a collage of vivid photographs of young African heritage professionals, it reflects the diversity, dynamism, and cultural richness of the continent.
-            </p>
-        </div>
-    </div>
-</div>
-<div class="one-two-rem"></div>
-    <div class="presentation">
+<works-page-layout hero-image="assets/iccrom/presentazione.png">
+    <span slot="title">ICCROM</span>
+    <span slot="year" style="text-align: right">2019</span>
+    <span slot="description">Event communication | Egyptian Academy in Rome</span>
+    <span slot="highlight">Youth in the driver's seat</span>
+    <span slot="content-left">This expert meeting brought together young professionals and experts from across Africa to discuss the evolving role of youth in the field of cultural heritage conservation.</span>
+    <span slot="content-right">Organized by ICCROM in partnership with the Egyptian Academy in Rome, the event provided a platform to amplify youth voices, share innovative practices, and reinforce Africa’s leadership in safeguarding its own heritage.
+        <br>The poster is a compelling visual representation of the event's core message — empowerment through youth engagement. Featuring a collage of vivid photographs of young African heritage professionals, it reflects the diversity, dynamism, and cultural richness of the continent.</span>
+    <div slot="images" style="gap: 0rem; background-color: black">
         <div class="mockup-container" >
             <img src="assets/iccrom/01.jpg">
         </div>
-        <div class="mockup-container" style="height: 30vh; background-color: black">
-            <div class="mockup">
-                <img src="assets/iccrom/05.jpg">
-            </div>
-            <div class="one-two-rem display"></div>
-            <div class="mockup">
-                <img src="assets/iccrom/04.jpg">
-            </div>
+        <div class="mockup-container">
+            <img src="assets/iccrom/05.jpg">
         </div>
-        <div class="mockup-container" style="height: 30vh; background-color: black">
-            <div class="mockup display">
+        <div class="mockup-container" style="gap: 0rem">
+            <div class="mockup ">
                 <img src="assets/iccrom/03.jpg">
             </div>
-            <div class="one-two-rem display"></div>
-            <div class="mockup">
-                <img src="assets/iccrom/06.jpg">
-            </div>
+                <div class="mockup" style="display: grid; gap: 0rem">
+                    <img src="assets/iccrom/06.jpg">
+                    <img src="assets/iccrom/04.jpg">
+                </div>
         </div>
         <div class="mockup-container" >
-                <img src="assets/iccrom/07.jpg">
+            <img src="assets/iccrom/07.jpg">
         </div>
     </div>
+</works-page-layout>
 <arrow-btn></arrow-btn>
-<div class="seven-two-rem"></div>
 <foot-works></foot-works>
 <script src="components.js"></script>
+<script src="works-page-layout.js"></script>
 </body>
 </html>

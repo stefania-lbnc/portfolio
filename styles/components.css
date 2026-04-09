@@ -139,9 +139,6 @@ button {
     aspect-ratio: 1 / 1;
     height: 4rem;
 }
-.swatch p {
-    padding: 8px 4px 0;
-}
 /* bar - usability test */
 .chart-container {
     display: grid;
