@@ -220,3 +220,10 @@ button {
     transition-duration: 0.15s;
     transition: ease-in-out;
 }
+/**Table styles**/
+tr {
+    border-bottom: 1px solid black;
+}
+td{
+    padding: 0.8rem;
+}
