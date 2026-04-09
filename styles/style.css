@@ -84,7 +84,7 @@ footer .corner{
     width: 80vw;
 }
 .hero-container{
-    width: 75vw;
+    width: 80vw;
     height: 56vh;
 }
 .hero-logo{
@@ -98,7 +98,7 @@ footer .corner{
 }
 .presentation{
     display: grid;
-    width: 40vw;
+    width: 80vw;
 }
 .projects-width{
     display: inline-flex;
@@ -120,7 +120,6 @@ footer .corner{
 }
 .mockup-container{
     display: inline-flex;
-   /* gap: 15px;*/
 }
 .mockup{
     width: 50%;

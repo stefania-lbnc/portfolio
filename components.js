@@ -128,13 +128,13 @@ class arrowBtn extends HTMLElement {
                 <div style="position: relative;">
                     <div class="corner-btn top-left"></div>
                     <div class="border-btn btn-content">
-                        <div class="menu-btn menu" onclick="goBack()" style="text-align: left">Back</div>
+                        <p class="menu-btn" onclick="goBack()" style="text-align: left">Back</p>
                     </div>
                 </div>
                 <div style="position: relative;">
                     <div class="corner-btn bottom-right"></div>
                     <div class="border-btn btn-content">
-                        <div class="menu-btn menu" onclick="goForward()">Next</div>
+                        <p class="menu-btn" onclick="goForward()">Next</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@ function goBack() {
 // Pre-established order of pages
 const pageOrder = [
     "magazine.html",
-    //"",
+    //"blindex",
     "terraviva.html",
     "equipe.html",      // Fourth page
     "lope.html",
