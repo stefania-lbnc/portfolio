@@ -1,24 +1,27 @@
 nav{
     position: fixed;
     top: 0;
+    left: 0;
     right: 0;
     height: 4vh;
-    padding: 2vh;
+    padding: 2vh 8vw;
     z-index: 15;
     justify-items: end;
     display: inline-flex;
     justify-content: end;
-    width: 100vw;
+    /**width: 100vw;**/
 }
 footer{
     display: inline-flex;
-    width: 100vw;
-    padding: 2vh 0;
+    border-top: black 1px solid;
+    /**width: 100vw;**/
+    padding: 2vh 8vw;
     justify-content: space-between;
     align-items: center;
-    height: 4vh;
+    height: 8vh;
     position: fixed;
     bottom: 0;
+    left: 0;
     right: 0;
     z-index: 13;
 }

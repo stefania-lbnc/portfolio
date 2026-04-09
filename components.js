@@ -29,9 +29,14 @@ class navBar extends HTMLElement {
         this.innerHTML = `
             <nav class="light-background">
                     <ul class="link-container">
-                        <li>
-                        <button class="menu-btn">
+                        <!--li>
+                            <button class="menu-btn">
                                 <a class="menu" href="index.html">home</a>
+                            </button>
+                        </li-->
+                        <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">about</a>
                             </button>
                         </li>
                          <li>
@@ -57,6 +62,11 @@ class navBarContacts extends HTMLElement {
                         <li>
                         <button class="menu-btn">
                                 <a class="menu" href="index.html" style="color: #FFFEF2">home</a>
+                            </button>
+                        </li>
+                        <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">about</a>
                             </button>
                         </li>
                          <li>
@@ -86,10 +96,12 @@ class footHome extends HTMLElement {
                         </a>
                     </li>
                 </ul>
-                </div>
                 <ul class="link-container display">
                     <li><a href="mailto:lobiancostefania@gmail.com"><p class="menu" style="text-align: right">lobiancostefania@gmail.com</p></a></li>
-                    <li class="display"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Résumé</p></a></li>
+                    <li class="menu"><a href="assets/Stefania%20Lo%20Bianco%20Resume.pdf" target="blank"><p class="menu" style="text-align: right">Résumé</p></a></li>
+                </ul>
+                <ul class="link-container display">
+                    <li><p>Designed by<br><a href="index.html">Stefania Lo Bianco</a> </p></li>
                 </ul>
             </footer>
         `;
