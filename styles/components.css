@@ -74,8 +74,6 @@ button {
     width: 90vw;
     padding: 0 8vh;
     justify-content: space-between;
-    position: fixed;
-    bottom: 32vh;
     right: 0;
     left: 0;
     z-index: 13;
@@ -221,9 +219,26 @@ button {
     transition: ease-in-out;
 }
 /**Table styles**/
+table{
+    border-inline: 1px solid black;
+}
+tbody{
+    display: inline-flex;
+    justify-content: space-between;
+}
 tr {
-    border-bottom: 1px solid black;
+    display: grid;
+    gap: 0;
 }
 td{
-    padding: 0.8rem;
+    padding: 0;
+}
+/**Typeface showcase**/
+.menu .comfortaa,
+.type-alphabet .comfortaa {
+    font-family: "Comfortaa", sans-serif;
+}
+.menu .source,
+.type-alphabet .source {
+    font-family: "Source Sans 3", sans-serif;
 }

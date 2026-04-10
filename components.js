@@ -144,6 +144,11 @@ class arrowBtn extends HTMLElement {
                     </div>
                 </div>
                 <div style="position: relative;">
+                    <div class="border-btn btn-content">
+                        <p class="menu-btn"><a href="index.html#projects">All works</a></p>
+                    </div>
+                </div>
+                <div style="position: relative;">
                     <div class="corner-btn bottom-right"></div>
                     <div class="border-btn btn-content">
                         <p class="menu-btn" onclick="goForward()">Next</p>

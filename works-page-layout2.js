@@ -21,32 +21,30 @@ class WorksPageLayout extends HTMLElement {
                 </div>
                 <div class="three-two-rem"></div>
                 <div class="profile-width">
-                    <div class="two-columns">
-                            <table>
-                              <tbody>
-                                <tr class="table-content">
-                                  <td><p>Type</p></td>
+                    <table>
+                        <tbody>
+                                <tr>
+                                  <td><p style="font-style: italic">Type</p></td>
                                   <td><p><slot name="type"></slot></p></td>
                                 </tr>
                                 <tr>
-                                  <td><p>Clients</p></td>
+                                  <td><p style="font-style: italic">Clients</p></td>
                                   <td><p><slot name="clients"></slot></p></td>
                                 </tr>
                                 <tr>
-                                  <td><p>Role</p></td>
+                                  <td><p style="font-style: italic">Role</p></td>
                                   <td><p><slot name="role"></slot></p></td>
                                 </tr>
                                 <tr>
-                                  <td><p>Collaborators</p></td>
+                                  <td><p style="font-style: italic">Collaborators</p></td>
                                   <td><p><slot name="collaborators"></slot></p></td>
                                 </tr>
                                 <tr>
-                                  <td><p>Deliverables</p></td>
+                                  <td><p style="font-style: italic">Deliverables</p></td>
                                   <td><p><slot name="deliverables"></slot></p></td>
                                 </tr>
                               </tbody>
-                            </table>
-                    </div>
+                    </table>
                     <div class="areas"><slot name="highlight"></slot></div>
                     <div>
                         <p class="menu">the brief</p>
