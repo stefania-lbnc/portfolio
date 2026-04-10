@@ -1,24 +1,27 @@
 nav{
     position: fixed;
     top: 0;
+    left: 0;
     right: 0;
     height: 4vh;
-    padding: 2vh;
+    padding: 2vh 8vw;
     z-index: 15;
     justify-items: end;
     display: inline-flex;
     justify-content: end;
-    width: 100vw;
+    /**width: 100vw;**/
 }
 footer{
     display: inline-flex;
-    width: 100vw;
-    padding: 2vh 0;
+    border-top: black 1px solid;
+    /**width: 100vw;**/
+    padding: 2vh 8vw;
     justify-content: space-between;
     align-items: center;
-    height: 4vh;
+    height: 8vh;
     position: fixed;
     bottom: 0;
+    left: 0;
     right: 0;
     z-index: 13;
 }
@@ -71,8 +74,6 @@ button {
     width: 90vw;
     padding: 0 8vh;
     justify-content: space-between;
-    position: fixed;
-    bottom: 32vh;
     right: 0;
     left: 0;
     z-index: 13;
@@ -216,4 +217,28 @@ button {
     display: none;
     transition-duration: 0.15s;
     transition: ease-in-out;
+}
+/**Table styles**/
+table{
+    border-inline: 1px solid black;
+}
+tbody{
+    display: inline-flex;
+    justify-content: space-between;
+}
+tr {
+    display: grid;
+    gap: 0;
+}
+td{
+    padding: 0;
+}
+/**Typeface showcase**/
+.menu .comfortaa,
+.type-alphabet .comfortaa {
+    font-family: "Comfortaa", sans-serif;
+}
+.menu .source,
+.type-alphabet .source {
+    font-family: "Source Sans 3", sans-serif;
 }
