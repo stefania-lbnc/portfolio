@@ -80,7 +80,6 @@ footer .corner{
     display: grid;
 }
 .content-width{
-    justify-items: left;
     width: 80vw;
 }
 .hero-container{

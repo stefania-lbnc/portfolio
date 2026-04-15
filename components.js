@@ -281,3 +281,17 @@ function handleSwipe() {
         if (window.nextButton) window.nextButton.click();
     }
 }
+
+const emailEl = document.querySelector('a[href^="mailto"] .role');
+function fitEmail() {
+    if (!emailEl) return;
+    const parent = emailEl.parentElement;
+    let size = 100;
+    emailEl.style.fontSize = size + 'px';
+    while (emailEl.scrollWidth > parent.clientWidth && size > 8) {
+        size--;
+        emailEl.style.fontSize = size + 'px';
+    }
+}
+fitEmail();
+window.addEventListener('resize', fitEmail);
