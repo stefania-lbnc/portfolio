@@ -1,47 +1,23 @@
-class navBarHome extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <nav class="light-yellow">
-                    <ul class="link-container">
-                        <li></li>
-                         <li>
-                             <button class="menu-btn">
-                                <a class="menu" href="index.html#about">about</a>
-                            </button>
-                        </li>
-                         <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#projects">works</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="contacts.html">get in touch</a>
-                            </button>
-                        </li>
-                    </ul>
-            </nav>
-        `;
-    }
-}
 class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="light-background">
-                    <ul class="link-container">
-                        <!--li>
+            <nav style="justify-content: space-between;">
+                    <ul class="light-background">
+                    <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html">home</a>
-                            </button>
-                        </li-->
-                        <li>
-                             <button class="menu-btn">
-                                <a class="menu" href="index.html#about">about</a>
+                                <a class="menu" href="index.html">Stefania Lo Bianco</a>
                             </button>
                         </li>
+                    </ul>
+                    <ul class="link-container">
                          <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html#projects">works</a>
+                            </button>
+                        </li>
+                        <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">manifesto</a>
                             </button>
                         </li>
                         <li>
@@ -159,8 +135,7 @@ class arrowBtn extends HTMLElement {
     }
 }
 
-customElements.define('nav-home', navBarHome);
-customElements.define('nav-works', navBar);
+customElements.define('navigation', navBar);
 customElements.define('nav-contacts', navBarContacts);
 customElements.define('foot-home', footHome);
 customElements.define('foot-works', footWorks);

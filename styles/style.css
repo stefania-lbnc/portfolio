@@ -42,7 +42,7 @@ p{
     font-weight: normal;
 }
 .menu{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -68,6 +68,7 @@ p{
     font-weight: 900;
     line-height: 6rem;
     text-transform: uppercase;
+    text-align: left;
 }
 footer .corner{
     color: #EBE6D6;
