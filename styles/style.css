@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    text-align: justify;
+    /**text-align: justify;**/
     gap: 3.2rem;
     font-family: Montserrat, sans-serif;
 }
@@ -9,6 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    color: #110E03;
     overflow-x: hidden;
     display: grid;
     justify-content: center;
@@ -23,23 +24,27 @@ img{
     height: 100%;
 }
 /** Hover and Visited transition **/
-a:link{text-decoration:none; text-decoration-color: black;}
+a:link{text-decoration:none; text-decoration-color: #110E03;}
 a:hover{color: #EBE6D6;}
-a:visited{text-decoration:none; color: black;}
-a:link {color: black;}
-a:visited {color: black;}
+a:visited{text-decoration:none; color: #110E03;}
+a:link {color: #110E03;}
+a:visited {color: #110E03;}
 a{transition: all 500ms ease;}
 /**Brand Color**/
-.light-yellow{
+.yellow{
     background-color: #EDDCA0;
 }
+.light-yellow{
+    background-color: #FCF9EE;
+}
 .light-background{
-    background-color: #FFFEF2;
+    background-color: #FEFCF7;
 }
 /**Text Properties**/
 p{
     font-size: 0.8rem;
     font-weight: normal;
+    text-align: justify;
 }
 .menu{
     font-size: 0.8rem;
@@ -62,6 +67,7 @@ p{
     font-weight: 700;
     line-height: 4.8rem;
     text-transform: uppercase;
+    text-align: left;
 }
 .role{
     font-size: 7.2rem;

@@ -3,7 +3,7 @@ class navBar extends HTMLElement {
         this.innerHTML = `
             <nav style="justify-content: space-between;">
                     <ul class="light-background">
-                    <li>
+                        <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html">Stefania Lo Bianco</a>
                             </button>
@@ -59,7 +59,7 @@ class navBarContacts extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="light-yellow">
+            <footer class="yellow">
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -135,7 +135,7 @@ class arrowBtn extends HTMLElement {
     }
 }
 
-customElements.define('navigation', navBar);
+customElements.define('nav-bar', navBar);
 customElements.define('nav-contacts', navBarContacts);
 customElements.define('foot-home', footHome);
 customElements.define('foot-works', footWorks);
