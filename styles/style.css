@@ -31,13 +31,16 @@ a:link {color: #110E03;}
 a:visited {color: #110E03;}
 a{transition: all 500ms ease;}
 /**Brand Color**/
-.yellow{
+.pitch-black{
+    background-color: #110E03;
+}
+.vanilla-custard{
     background-color: #EDDCA0;
 }
-.light-yellow{
+.floral-white{
     background-color: #FCF9EE;
 }
-.light-background{
+.porcelain{
     background-color: #FEFCF7;
 }
 /**Text Properties**/

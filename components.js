@@ -2,7 +2,7 @@ class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <nav style="justify-content: space-between;">
-                    <ul class="light-background">
+                    <ul class="porcelain">
                         <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html">Stefania Lo Bianco</a>
@@ -59,7 +59,7 @@ class navBarContacts extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="yellow">
+            <footer class="vanilla-custard">
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -88,7 +88,7 @@ class footWorks extends HTMLElement {
         this.innerHTML = `
             <div class="seven-two-rem"></div>
             <div class="seven-two-rem mobile"></div>
-            <footer class="light-background">
+            <footer class="porcelain">
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
