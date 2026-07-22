@@ -2,7 +2,7 @@ class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <nav style="justify-content: space-between;">
-                    <ul class="porcelain">
+                    <ul>
                         <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html">Stefania Lo Bianco</a>
@@ -59,7 +59,7 @@ class navBarContacts extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="vanilla-custard">
+            <footer class="pitch-black">
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -146,6 +146,8 @@ window.addEventListener('scroll', () => {
     const presentation = document.querySelector('.my-projects');
     const boardsContainer = document.querySelector('.four-columns');
 
+    if (!infoContainer || !presentation || !boardsContainer) return; // Elementi non presenti su questa pagina
+
     const infoContainerInitialWidth = getComputedStyle(infoContainer).width; // Initial width of info-container
     const boardsContainerInitialWidth = getComputedStyle(boardsContainer).width; // Initial width of info-container
     const presentationTop = presentation.getBoundingClientRect().top;
@@ -212,6 +214,7 @@ buttons.forEach(button => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const skills = document.querySelectorAll(".skills");
+    if (skills.length === 0) return; // Nessun elemento .skills su questa pagina
     let index = 0;
 
     function showNextSkill() {

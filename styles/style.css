@@ -185,3 +185,52 @@ footer .corner{
     border-top: 10px solid;
     border-color: black;
 }
+
+/**Hero: pin + cover (home)**/
+.pin-wrap {
+    position: relative;
+    height: 200vh;
+    width: 100vw;
+}
+#firsts-section {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+}
+.scroll-hint {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#seconds-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -100vh;
+    width: 100vw;
+    background-color: #110E03;
+    color: #FFFEF2;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+#seconds-section .hero-second {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+/* a:link è un colore scuro fisso qui sopra: lo correggo solo dentro
+   il pannello scuro, senza toccare il resto del sito */
+#seconds-section a:link,
+#seconds-section a:visited {
+    color: #FFFEF2;
+}

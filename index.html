@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Stefania Lo Bianco, a graphic and visual designer based in Rome specializing in editorial, brand identity, and UX/UI design.">
+    <meta property="og:title" content="Stefania Lo Bianco">
+    <meta property="og:description" content="Portfolio of Stefania Lo Bianco, a graphic and visual designer based in Rome specializing in editorial, brand identity, and UX/UI design.">
+    <meta property="og:type" content="website">
     <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,21 +23,28 @@
 </head>
 <body class="vanilla-custard">
 <nav-bar></nav-bar>
-    <div class="content-width">
-        <div class="logo-name">
-                <div style="position: relative; width: fit-content">
-                    <section>
-                        <div class="role">Design begins with curiosity</div>
-                    </section>
-                    <section>
-                        <div class="role">and is built with method.</div>
-                    </section>
+    <div class="pin-wrap">
+        <section id="firsts-section">
+            <div class="content-width">
+                <div class="logo-name">
+                    <div class="role">Design begins with curiosity</div>
                 </div>
-        </div>
-        <div>
-            <p>scroll down</p>
-            <span class="material-symbols-outlined">keyboard_arrow_down</span>
-        </div><!-- Hero -->
+            </div>
+            <div class="scroll-hint">
+                <p>scroll down</p>
+                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+        </section>
+    </div>
+    <div id="seconds-section">
+        <section class="hero-second">
+            <div class="content-width">
+                <div class="logo-name">
+                    <div class="role">and is built with method.</div>
+                </div>
+            </div>
+        </section>
+    <div class="content-width">
         <div class="seven-two-rem"></div>
         <div id="profile" class="a-third"></div>
         <div id="about"></div>
@@ -187,8 +199,9 @@
             </div>
         </section> <!-- Projects -->
     </div>
-<div class="a-third"></div>
-<foot-home></foot-home>
+    <div class="a-third"></div>
+    <foot-home></foot-home>
+    </div><!-- chiude seconds-section -->
 <script src="components.js"></script>
 </body>
 </html>

@@ -9,7 +9,13 @@ nav{
     justify-items: end;
     display: inline-flex;
     justify-content: end;
+    background-color: #110E03;
     /**width: 100vw;**/
+}
+nav a.menu,
+nav a.menu:link,
+nav a.menu:visited {
+    color: #FFFEF2;
 }
 footer{
     display: inline-flex;
@@ -24,6 +30,14 @@ footer{
     left: 0;
     right: 0;
     z-index: 13;
+}
+/* Footer scuro della home (foot-home, classe pitch-black): testo
+   sempre chiaro per contrasto */
+footer.pitch-black a,
+footer.pitch-black a:link,
+footer.pitch-black a:visited,
+footer.pitch-black p {
+    color: #FFFEF2;
 }
 /**Button Properties**/
 button {
