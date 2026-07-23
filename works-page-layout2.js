@@ -63,35 +63,42 @@ class WorksPageLayout extends HTMLElement {
                         <table>
                             <tbody>
                                     <tr>
-                                      <td><p style="font-style: italic">Type - <slot name="type"></slot></p></td>
+                                      <td><p style="font-style: italic">Type</p></td>
+                                      <td><p><slot name="type"></slot></p></td>
                                     </tr>
                                     <tr>
-                                      <td><p style="font-style: italic">Clients - <slot name="clients"></slot></p></td>
+                                      <td><p style="font-style: italic">Clients</p></td>
+                                      <td><p><slot name="clients"></slot></p></td>
                                     </tr>
                                     <tr>
-                                      <td><p style="font-style: italic">Role - <slot name="role"></slot></p></td>
+                                      <td><p style="font-style: italic">Role</p></td>
+                                      <td><p><slot name="role"></slot></p></td>
                                     </tr>
                                     <tr>
-                                      <td><p style="font-style: italic">Collaborators - <slot name="collaborators"></slot></p></td>
+                                      <td><p style="font-style: italic">Collaborators</p></td>
+                                      <td><p><slot name="collaborators"></slot></p></td>
                                     </tr>
                                     <tr>
-                                      <td><p style="font-style: italic">Deliverables - <slot name="deliverables"></slot></p></td>
+                                      <td><p style="font-style: italic">Deliverables</p></td>
+                                      <td><p><slot name="deliverables"></slot></p></td>
                                     </tr>
                                   </tbody>
                         </table>
-                        <div class="one-two-rem"></div>
-                        <div class="name"><slot name="highlight"></slot></div>
-                        <div class="point-eight"></div>
+                        <div class="three-two-rem"></div>
+                        <div class="areas"><slot name="highlight"></slot></div>
                         <div>
                             <p class="menu">the brief</p>
+                            <div class="point-eight"></div>
                             <p><slot name="brief"></slot></p>
                         </div>
                         <p class="menu" style="font-style: italic"><slot name="quote"></slot></p>
-                        <div class="point-eight"></div>
                         <div>
                             <p class="menu">my approach</p>
+                            <div class="point-eight"></div>
                             <p><slot name="approach"></slot></p>
                         </div>
+                        <div class="three-two-rem"></div>
+                        <slot name="nav"></slot>
                     </div>
                 </div>
             </div>

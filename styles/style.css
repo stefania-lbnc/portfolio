@@ -130,6 +130,9 @@ footer .corner{
 .mockup-container{
     display: inline-flex;
 }
+.mockup-container .mockup-text{
+    gap: 0;
+}
 .mockup{
     width: 50%;
 }

@@ -107,6 +107,16 @@ button {
     display: inline-flex;
     padding: 0 8vh;
 }
+/* arrow-btn nidificato dentro works-page-layout (sidebar destra):
+   da riga a piena larghezza (90vw) a colonna stretta, larga quanto
+   la sidebar. Non tocca arrow-btn dove resta fuori, sulle altre pagine */
+works-page-layout arrow-btn .button-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    gap: 0.8rem;
+}
 .btn-content{
     padding: 10px;
 }
