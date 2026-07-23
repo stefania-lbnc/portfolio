@@ -9,13 +9,23 @@ nav{
     justify-items: end;
     display: inline-flex;
     justify-content: end;
-    background-color: #110E03;
     /**width: 100vw;**/
 }
-nav a.menu,
-nav a.menu:link,
-nav a.menu:visited {
+/* Solo in home (body.vanilla-custard): nav scura fissa, per restare
+   leggibile sopra il pannello oro e quello nero. */
+body.vanilla-custard nav {
+    background-color: #110E03;
+}
+body.vanilla-custard nav a.menu,
+body.vanilla-custard nav a.menu:link,
+body.vanilla-custard nav a.menu:visited {
     color: #FFFEF2;
+}
+/* Solo nelle pagine progetto (body.porcelain): sfondo porcelain
+   esplicito, stesso colore di .porcelain, così resta un fondo
+   pieno anche quando le immagini della gallery scorrono sotto */
+body.porcelain nav {
+    background-color: #FEFCF7;
 }
 footer{
     display: inline-flex;
@@ -234,7 +244,7 @@ button {
 }
 /**Table styles**/
 table{
-    border-inline: 1px solid black;
+    border-block: 1px solid black;
 }
 tbody{
     display: inline-flex;

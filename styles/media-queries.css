@@ -14,6 +14,12 @@
     .intro, .skills{
         flex-direction: column;
     }
+    .project-columns{
+        flex-direction: column;
+    }
+    .project-sticky{
+        position: static;
+    }
     .half-mobile{
         width: 40vw;
     }

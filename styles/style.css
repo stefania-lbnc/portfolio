@@ -107,7 +107,7 @@ footer .corner{
 }
 .presentation{
     display: grid;
-    width: 80vw;
+    width: 100%;
 }
 .projects-width{
     display: inline-flex;
