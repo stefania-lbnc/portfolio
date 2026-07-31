@@ -11,22 +11,6 @@ nav{
     justify-content: end;
     /**width: 100vw;**/
 }
-/* Solo in home (body.vanilla-custard): nav scura fissa, per restare
-   leggibile sopra il pannello oro e quello nero. */
-body.vanilla-custard nav {
-    background-color: #110E03;
-}
-body.vanilla-custard nav a.menu,
-body.vanilla-custard nav a.menu:link,
-body.vanilla-custard nav a.menu:visited {
-    color: #FFFEF2;
-}
-/* Solo nelle pagine progetto (body.porcelain): sfondo porcelain
-   esplicito, stesso colore di .porcelain, così resta un fondo
-   pieno anche quando le immagini della gallery scorrono sotto */
-body.porcelain nav {
-    background-color: #FEFCF7;
-}
 footer{
     display: inline-flex;
     border-top: black 1px solid;
@@ -41,13 +25,48 @@ footer{
     right: 0;
     z-index: 13;
 }
-/* Footer scuro della home (foot-home, classe pitch-black): testo
-   sempre chiaro per contrasto */
-footer.pitch-black a,
-footer.pitch-black a:link,
-footer.pitch-black a:visited,
-footer.pitch-black p {
-    color: #FFFEF2;
+/* Sfondo di nav/footer in home: due pseudo-elementi pieni (nessun
+   testo dentro, quindi nessun doppione) che dissolvono via opacità
+   seguendo --ui-progress (0-1, aggiornata in continuo dallo scroll
+   in components.js). Il testo invece resta un solo elemento, il cui
+   colore segue --ui-color (anch'essa calcolata in continuo) */
+body.vanilla-custard nav,
+body.vanilla-custard footer {
+    position: fixed; /* ridichiarato per dare un contesto di posizionamento agli pseudo-elementi */
+}
+body.vanilla-custard nav::before,
+body.vanilla-custard nav::after,
+body.vanilla-custard footer::before,
+body.vanilla-custard footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+body.vanilla-custard nav::before,
+body.vanilla-custard footer::before {
+    background-color: #EDDCA0;
+    opacity: calc(1 - var(--ui-progress, 0));
+}
+body.vanilla-custard nav::after,
+body.vanilla-custard footer::after {
+    background-color: #110E03;
+    opacity: var(--ui-progress, 0);
+}
+body.vanilla-custard nav a.menu,
+body.vanilla-custard nav a.menu:link,
+body.vanilla-custard nav a.menu:visited,
+body.vanilla-custard footer a,
+body.vanilla-custard footer a:link,
+body.vanilla-custard footer a:visited,
+body.vanilla-custard footer p {
+    color: var(--ui-color, #110E03);
+}
+/* Solo nelle pagine progetto (body.porcelain): sfondo porcelain
+   esplicito, stesso colore di .porcelain, così resta un fondo
+   pieno anche quando le immagini della gallery scorrono sotto */
+body.porcelain nav {
+    background-color: #FEFCF7;
 }
 /**Button Properties**/
 button {
@@ -108,14 +127,32 @@ button {
     padding: 0 8vh;
 }
 /* arrow-btn nidificato dentro works-page-layout (sidebar destra):
-   da riga a piena larghezza (90vw) a colonna stretta, larga quanto
-   la sidebar. Non tocca arrow-btn dove resta fuori, sulle altre pagine */
+   riga orizzontale, niente cornici decorative, solo parola + freccia.
+   Non tocca arrow-btn dove resta fuori, sulle altre pagine */
 works-page-layout arrow-btn .button-container {
     width: 100%;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     gap: 0.8rem;
+}
+works-page-layout arrow-btn .corner-btn {
+    display: none;
+}
+works-page-layout arrow-btn .border-btn {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+works-page-layout arrow-btn .menu-btn {
+    width: auto;
+}
+works-page-layout arrow-btn .button-container > div:nth-child(1) .menu-btn::before {
+    content: "← ";
+}
+works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::after {
+    content: " →";
 }
 .btn-content{
     padding: 10px;

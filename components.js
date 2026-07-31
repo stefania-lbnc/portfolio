@@ -59,7 +59,7 @@ class navBarContacts extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="pitch-black">
+            <footer>
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -273,3 +273,39 @@ function fitEmail() {
 }
 fitEmail();
 window.addEventListener('resize', fitEmail);
+
+// Colore di nav/footer in home, in continuo con lo scroll di .pin-wrap:
+// --ui-progress guida la dissolvenza dello sfondo (due pseudo-elementi,
+// vedi components.css), --ui-color il colore del testo (un solo set
+// di link, nessun doppione: il colore stesso interpola col progress)
+const pinWrap = document.querySelector('.pin-wrap');
+if (pinWrap) {
+    const DARK_TEXT = [17, 14, 3];      // #110E03
+    const LIGHT_TEXT = [255, 254, 242]; // #FFFEF2
+
+    function lerp(a, b, t) {
+        return a + (b - a) * t;
+    }
+
+    function mixRgb(from, to, t) {
+        const r = Math.round(lerp(from[0], to[0], t));
+        const g = Math.round(lerp(from[1], to[1], t));
+        const b = Math.round(lerp(from[2], to[2], t));
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function updateUiProgress() {
+        const rect = pinWrap.getBoundingClientRect();
+        const total = rect.height - window.innerHeight; // ampiezza utile della transizione (100vh)
+        const scrolled = -rect.top;
+        let progress = total > 0 ? scrolled / total : 0;
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        document.documentElement.style.setProperty('--ui-progress', progress);
+        document.documentElement.style.setProperty('--ui-color', mixRgb(DARK_TEXT, LIGHT_TEXT, progress));
+    }
+
+    updateUiProgress();
+    window.addEventListener('scroll', updateUiProgress);
+    window.addEventListener('resize', updateUiProgress);
+}
