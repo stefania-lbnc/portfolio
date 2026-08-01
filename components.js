@@ -274,14 +274,13 @@ function fitEmail() {
 fitEmail();
 window.addEventListener('resize', fitEmail);
 
-// Colore di nav/footer in home, in continuo con lo scroll di .pin-wrap:
-// --ui-progress guida la dissolvenza dello sfondo (due pseudo-elementi,
-// vedi components.css), --ui-color il colore del testo (un solo set
-// di link, nessun doppione: il colore stesso interpola col progress)
+// Colore di nav/footer in home, in continuo con lo scroll di .pin-wrap
 const pinWrap = document.querySelector('.pin-wrap');
 if (pinWrap) {
     const DARK_TEXT = [17, 14, 3];      // #110E03
     const LIGHT_TEXT = [255, 254, 242]; // #FFFEF2
+    const GOLD_BG = [237, 220, 160];    // #EDDCA0
+    const DARK_BG = [17, 14, 3];        // #110E03
 
     function lerp(a, b, t) {
         return a + (b - a) * t;
@@ -294,18 +293,18 @@ if (pinWrap) {
         return `rgb(${r}, ${g}, ${b})`;
     }
 
-    function updateUiProgress() {
+    function updateUiColor() {
         const rect = pinWrap.getBoundingClientRect();
         const total = rect.height - window.innerHeight; // ampiezza utile della transizione (100vh)
         const scrolled = -rect.top;
         let progress = total > 0 ? scrolled / total : 0;
         progress = Math.min(Math.max(progress, 0), 1);
 
-        document.documentElement.style.setProperty('--ui-progress', progress);
         document.documentElement.style.setProperty('--ui-color', mixRgb(DARK_TEXT, LIGHT_TEXT, progress));
+        document.documentElement.style.setProperty('--ui-bg', mixRgb(GOLD_BG, DARK_BG, progress));
     }
 
-    updateUiProgress();
-    window.addEventListener('scroll', updateUiProgress);
-    window.addEventListener('resize', updateUiProgress);
+    updateUiColor();
+    window.addEventListener('scroll', updateUiColor);
+    window.addEventListener('resize', updateUiColor);
 }

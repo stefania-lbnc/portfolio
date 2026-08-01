@@ -1,6 +1,6 @@
 :root{
-    --ui-progress: 0;
     --ui-color: #110E03;
+    --ui-bg: #EDDCA0;
 }
 *{
     margin: 0;
