@@ -233,22 +233,23 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     /*height: fit-content;*/
 }
 .my-projects{
-    display: flex;
-    /*gap: 1.2rem;*/
-    width: 80vw;
-    justify-content: space-between;
-    align-items: end;
+    display: block;
 }
 .my-works{
     display: inline-flex;
     gap: 1.6rem;
-    align-items: end;
+    align-items: start;
+    width: 100%;
+    padding: 0.8rem 0;
 }
 /* List — counter lives here */
 .works-list {
     display: grid;
-    gap: 3.2rem;
+    gap: 0;
     counter-reset: works;
+}
+.my-projects:not(:last-child) .my-works {
+    border-bottom: 1px solid rgba(17, 14, 3, 0.1);
 }
 /* Auto-number via CSS counter */
 .work-item::before {
@@ -256,20 +257,29 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     content: counter(works, decimal-leading-zero);
     font-size: 0.8rem;
     font-weight: normal;
+    color: #999;
 }
-/* ── Hover states ── */
-.work-item:hover .areas {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 4.8rem;
+/* ── Hover states: categoria/anno/descrizione compaiono insieme sotto il titolo ── */
+.work-meta {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out;
+}
+.my-projects:hover .work-meta {
+    max-height: 6rem;
+    opacity: 1;
+    margin-top: 0.4rem;
+}
+.work-category {
+    font-size: 0.75rem;
     text-transform: uppercase;
-    transition-duration: 0.15s;
-    transition: ease-in-out;
+    color: #999;
 }
-.work-item:hover p {
-    display: none;
-    transition-duration: 0.15s;
-    transition: ease-in-out;
+.work-desc {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 0.15rem;
 }
 /**Table styles**/
 table{

@@ -37,7 +37,7 @@ class navBarContacts extends HTMLElement {
                     <ul class="link-container">
                         <li>
                         <button class="menu-btn">
-                                <a class="menu" href="index.html" style="color: #FFFEF2">home</a>
+                                <a class="menu" href="index.html">home</a>
                             </button>
                         </li>
                         <li>
@@ -47,10 +47,9 @@ class navBarContacts extends HTMLElement {
                         </li>
                          <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#projects" style="color: #FFFEF2">works</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
-                        <li></li>
                     </ul>
             </nav>
         `;
@@ -197,18 +196,25 @@ function goForward() {
 }
 //hover effect
 const buttons = document.querySelectorAll('.my-projects'); // Select all project links
+const worksPreviewImg = document.getElementById('works-preview-img');
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
     const projects = button.querySelector('.big-p');
+    const previewSrc = button.dataset.preview;
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
         if (projects) projects.classList.add('hover-effect'); // Add effect to projects
+        if (worksPreviewImg && previewSrc) {
+            worksPreviewImg.src = previewSrc;
+            worksPreviewImg.classList.add('active');
+        }
     });                                                                                                        
     button.addEventListener('mouseout', () => {                                                                     
         if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
         if (projects) projects.classList.remove('hover-effect'); // Remove effect from projects
+        if (worksPreviewImg) worksPreviewImg.classList.remove('active');
     });
 });
 
@@ -259,20 +265,6 @@ function handleSwipe() {
         if (window.nextButton) window.nextButton.click();
     }
 }
-
-const emailEl = document.querySelector('a[href^="mailto"] .role');
-function fitEmail() {
-    if (!emailEl) return;
-    const parent = emailEl.parentElement;
-    let size = 100;
-    emailEl.style.fontSize = size + 'px';
-    while (emailEl.scrollWidth > parent.clientWidth && size > 8) {
-        size--;
-        emailEl.style.fontSize = size + 'px';
-    }
-}
-fitEmail();
-window.addEventListener('resize', fitEmail);
 
 // Colore di nav/footer in home, in continuo con lo scroll di .pin-wrap
 const pinWrap = document.querySelector('.pin-wrap');

@@ -38,6 +38,9 @@ a{transition: all 500ms ease;}
 .pitch-black{
     background-color: #110E03;
 }
+.black{
+    background-color: #000000;
+}
 .vanilla-custard{
     background-color: #EDDCA0;
 }
@@ -188,6 +191,63 @@ footer .corner{
 .line-solid{
     border-top: 10px solid;
     border-color: black;
+}
+
+/**Layout a due colonne condiviso tra pagine progetto e lista lavori in home**/
+.project-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+}
+.project-gallery {
+    flex: 2;
+    min-width: 0;
+}
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+.project-sticky {
+    position: sticky;
+    top: 8vh;
+}
+
+/**Lista lavori a schermo diviso (home): il pannello si allunga a piena
+   altezza solo qui, senza toccare project-info nelle pagine progetto
+   (che ha bisogno di flex-start per restare sticky) **/
+.works-preview {
+    align-self: stretch;
+    overflow: hidden;
+}
+.works-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.works-preview img.active {
+    opacity: 1;
+}
+
+/**Pagina contatti: testo e link chiari su sfondo scuro, una sola
+   regola invece di ripetere color inline su ogni elemento**/
+body.black {
+    color: #FFFEF2;
+}
+body.black a:link,
+body.black a:visited {
+    color: #FFFEF2;
+}
+.email-link {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 /**Hero: pin + cover (home)**/
