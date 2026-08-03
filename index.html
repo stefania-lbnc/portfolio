@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Stefania Lo Bianco, a graphic and visual designer based in Rome specializing in editorial, brand identity, and UX/UI design.">
+    <meta property="og:title" content="Stefania Lo Bianco">
+    <meta property="og:description" content="Portfolio of Stefania Lo Bianco, a graphic and visual designer based in Rome specializing in editorial, brand identity, and UX/UI design.">
+    <meta property="og:type" content="website">
     <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--Google Icons-->
-    <!--Style Sheets-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />    <!--Style Sheets-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components.css">
     <!--Media Queries-->
@@ -16,19 +21,30 @@
     <link rel="icon" href="assets/white-fav-icon.svg" type="image/svg+xml">
     <title>Stefania Lo Bianco</title>
 </head>
-<body class="light-yellow">
-<nav-home></nav-home>
-    <div class="content-width">
-        <div class="logo-name">
-                <div class="name">hi! I’m STEFANIA LO BIANCO</div>
-                <div style="position: relative; width: fit-content">
-                    <div class="corner top-left"></div>
-                    <div class="corner bottom-right"></div>
-                    <div class="bracket-content">
-                        <p class="role">GRAPHIC &<br>VISUAL DESIGNER</p>
-                    </div>
+<body class="vanilla-custard">
+<nav-bar></nav-bar>
+    <div class="pin-wrap">
+        <section id="firsts-section">
+            <div class="content-width">
+                <div class="logo-name">
+                    <div class="role">Design begins with curiosity</div>
                 </div>
-            </div> <!-- Hero -->
+            </div>
+            <div class="scroll-hint">
+                <p>scroll down</p>
+                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+        </section>
+    </div>
+    <div id="seconds-section">
+        <section class="hero-second">
+            <div class="content-width">
+                <div class="logo-name">
+                    <div class="role">and is built with method.</div>
+                </div>
+            </div>
+        </section>
+    <div class="content-width">
         <div class="seven-two-rem"></div>
         <div id="profile" class="a-third"></div>
         <div id="about"></div>
@@ -94,97 +110,96 @@
                     <p class="menu">Selected works</p>
                     <p>A selection of editorial, branding, and digital projects.</p>
                 </div>
-                <div class="works-list">
-                    <div id="magazine" class="my-projects">
+                <div class="project-columns">
+                <div class="works-list project-gallery">
+                    <div id="magazine" class="my-projects" data-preview="assets/magazine/01.jpg">
                         <div class="my-works work-item">
                             <a href="magazine.html">
                                 <div class="areas">A.D.E. Magazine</div>
-                                <p class="two-columns">Editorial redesign | Egyptian Academy in Rome</p>
+                                <div class="work-meta">
+                                    <p class="work-category">Editorial · 2021</p>
+                                    <p class="work-desc">Editorial redesign | Egyptian Academy in Rome</p>
+                                </div>
                             </a>
-                        </div>
-                        <div style="justify-items: right">
-                            <p>Editorial</p>
-                            <p>2021</p>
                         </div>
                     </div>
                     <!--<div id="blindex" class="my-projects">
                         <div class="my-works work-item">
                             <a href="">
                                 <div class="areas four-columns">blindex</div>
-                                <p class="two-columns">Full brand identity | Commission </p>
+                                <div class="work-meta">
+                                    <p class="work-category">Brand Identity · 2026</p>
+                                    <p class="work-desc">Full brand identity | Commission</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>Brand Identity</p>
-                            <p>2026</p>
-                        </div>
                     </div>-->
-                    <div id="terraviva" class="my-projects">
+                    <div id="terraviva" class="my-projects" data-preview="assets/terraviva/01-hero.jpg">
                         <div class="my-works work-item">
                             <a href="terraviva.html">
                                 <div class="areas four-columns">TERRAVIVA</div>
-                                <p class="two-columns">Brand identity contest | Self-initiated</p>
+                                <div class="work-meta">
+                                    <p class="work-category">Brand Identity · 2024</p>
+                                    <p class="work-desc">Brand identity contest | Self-initiated</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>Brand Identity</p>
-                            <p>2024</p>
-                        </div>
                     </div>
-                    <div id="equipe" class="my-projects">
+                    <div id="equipe" class="my-projects" data-preview="assets/equipe/03-Velvetty-Poster-Mockup.jpg">
                         <div class="my-works work-item">
                             <a href="equipe.html">
                                 <div class="areas four-columns">EQUIPE</div>
-                                <p class="two-columns">Full brand identity | Commission</p>
+                                <div class="work-meta">
+                                    <p class="work-category">Brand Identity · 2023</p>
+                                    <p class="work-desc">Full brand identity | Commission</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>Brand Identity</p>
-                            <p>2023</p>
-                        </div>
                     </div>
-                    <div id="lope" class="my-projects">
+                    <div id="lope" class="my-projects" data-preview="assets/lope/01.jpg">
                         <div class="my-works work-item">
                             <a href="lope.html">
                                 <div class="areas four-columns">LØPE</div>
-                                <p class="two-columns">App design | Self-initiated</p>
+                                <div class="work-meta">
+                                    <p class="work-category">UX | UI · 2022</p>
+                                    <p class="work-desc">App design | Self-initiated</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>UX | UI</p>
-                            <p>2022</p>
-                        </div>
                     </div>
-                    <div id="Iccrom" class="my-projects">
+                    <div id="Iccrom" class="my-projects" data-preview="assets/iccrom/presentazione.png">
                         <div class="my-works work-item">
                             <a href="iccrom.html">
                                 <div class="areas four-columns">ICCROM</div>
-                                <p class="two-columns">Event communication | Egyptian Academy in Rome</p>
+                                <div class="work-meta">
+                                    <p class="work-category">Flyer · 2019</p>
+                                    <p class="work-desc">Event communication | Egyptian Academy in Rome</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>Flyer</p>
-                            <p>2019</p>
-                        </div>
                     </div>
-                    <div id="FRIMM" class="my-projects">
+                    <div id="FRIMM" class="my-projects" data-preview="assets/frimm/hero.webp">
                         <div class="my-works work-item">
                             <a href="frimm.html">
                                 <div class="areas four-columns">Frimm</div>
-                                <p class="two-columns">Event communication | Walk In Advertising Agency</p>
+                                <div class="work-meta">
+                                    <p class="work-category">Logo · 2017</p>
+                                    <p class="work-desc">Event communication | Walk In Advertising Agency</p>
+                                </div>
                             </a>
                         </div>
-                        <div style="justify-items: right">
-                            <p>Logo</p>
-                            <p>2017</p>
-                        </div>
                     </div>
+                </div>
+                <div class="works-preview project-info project-sticky">
+                    <img id="works-preview-img" src="" alt="">
+                </div>
                 </div>
             </div>
         </section> <!-- Projects -->
     </div>
-<div class="a-third"></div>
-<foot-home></foot-home>
+    <div class="a-third"></div>
+    <foot-home></foot-home>
+    </div><!-- chiude seconds-section -->
 <script src="components.js"></script>
 </body>
 </html>

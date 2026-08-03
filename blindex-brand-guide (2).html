@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--family font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--family font Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!--family font Sourse sans pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <!--Media Queries-->
+    <link rel="stylesheet" href="styles/media-queries.css">
+    <!--favIcon-->
+    <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
+    <title>blindex — Brand Guide</title>
+    <style>
+        /* ============================================================
+           Brand Guide chrome. Colors/fonts pulled from styles/style.css
+           (pitch-black, vanilla-custard, porcelain) — nothing invented.
+           Flat throughout: sharp corners, 1px solid borders, no shadows,
+           matching arrow-btn / table borders already used on the site.
+           Blindex's own accent (Rosso Ardesia #A63D40) marks anything
+           specific to this client's content; vanilla-custard stays the
+           guide's own tool accent (nav, buttons).
+           ============================================================ */
+        :root{
+            --ink: #110E03;
+            --porcelain: #FEFCF7;
+            --gold: #EDDCA0;
+            --floral: #FCF9EE;
+            --accent: #A63D40; /* Rosso Ardesia — Blindex only */
+            --sidebar-w: 17rem;
+        }
+        body{ display: block; background: var(--porcelain); }
+        a{ text-decoration: none; }
+
+        .bg-sidebar{
+            position: fixed; top: 0; left: 0; bottom: 0; width: var(--sidebar-w);
+            background: var(--ink); color: var(--porcelain);
+            display: flex; flex-direction: column; padding: 2.4rem 1.8rem;
+            overflow-y: auto; z-index: 60; gap: 0;
+        }
+        .bg-sidebar-eyebrow{ font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+        .bg-sidebar-name{ font-family: 'Comfortaa', sans-serif; font-size: 1.7rem; color: var(--porcelain); margin-top: .5rem; }
+        .bg-nav{ list-style: none; margin-top: 2.6rem; flex: 1; }
+        .bg-nav li a{
+            display: block; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+            color: rgba(254,252,247,.55); padding: .6rem 0 .6rem .8rem; border-left: 2px solid transparent;
+            transition: color .15s ease, border-color .15s ease;
+        }
+        .bg-nav li a:hover{ color: var(--porcelain); }
+        .bg-nav li a.active{ color: var(--gold); border-left-color: var(--gold); }
+        .bg-sidebar-footer{ padding-top: 1.6rem; border-top: 1px solid rgba(254,252,247,.15); display: flex; flex-direction: column; gap: .9rem; }
+        .bg-btn{
+            display: block; text-align: center; font-size: .72rem; letter-spacing: .05em; text-transform: uppercase;
+            padding: .8rem 1rem; border: 1px solid var(--gold); background: var(--gold); color: var(--ink); cursor: pointer;
+        }
+        .bg-btn:hover{ background: transparent; color: var(--gold); }
+        .bg-sidebar-link{ font-size: .7rem; color: rgba(254,252,247,.6); text-align: center; }
+        .bg-sidebar-link:hover{ color: var(--gold); }
+
+        .bg-toggle{
+            display: none; position: fixed; top: 1rem; left: 1rem; z-index: 110;
+            width: 2.6rem; height: 2.6rem; border: none; background: var(--ink); cursor: pointer;
+        }
+        .bg-toggle span, .bg-toggle span::before, .bg-toggle span::after{
+            content: ''; display: block; width: 16px; height: 1px; background: var(--porcelain); position: relative;
+        }
+        .bg-toggle span::before{ position: absolute; top: -5px; }
+        .bg-toggle span::after{ position: absolute; top: 5px; }
+        .bg-scrim{ display: none; position: fixed; inset: 0; background: rgba(17,14,3,.5); z-index: 55; }
+        .bg-scrim.visible{ display: block; }
+
+        main{ margin-left: var(--sidebar-w); padding: 4.5rem 4.5vw 3rem; max-width: 62rem; }
+        section{ padding-bottom: 4rem; margin-bottom: 4rem; border-bottom: 1px solid #E0E0E0; }
+        section:last-of-type{ border-bottom: none; }
+        .bg-eyebrow{ font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: #8a8a80; margin-bottom: .6rem; display: block; }
+        .bg-h{ font-family: 'Comfortaa', sans-serif; font-weight: 700; font-size: 2rem; text-transform: none; margin-bottom: 1rem; }
+
+        .bg-box{ border: 1px solid var(--ink); padding: 1.6rem; }
+
+        /* Timeline */
+        .bg-timeline{ display: flex; align-items: flex-start; justify-content: space-between; position: relative; padding-top: .4rem; }
+        .bg-timeline::before{ content: ""; position: absolute; top: 6px; left: 0; right: 0; height: 1px; background: #E0E0E0; }
+        .bg-tl-stage{ position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; flex: 1; text-align: center; padding: 0 .4rem; }
+        .bg-tl-dot{ width: 11px; height: 11px; border-radius: 50%; background: var(--porcelain); border: 1px solid var(--ink); margin-bottom: .9rem; }
+        .bg-tl-stage.done .bg-tl-dot{ background: var(--ink); border-color: var(--ink); }
+        .bg-tl-stage.current .bg-tl-dot{ background: var(--accent); border-color: var(--accent); width: 15px; height: 15px; margin-bottom: .75rem; }
+        .bg-tl-stage.upcoming .bg-tl-dot{ background: var(--porcelain); border-color: #cfcfc7; }
+        .bg-tl-label{ font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+        .bg-tl-stage.upcoming .bg-tl-label{ color: #9b9b90; }
+        .bg-tl-current-tag{ font-size: .68rem; font-style: italic; color: var(--accent); margin-top: .3rem; }
+
+        /* Mark */
+        .bg-mark-layout{ display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: start; }
+        .bg-mark-stage{
+            border: 1px solid var(--ink); height: 22rem; display: flex; align-items: center; justify-content: center;
+            transition: background .2s ease;
+        }
+        .bg-mark-stage[data-variant="dark"]{ background: var(--ink); }
+        .bg-mark-stage[data-variant="gold"]{ background: var(--gold); }
+        .bg-mark-stage img{ width: 55%; object-fit: contain; }
+        .bg-variant-row{ display: flex; gap: .5rem; margin-top: .9rem; }
+        .bg-variant-btn{
+            font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; padding: .5rem .9rem;
+            border: 1px solid var(--ink); background: var(--porcelain); color: var(--ink); cursor: pointer;
+        }
+        .bg-variant-btn.active{ background: var(--ink); color: var(--porcelain); }
+
+        /* Color */
+        .bg-swatch-color{ cursor: pointer; position: relative; }
+        .bg-copied::after{
+            content: "copied"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            background: rgba(254,252,247,.92); font-size: .68rem; text-transform: uppercase; color: var(--ink);
+        }
+
+        /* Typography */
+        .bg-type-scale{ border: 1px solid var(--ink); padding: 1.6rem; }
+        .bg-type-row{ display: flex; align-items: baseline; gap: 1.4rem; padding: .85rem 0; border-bottom: 1px solid #E0E0E0; }
+        .bg-type-row:last-child{ border-bottom: none; }
+        .bg-type-tag{ font-size: .68rem; color: #8a8a80; width: 5.5rem; flex-shrink: 0; }
+
+        /* Downloads */
+        .bg-download-list a{
+            display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--ink);
+            font-size: .8rem; text-transform: uppercase;
+        }
+        .bg-download-list a:hover{ color: var(--accent); }
+        .bg-download-list a span{ color: #8a8a80; }
+
+        /* Feedback */
+        .bg-input{
+            display: block; width: 100%; max-width: 28rem; font-family: Montserrat, sans-serif; font-size: .8rem; color: var(--ink);
+            border: none; border-bottom: 1px solid var(--ink); background: transparent; padding: .6rem 0;
+        }
+        .bg-input:focus{ outline: none; border-bottom-color: var(--accent); }
+        .bg-textarea{ border: 1px solid var(--ink); padding: .8rem; resize: vertical; max-width: 28rem; }
+        .bg-send-btn{
+            cursor: pointer; text-transform: uppercase; font-size: .72rem; letter-spacing: .05em;
+            border: none; background: none; border-bottom: 1px solid var(--ink); padding: 0 0 .25rem; font-family: Montserrat, sans-serif;
+        }
+        .bg-send-btn:hover{ color: var(--accent); border-color: var(--accent); }
+
+        .bg-sidebar, .bg-mark-stage, .bg-box, .bg-type-scale, .bg-input, .bg-textarea{ box-sizing: border-box; }
+
+        @media (max-width: 1300px){
+            .bg-sidebar{ transform: translateX(-100%); transition: transform .3s ease; width: 78%; max-width: 19rem; }
+            .bg-sidebar.open{ transform: translateX(0); }
+            main{ margin-left: 0; padding: 5.5rem 6vw 3rem; }
+            .bg-toggle{ display: flex; align-items: center; justify-content: center; }
+            .bg-mark-layout{ grid-template-columns: 1fr; }
+            .bg-title{ font-size: 3rem; }
+            .bg-timeline{ flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+            .bg-timeline::before{ display: none; }
+            .bg-tl-stage{ flex: none; width: 100%; flex-direction: row; align-items: center; text-align: left; gap: .9rem; padding: 0; }
+            .bg-tl-dot{ margin-bottom: 0; flex-shrink: 0; }
+            .bg-tl-current-tag{ margin-top: 0; }
+        }
+
+        @media print{
+            .bg-sidebar, .bg-toggle, .bg-scrim, .bg-no-print{ display: none !important; }
+            main{ margin-left: 0; max-width: none; padding: .6in .9in; }
+            section{ break-inside: avoid; page-break-after: always; border-bottom: none; }
+            section:last-of-type{ page-break-after: auto; }
+            @page{ size: landscape; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="bg-toggle" id="bgToggle" aria-label="Toggle navigation"><span></span></button>
+<div class="bg-scrim" id="bgScrim"></div>
+
+<aside class="bg-sidebar" id="bgSidebar">
+    <span class="bg-sidebar-eyebrow">Brand Guide</span>
+    <div class="bg-sidebar-name">blindex</div>
+    <ul class="bg-nav" id="bgNav">
+        <li><a href="#timeline" data-target="timeline">Timeline</a></li>
+        <li><a href="#brief" data-target="brief">Brief</a></li>
+        <li><a href="#concept" data-target="concept">Concept</a></li>
+        <li><a href="#mark" data-target="mark">The Mark</a></li>
+        <li><a href="#color" data-target="color">Color</a></li>
+        <li><a href="#type" data-target="type">Typography</a></li>
+        <li><a href="#use" data-target="use">In Use</a></li>
+        <li><a href="#downloads" data-target="downloads">Downloads</a></li>
+        <li><a href="#feedback" data-target="feedback">Feedback</a></li>
+    </ul>
+    <div class="bg-sidebar-footer">
+        <button class="bg-btn" id="bgPdfBtn" type="button">Download PDF</button>
+        <a class="bg-sidebar-link" href="blindex.html">← blindex case study</a>
+        <a class="bg-sidebar-link" href="index.html">Stefania Lo Bianco</a>
+    </div>
+</aside>
+
+<main>
+
+    <div>
+        <p class="big-p bg-title">blindex</p>
+        <p>Full Brand identity | Commission — blindex S.P.A. — 2026</p>
+    </div>
+
+    <div class="one-six-rem"></div>
+
+    <section id="timeline">
+        <span class="bg-eyebrow">Project Status</span>
+        <p class="bg-h">Where we are</p>
+        <div class="bg-timeline" id="bgTimeline"></div>
+    </section>
+
+    <section id="brief">
+        <span class="bg-eyebrow">The Brief</span>
+        <p class="bg-h">How do you make a technical product feel like a design choice?</p>
+        <p>Blindex makes custom roller blinds for offices, hotels, and commercial spaces. The client came to me needing a full brand identity — logo, guidelines, the works.
+        <br>The real challenge wasn't the aesthetics. It was figuring out how to communicate something functional and technical in a way that felt refined and considered — without losing sight of what the product actually does.
+        <br><br>The brief said "elegant and professional." I kept asking: what does elegant actually look like for a blind that disappears into a ceiling?</p>
+    </section>
+
+    <section id="concept">
+        <span class="bg-eyebrow">The Idea</span>
+        <p class="bg-h">Starting from the product, not the mood board</p>
+        <p>I built the concept around what the product actually does: it moves. Smoothly, quietly, always controlled. That gesture — a roller blind in motion — became the foundation for everything: the logo, the tone, the spacing, the palette.
+        <br>I called it Dynamic Flow. Not as a tagline, but as a design principle to keep every decision anchored to something real.</p>
+    </section>
+
+    <section id="mark">
+        <span class="bg-eyebrow">Visual Identity</span>
+        <p class="bg-h">The Mark</p>
+        <div class="bg-mark-layout">
+            <div>
+                <div class="bg-mark-stage" id="bgMarkStage" data-variant="light">
+                    <img src="assets/blindex/logo.svg" alt="blindex logo">
+                </div>
+                <div class="bg-variant-row" id="bgVariantRow"></div>
+            </div>
+            <div>
+                <p style="font-style: italic; font-weight: 600;">One letter does all the work</p>
+                <div class="point-eight"></div>
+                <p>I wanted a wordmark with a handcrafted feel — soft curves, continuous stroke, nothing rigid. The letterforms needed to communicate quality without looking like every other sans-serif identity out there.
+                <br>The "e" became the key. Its shape naturally echoes the scrolling motion of a blind — fluid, controlled, never breaking. Giving it a different colour wasn't just a stylistic choice: it's where the whole concept lives, visible at any size.</p>
+                <div class="one-six-rem"></div>
+                <p class="bg-eyebrow" style="margin-bottom:.3rem;">Clear space &amp; minimum size</p>
+                <p>[ Note the minimum clear space around the mark and the smallest size it can be reproduced at. ]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="color">
+        <span class="bg-eyebrow">Visual Identity</span>
+        <p class="bg-h">Color Palette</p>
+        <p>Deep Black and Ardesia Red anchor the primary system. The secondaries — Smoke, Pearl, Sage, Sand — give the brand room to breathe across different contexts without losing coherence. Sand is the default background: warm, quiet, never competing with the content.</p>
+        <p class="bg-eyebrow bg-no-print" style="margin-top:1.2rem;">Click a swatch to copy its hex</p>
+        <div class="one-six-rem"></div>
+        <div style="display: grid">
+            <div class="mockup-container">
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#111111" style="background:#111111"></div>
+                        <p>Nero Profondo #111111</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#A63D40" style="background:#a63d40"></div>
+                        <p>Rosso Ardesia #A63D40</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mockup-container">
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#666666" style="background:#666666"></div>
+                        <p>Grigio Fumo #666666</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#E0E0E0" style="background:#e0e0e0"></div>
+                        <p>Grigio Perla #E0E0E0</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#7A918D" style="background:#7a918d"></div>
+                        <p>Verde Salvia #7A918D</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color bg-swatch-color" data-hex="#F5F1EC" style="background:#f5f1ec"></div>
+                        <p>Sabbia Chiara #F5F1EC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="type">
+        <span class="bg-eyebrow">Visual Identity</span>
+        <p class="bg-h">Typography</p>
+        <p>Comfortaa for titles — geometric and soft, it carries the same warmth as the palette without being decorative. Source Sans Pro for everything else — clean, highly legible, completely unobtrusive.</p>
+        <div class="one-six-rem"></div>
+        <div class="bg-type-scale">
+            <div class="bg-type-row">
+                <span class="bg-type-tag">Heading</span>
+                <span style="font-family:'Comfortaa',sans-serif; font-weight:700; font-size:2rem;">Aa Bb Cc</span>
+            </div>
+            <div class="bg-type-row">
+                <span class="bg-type-tag">Body</span>
+                <span style="font-family:'Source Sans 3',sans-serif; font-size:1.1rem;">Aa Bb Cc — body copy sets in Source Sans Pro.</span>
+            </div>
+            <div class="bg-type-row">
+                <span class="bg-type-tag">Caption</span>
+                <span style="font-family:'Source Sans 3',sans-serif; font-size:.75rem; text-transform:uppercase; letter-spacing:.05em;">Caption / meta label</span>
+            </div>
+        </div>
+        <div class="one-six-rem"></div>
+        <div class="mockup-container">
+            <div class="mockup">
+                <span class="menu">Heading — Comfortaa</span>
+                <div class="point-eight"></div>
+                <p class="type-alphabet comfortaa">A B C D E F G H I J K L M<br>N O P Q R S T U V W X Y Z<br>0 1 2 3 4 5 6 7 8 9</p>
+                <div class="point-eight"></div>
+                <p>Logo | Titles | Display<br>Geometric, soft, contemporary</p>
+            </div>
+            <div class="mockup">
+                <span class="menu">Paragraph — Source Sans Pro</span>
+                <div class="point-eight"></div>
+                <p class="type-alphabet source">A B C D E F G H I J K L M<br>N O P Q R S T U V W X Y Z<br>0 1 2 3 4 5 6 7 8 9</p>
+                <div class="point-eight"></div>
+                <p>Body | Captions | UI<br>Neutral, functional, professional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="use">
+        <span class="bg-eyebrow">Visual Identity</span>
+        <p class="bg-h">Brand in Use</p>
+        <p>The brand book covers all the touchpoints a B2B brand actually needs: stationery, digital presentations, signage, environmental applications. If the guidelines are clear, the identity takes care of itself.</p>
+        <div class="one-six-rem"></div>
+        <div class="mockup-container">
+            <div class="mockup"><img src="assets/blindex/corner.svg"></div>
+            <div class="mockup"><img src="assets/blindex/space.svg"></div>
+        </div>
+    </section>
+
+    <section id="downloads" class="bg-no-print">
+        <span class="bg-eyebrow">Resources</span>
+        <p class="bg-h">Downloads</p>
+        <div class="bg-download-list">
+            <a href="assets/blindex/logo.svg" download>Primary logo <span>.svg</span></a>
+            <a href="#" id="dlPalette">Color palette <span>.css</span></a>
+            <a href="#" id="dlType">Typography spec <span>.txt</span></a>
+            <a href="#" id="dlPdf">Full guide <span>PDF</span></a>
+        </div>
+    </section>
+
+    <section id="feedback" class="bg-no-print">
+        <span class="bg-eyebrow">Get in touch</span>
+        <p class="bg-h">Notes &amp; Feedback</p>
+        <p>Questions, requested changes, anything unclear — leave a note and it opens as an email addressed to me directly.</p>
+        <div class="one-six-rem"></div>
+        <input type="text" id="fbName" placeholder="Your name" class="bg-input">
+        <div class="one-two-rem"></div>
+        <textarea id="fbComment" placeholder="Your comment..." class="bg-input bg-textarea" rows="4"></textarea>
+        <div class="one-two-rem"></div>
+        <button type="button" class="bg-send-btn" id="fbSend">Send feedback →</button>
+    </section>
+
+</main>
+
+<script>
+    /* ---------- Sidebar nav: mobile toggle + scroll spy ---------- */
+    (function () {
+        const sidebar = document.getElementById("bgSidebar");
+        const scrim = document.getElementById("bgScrim");
+        const toggle = document.getElementById("bgToggle");
+        function open() { sidebar.classList.add("open"); scrim.classList.add("visible"); }
+        function close() { sidebar.classList.remove("open"); scrim.classList.remove("visible"); }
+        toggle.addEventListener("click", function () {
+            sidebar.classList.contains("open") ? close() : open();
+        });
+        scrim.addEventListener("click", close);
+        document.querySelectorAll(".bg-nav a").forEach(function (a) { a.addEventListener("click", close); });
+
+        const links = document.querySelectorAll(".bg-nav a");
+        const sections = document.querySelectorAll("main section[id]");
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    links.forEach(function (l) { l.classList.remove("active"); });
+                    const match = document.querySelector('.bg-nav a[data-target="' + entry.target.id + '"]');
+                    if (match) match.classList.add("active");
+                });
+            }, { rootMargin: "-45% 0px -50% 0px" });
+            sections.forEach(function (s) { observer.observe(s); });
+        }
+    })();
+
+    /* ---------- Mark variant stage ---------- */
+    (function () {
+        const stage = document.getElementById("bgMarkStage");
+        const row = document.getElementById("bgVariantRow");
+        const variants = [
+            { key: "light", label: "Light" },
+            { key: "dark", label: "Dark" },
+            { key: "gold", label: "On Gold" },
+        ];
+        variants.forEach(function (v, i) {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "bg-variant-btn" + (i === 0 ? " active" : "");
+            btn.textContent = v.label;
+            btn.addEventListener("click", function () {
+                stage.setAttribute("data-variant", v.key);
+                row.querySelectorAll(".bg-variant-btn").forEach(function (b) { b.classList.remove("active"); });
+                btn.classList.add("active");
+            });
+            row.appendChild(btn);
+        });
+    })();
+
+    /* ---------- Swatch copy ---------- */
+    document.querySelectorAll(".bg-swatch-color").forEach(function (el) {
+        el.addEventListener("click", function () {
+            const hex = el.getAttribute("data-hex");
+            const done = function () {
+                el.classList.add("bg-copied");
+                setTimeout(function () { el.classList.remove("bg-copied"); }, 1200);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(hex).then(done).catch(done);
+            } else { done(); }
+        });
+    });
+
+    /* ---------- Downloads ---------- */
+    function bgDownload(filename, content, mime) {
+        const blob = new Blob([content], { type: mime });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url; a.download = filename;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    }
+    const paletteBtn = document.getElementById("dlPalette");
+    if (paletteBtn) paletteBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const css = [
+            ":root {", "  --nero-profondo: #111111;", "  --rosso-ardesia: #A63D40;",
+            "  --grigio-fumo: #666666;", "  --grigio-perla: #E0E0E0;",
+            "  --verde-salvia: #7A918D;", "  --sabbia-chiara: #F5F1EC;", "}",
+        ].join("\n");
+        bgDownload("blindex-palette.css", css, "text/css");
+    });
+    const typeBtn = document.getElementById("dlType");
+    if (typeBtn) typeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const txt = [
+            "blindex — Typography Spec", "",
+            "Primary: Comfortaa — Logo, titles, display. Geometric, soft, contemporary.",
+            "Secondary: Source Sans Pro — Body, captions, UI. Neutral, functional, professional.",
+        ].join("\n");
+        bgDownload("blindex-typography.txt", txt, "text/plain");
+    });
+    function triggerPdf(e) { if (e) e.preventDefault(); window.print(); }
+    const dlPdf = document.getElementById("dlPdf");
+    if (dlPdf) dlPdf.addEventListener("click", triggerPdf);
+    const bgPdfBtn = document.getElementById("bgPdfBtn");
+    if (bgPdfBtn) bgPdfBtn.addEventListener("click", triggerPdf);
+
+    /* ---------- Timeline — edit statuses: "done" | "current" | "upcoming" ---------- */
+    const TIMELINE = [
+        { label: "Brief", status: "done" },
+        { label: "Concept", status: "done" },
+        { label: "Visual Identity", status: "current" },
+        { label: "Applications", status: "upcoming" },
+        { label: "Guidelines", status: "upcoming" },
+        { label: "Delivery", status: "upcoming" },
+    ];
+    const tlEl = document.getElementById("bgTimeline");
+    if (tlEl) {
+        TIMELINE.forEach(function (stage) {
+            const el = document.createElement("div");
+            el.className = "bg-tl-stage " + stage.status;
+            el.innerHTML =
+                '<div class="bg-tl-dot"></div>' +
+                '<div class="bg-tl-label">' + stage.label + '</div>' +
+                (stage.status === "current" ? '<div class="bg-tl-current-tag">we are here</div>' : "");
+            tlEl.appendChild(el);
+        });
+    }
+
+    /* ---------- Feedback ---------- */
+    const fbSend = document.getElementById("fbSend");
+    if (fbSend) fbSend.addEventListener("click", function () {
+        const nameEl = document.getElementById("fbName");
+        const commentEl = document.getElementById("fbComment");
+        const name = (nameEl.value || "").trim() || "Anonymous";
+        const comment = (commentEl.value || "").trim();
+        if (!comment) { commentEl.focus(); return; }
+        const subject = encodeURIComponent("blindex Brand Guide — feedback from " + name);
+        const body = encodeURIComponent(comment + "\n\n— " + name);
+        window.location.href = "mailto:lobiancostefania@gmail.com?subject=" + subject + "&body=" + body;
+    });
+</script>
+</body>
+</html>

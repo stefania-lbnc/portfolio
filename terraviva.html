@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TerraViva brand identity contest entry, self-initiated in collaboration with Leandro Marin.">
+    <meta property="og:title" content="TERRAVIVA — Stefania Lo Bianco">
+    <meta property="og:description" content="TerraViva brand identity contest entry, self-initiated in collaboration with Leandro Marin.">
+    <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/terraviva/01-hero.jpg">
+    <meta property="og:type" content="website">
     <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +22,21 @@
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
     <title>TERRAVIVA</title>
 </head>
-<body class="light-background">
-<nav-works></nav-works>
+<body class="porcelain">
+<nav-bar></nav-bar>
 <works-page-layout hero-image="assets/terraviva/01-hero.jpg">
     <span slot="title">TERRAVIVA</span>
     <span slot="year" style="text-align: right">2023</span>
     <span slot="description">Brand identity contest | Self-initiated<br>
     In collaboration with <a href="https://leandro-marin.github.io/projects-2024/">Leandro Marin</a></span>
+    <span slot="type">Brand Identity</span>
+    <span slot="clients">Self-initiated | Contest Entry</span>
+    <span slot="role">Graphic Designer</span>
+    <span slot="collaborators">Leandro Marin</span>
+    <span slot="deliverables">Logo, Visual Identity</span>
     <span slot="highlight">The butterfly, a symbol of renewal.</span>
-    <span slot="content-right">The main idea from which this logo has been created is based on TerraViva's philosophy, which is based on promoting innovative practices focused on environmental and social sustainability.</span>
-    <span slot="content-left">In the work process, a lateral idea has been sought, always thinking outside the box.</span>
+    <span slot="brief">In the work process, a lateral idea has been sought, always thinking outside the box.</span>
+    <span slot="approach">The main idea from which this logo has been created is based on TerraViva's philosophy, which is based on promoting innovative practices focused on environmental and social sustainability.</span>
     <div slot="images">
         <div class="presentation">
             <div class="mockup-container">
@@ -55,9 +66,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mockup-container" style="align-items: end">
-                <p class="two-columns">Choosing the right typeface is crucial—it sets the tone and evokes an emotional response even before the words are read. A typeface’s personality should align with the project’s purpose to truly connect with the audience.</p>
-                <div class="four-columns" style="display: inline-flex">
+            <div class="mockup-container" style="flex-direction: column">
+                <p>Choosing the right typeface is crucial—it sets the tone and evokes an emotional response even before the words are read. A typeface’s personality should align with the project’s purpose to truly connect with the audience.</p>
+                <div style="display: inline-flex; gap: 1.6rem">
                     <div class="swatch">
                         <img src="assets/terraviva/font_comfortaa.webp" style="object-fit: contain">
                         <p>comfortaa bold</p>
@@ -103,13 +114,13 @@
             </div>
         </div>
     </div>
+    <arrow-btn slot="nav"></arrow-btn>
 </works-page-layout>
     <div class="hero-container">
         <img class="hero-logo display" src="assets/terraviva/logo-primary-white.svg" style="width: 40vw; left: 30vw">
         <img class="hero-logo mobile" src="assets/terraviva/logo-secondary.svg" style="width: 60vw; left: 20vw">
         <!--<img class="hero" src="assets/terraviva/01-hero.jpg"/>-->
     </div>
-<arrow-btn></arrow-btn>
 <foot-works></foot-works>
 <script src="components.js"></script>
 <script src="works-page-layout.js"></script>

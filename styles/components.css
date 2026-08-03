@@ -25,6 +25,31 @@ footer{
     right: 0;
     z-index: 13;
 }
+/* Sfondo e testo di nav/footer in home, guidati da --ui-progress e
+   --ui-color (aggiornate in continuo dallo scroll in components.js) */
+body.vanilla-custard nav {
+    background-color: var(--ui-bg, #EDDCA0) !important;
+}
+body.vanilla-custard footer {
+    background-color: var(--ui-bg, #EDDCA0) !important;
+}
+body.vanilla-custard nav a.menu,
+body.vanilla-custard nav a.menu:link,
+body.vanilla-custard nav a.menu:visited {
+    color: var(--ui-color, #110E03) !important;
+}
+body.vanilla-custard footer a,
+body.vanilla-custard footer a:link,
+body.vanilla-custard footer a:visited,
+body.vanilla-custard footer p {
+    color: var(--ui-color, #110E03) !important;
+}
+/* Solo nelle pagine progetto (body.porcelain): sfondo porcelain
+   esplicito, stesso colore di .porcelain, così resta un fondo
+   pieno anche quando le immagini della gallery scorrono sotto */
+body.porcelain nav {
+    background-color: #FEFCF7;
+}
 /**Button Properties**/
 button {
     border: 0;
@@ -82,6 +107,34 @@ button {
     justify-content: center;
     display: inline-flex;
     padding: 0 8vh;
+}
+/* arrow-btn nidificato dentro works-page-layout (sidebar destra):
+   riga orizzontale, niente cornici decorative, solo parola + freccia.
+   Non tocca arrow-btn dove resta fuori, sulle altre pagine */
+works-page-layout arrow-btn .button-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 0.8rem;
+}
+works-page-layout arrow-btn .corner-btn {
+    display: none;
+}
+works-page-layout arrow-btn .border-btn {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+works-page-layout arrow-btn .menu-btn {
+    width: auto;
+}
+works-page-layout arrow-btn .button-container > div:nth-child(1) .menu-btn::before {
+    content: "← ";
+}
+works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::after {
+    content: " →";
 }
 .btn-content{
     padding: 10px;
@@ -180,22 +233,23 @@ button {
     /*height: fit-content;*/
 }
 .my-projects{
-    display: flex;
-    /*gap: 1.2rem;*/
-    width: 80vw;
-    justify-content: space-between;
-    align-items: end;
+    display: block;
 }
 .my-works{
     display: inline-flex;
     gap: 1.6rem;
-    align-items: end;
+    align-items: start;
+    width: 100%;
+    padding: 0.8rem 0;
 }
 /* List — counter lives here */
 .works-list {
     display: grid;
-    gap: 3.2rem;
+    gap: 0;
     counter-reset: works;
+}
+.my-projects:not(:last-child) .my-works {
+    border-bottom: 1px solid rgba(17, 14, 3, 0.1);
 }
 /* Auto-number via CSS counter */
 .work-item::before {
@@ -203,24 +257,33 @@ button {
     content: counter(works, decimal-leading-zero);
     font-size: 0.8rem;
     font-weight: normal;
+    color: #999;
 }
-/* ── Hover states ── */
-.work-item:hover .areas {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 4.8rem;
+/* ── Hover states: categoria/anno/descrizione compaiono insieme sotto il titolo ── */
+.work-meta {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out, max-height 0.2s ease-in-out;
+}
+.my-projects:hover .work-meta {
+    max-height: 6rem;
+    opacity: 1;
+    margin-top: 0.4rem;
+}
+.work-category {
+    font-size: 0.75rem;
     text-transform: uppercase;
-    transition-duration: 0.15s;
-    transition: ease-in-out;
+    color: #999;
 }
-.work-item:hover p {
-    display: none;
-    transition-duration: 0.15s;
-    transition: ease-in-out;
+.work-desc {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 0.15rem;
 }
 /**Table styles**/
 table{
-    border-inline: 1px solid black;
+    border-block: 1px solid black;
 }
 tbody{
     display: inline-flex;

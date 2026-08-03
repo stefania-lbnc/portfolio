@@ -1,47 +1,23 @@
-class navBarHome extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <nav class="light-yellow">
-                    <ul class="link-container">
-                        <li></li>
-                         <li>
-                             <button class="menu-btn">
-                                <a class="menu" href="index.html#about">about</a>
-                            </button>
-                        </li>
-                         <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html#projects">works</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="menu-btn">
-                                <a class="menu" href="contacts.html">get in touch</a>
-                            </button>
-                        </li>
-                    </ul>
-            </nav>
-        `;
-    }
-}
 class navBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="light-background">
-                    <ul class="link-container">
-                        <!--li>
-                            <button class="menu-btn">
-                                <a class="menu" href="index.html">home</a>
-                            </button>
-                        </li-->
+            <nav style="justify-content: space-between;">
+                    <ul>
                         <li>
-                             <button class="menu-btn">
-                                <a class="menu" href="index.html#about">about</a>
+                            <button class="menu-btn">
+                                <a class="menu" href="index.html">Stefania Lo Bianco</a>
                             </button>
                         </li>
+                    </ul>
+                    <ul class="link-container">
                          <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html#projects">works</a>
+                            </button>
+                        </li>
+                        <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">manifesto</a>
                             </button>
                         </li>
                         <li>
@@ -61,7 +37,7 @@ class navBarContacts extends HTMLElement {
                     <ul class="link-container">
                         <li>
                         <button class="menu-btn">
-                                <a class="menu" href="index.html" style="color: #FFFEF2">home</a>
+                                <a class="menu" href="index.html">home</a>
                             </button>
                         </li>
                         <li>
@@ -71,10 +47,9 @@ class navBarContacts extends HTMLElement {
                         </li>
                          <li>
                             <button class="menu-btn">
-                                <a class="menu" href="index.html#projects" style="color: #FFFEF2">works</a>
+                                <a class="menu" href="index.html#projects">works</a>
                             </button>
                         </li>
-                        <li></li>
                     </ul>
             </nav>
         `;
@@ -83,7 +58,7 @@ class navBarContacts extends HTMLElement {
 class footHome extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="light-yellow">
+            <footer>
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -112,7 +87,7 @@ class footWorks extends HTMLElement {
         this.innerHTML = `
             <div class="seven-two-rem"></div>
             <div class="seven-two-rem mobile"></div>
-            <footer class="light-background">
+            <footer class="porcelain">
                 <ul class="link-container">
                     <li>
                         <a href="https://www.behance.net/stefanialobiancobe" target="_blank" class="social-content">
@@ -159,8 +134,7 @@ class arrowBtn extends HTMLElement {
     }
 }
 
-customElements.define('nav-home', navBarHome);
-customElements.define('nav-works', navBar);
+customElements.define('nav-bar', navBar);
 customElements.define('nav-contacts', navBarContacts);
 customElements.define('foot-home', footHome);
 customElements.define('foot-works', footWorks);
@@ -170,6 +144,8 @@ window.addEventListener('scroll', () => {
     const infoContainer = document.querySelector('.info-container');
     const presentation = document.querySelector('.my-projects');
     const boardsContainer = document.querySelector('.four-columns');
+
+    if (!infoContainer || !presentation || !boardsContainer) return; // Elementi non presenti su questa pagina
 
     const infoContainerInitialWidth = getComputedStyle(infoContainer).width; // Initial width of info-container
     const boardsContainerInitialWidth = getComputedStyle(boardsContainer).width; // Initial width of info-container
@@ -220,23 +196,31 @@ function goForward() {
 }
 //hover effect
 const buttons = document.querySelectorAll('.my-projects'); // Select all project links
+const worksPreviewImg = document.getElementById('works-preview-img');
 
 buttons.forEach(button => {
     const typeHover = button.querySelector('.type-hover'); // Find elements inside each button
     const projects = button.querySelector('.big-p');
+    const previewSrc = button.dataset.preview;
 
     button.addEventListener('mouseover', () => {                                                               
         if (typeHover) typeHover.classList.add('show'); // Show type-hover text         
         if (projects) projects.classList.add('hover-effect'); // Add effect to projects
+        if (worksPreviewImg && previewSrc) {
+            worksPreviewImg.src = previewSrc;
+            worksPreviewImg.classList.add('active');
+        }
     });                                                                                                        
     button.addEventListener('mouseout', () => {                                                                     
         if (typeHover) typeHover.classList.remove('show'); // Hide type-hover text                                                                          
         if (projects) projects.classList.remove('hover-effect'); // Remove effect from projects
+        if (worksPreviewImg) worksPreviewImg.classList.remove('active');
     });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
     const skills = document.querySelectorAll(".skills");
+    if (skills.length === 0) return; // Nessun elemento .skills su questa pagina
     let index = 0;
 
     function showNextSkill() {
@@ -280,4 +264,39 @@ function handleSwipe() {
         // Swipe a sinistra (avanti)
         if (window.nextButton) window.nextButton.click();
     }
+}
+
+// Colore di nav/footer in home, in continuo con lo scroll di .pin-wrap
+const pinWrap = document.querySelector('.pin-wrap');
+if (pinWrap) {
+    const DARK_TEXT = [17, 14, 3];      // #110E03
+    const LIGHT_TEXT = [255, 254, 242]; // #FFFEF2
+    const GOLD_BG = [237, 220, 160];    // #EDDCA0
+    const DARK_BG = [17, 14, 3];        // #110E03
+
+    function lerp(a, b, t) {
+        return a + (b - a) * t;
+    }
+
+    function mixRgb(from, to, t) {
+        const r = Math.round(lerp(from[0], to[0], t));
+        const g = Math.round(lerp(from[1], to[1], t));
+        const b = Math.round(lerp(from[2], to[2], t));
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function updateUiColor() {
+        const rect = pinWrap.getBoundingClientRect();
+        const total = rect.height - window.innerHeight; // ampiezza utile della transizione (100vh)
+        const scrolled = -rect.top;
+        let progress = total > 0 ? scrolled / total : 0;
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        document.documentElement.style.setProperty('--ui-color', mixRgb(DARK_TEXT, LIGHT_TEXT, progress));
+        document.documentElement.style.setProperty('--ui-bg', mixRgb(GOLD_BG, DARK_BG, progress));
+    }
+
+    updateUiColor();
+    window.addEventListener('scroll', updateUiColor);
+    window.addEventListener('resize', updateUiColor);
 }

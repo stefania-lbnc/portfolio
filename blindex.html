@@ -18,8 +18,8 @@
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
     <title>blindex</title>
 </head>
-<body class="light-background">
-<nav-works></nav-works>
+<body class="porcelain">
+<nav-bar></nav-bar>
 <works-page-layout hero-image="assets/blindex/logo.svg">
     <span slot="title">blindex</span>
     <span slot="year" style="text-align: right">2026</span>
@@ -29,24 +29,17 @@
     <span slot="role">Graphic Designer</span>
     <span slot="deliverables">Logo, Visual Identity, Brand Guidelines</span>
     <span slot="highlight">How do you make a technical product feel like a design choice? </span>
-    <span slot="brief">Blindex makes custom roller blinds for offices, hotels, and commercial spaces. The client came to me needing a full brand identity — logo, guidelines, the works.
-    <br>The real challenge wasn't the aesthetics. It was figuring out how to communicate something functional and technical in a way that felt refined and considered — without losing sight of what the product actually does.
-    <br><br>The brief said "elegant and professional." I kept asking: what does elegant actually look like for a blind that disappears into a ceiling?</span>
+    <span slot="brief">Blindex makes custom roller blinds for offices, hotels, and commercial spaces. The brief said "elegant and professional" — but what does elegant look like for a blind that disappears into a ceiling?</span>
     <span slot="quote">Starting from the product, not the mood board</span>
-    <span slot="approach">I built the concept around what the product actually does: it moves. Smoothly, quietly, always controlled. That gesture — a roller blind in motion — became the foundation for everything: the logo, the tone, the spacing, the palette.
-        <br>I called it Dynamic Flow. Not as a tagline, but as a design principle to keep every decision anchored to something real.</span>
+    <span slot="approach">The product moves — smoothly, quietly, always controlled. That gesture became the foundation for the logo, the tone, the palette. I called it Dynamic Flow.</span>
     <div slot="images">
         <div class="presentation">
             <div class="mockup-container">
                 <img src="assets/blindex/logo.svg">
             </div>
-            <div class="mockup-container">
-                <p class="two-columns menu" style="font-style: italic">One letter does all the work</p>
-                <div class="four-columns">
-                    <p>I wanted a wordmark with a handcrafted feel — soft curves, continuous stroke, nothing rigid. The letterforms needed to communicate quality without looking like every other sans-serif identity out there.
-                        <br>The "e" became the key. Its shape naturally echoes the scrolling motion of a blind — fluid, controlled, never breaking. Giving it a different colour wasn't just a stylistic choice: it's where the whole concept lives, visible at any size.
-                        <br>The rest of the wordmark stays grounded so the "e" can move.</p>
-                </div>
+            <div class="mockup-container" style="flex-direction: column">
+                <p class="menu" style="font-style: italic">One letter does all the work</p>
+                <p>The "e" became the key — its shape echoes the scrolling motion of a blind, fluid and controlled. Giving it a different colour is where the whole concept lives.</p>
             </div>
             <div class="mockup-container" style="align-items: center">
                 <div class="mockup" style="justify-items: center;">
@@ -56,12 +49,9 @@
                     <img src="assets/blindex/space.svg">
                 </div>
             </div>
-            <div class="mockup-container">
-                <div class="four-columns">
-                    <p>I didn't want a cold, corporate palette. Blindex works with architects and interior designers — people who care about how a space feels, not just how it looks on paper.
-                    <br>Deep Black and Ardesia Red anchor the primary system. The secondaries — Smoke, Pearl, Sage, Sand — give the brand room to breathe across different contexts without losing coherence. Sand in particular became the default background: warm, quiet, never competing with the content.</p>
-                </div>
-                <p class="two-columns menu" style="font-style: italic">Warm enough to feel human</p>
+            <div class="mockup-container" style="flex-direction: column">
+                <p class="menu" style="font-style: italic">Warm enough to feel human</p>
+                <p>Deep Black and Ardesia Red anchor the system; Smoke, Pearl, Sage, and Sand let it breathe. Sand became the default background — warm, quiet, never competing with the content.</p>
             </div>
             <div style="display: grid"><!--swatches-->
                 <div class="mockup-container">
@@ -97,13 +87,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mockup-container">
-                <p class="two-columns menu" style="font-style: italic">Two fonts, one direction</p>
-                <div class="four-columns">
-                    <p>Comfortaa for titles — geometric and soft, it carries the same warmth as the palette without being decorative. It's the face you see first and it sets the tone immediately.
-                    <br>Source Sans Pro for everything else — clean, highly legible, completely unobtrusive. It lets the content speak without getting in the way.
-                    <br>Together they cover the full range: from a bold heading on a presentation to a small caption on an installation manual.</p>
-                </div>
+            <div class="mockup-container" style="flex-direction: column">
+                <p class="menu" style="font-style: italic">Two fonts, one direction</p>
+                <p>Comfortaa for titles — geometric, soft, sets the tone immediately. Source Sans Pro for everything else — clean and unobtrusive, so the content speaks.</p>
             </div>
             <div class="mockup-container">
                     <div class="mockup">
@@ -123,12 +109,9 @@
                         <p>Body | Captions | UI<br>Neutral, functional, professional</p>
                     </div>
                 </div><!--type specimens-->
-            <div class="mockup-container"> <!--Brand in use-->
-                <p class="two-columns menu" style="font-style: italic">brand in use</p>
-                <div class="four-columns">
-                    <p>The brand book covers all the touchpoints a B2B brand actually needs: stationery, digital presentations, signage, environmental applications. The goal was a system flexible enough to work across all of them without needing to reinvent anything each time.
-                    <br>If the guidelines are clear, the identity takes care of itself.</p>
-                </div>
+            <div class="mockup-container" style="flex-direction: column"> <!--Brand in use-->
+                <p class="menu" style="font-style: italic">brand in use</p>
+                <p>The guidelines cover every touchpoint a B2B brand needs — stationery to signage — flexible enough that nothing has to be reinvented each time.</p>
             </div>
             <div class="mockup-container">
                 <div class="mockup">
@@ -143,10 +126,10 @@
             </div>
         </div>
     </div>
+    <arrow-btn slot="nav"></arrow-btn>
 </works-page-layout>
-<arrow-btn></arrow-btn>
 <foot-works></foot-works>
 <script src="components.js"></script>
-<script src="works-page-layout2.js"></script>
+<script src="works-page-layout.js"></script>
 </body>
 </html>

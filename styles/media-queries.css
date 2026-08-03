@@ -14,6 +14,15 @@
     .intro, .skills{
         flex-direction: column;
     }
+    .project-columns{
+        flex-direction: column;
+    }
+    .project-sticky{
+        position: static;
+    }
+    .works-preview{
+        display: none;
+    }
     .half-mobile{
         width: 40vw;
     }
@@ -37,6 +46,11 @@
     }
     .mobile, .my-projects{
         display: grid;
+    }
+    .work-meta{
+        max-height: none !important;
+        opacity: 1 !important;
+        margin-top: 0.4rem !important;
     }
     .display{
         display: none;
