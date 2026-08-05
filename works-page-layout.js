@@ -69,17 +69,11 @@ class WorksPageLayout extends HTMLElement {
                         </table>
                         <div class="three-two-rem"></div>
                         <div class="areas"><slot name="highlight"></slot></div>
+                        <div class="point-eight"></div>
                         <div>
-                            <p class="menu">the brief</p>
-                            <div class="point-eight"></div>
                             <p><slot name="brief"></slot></p>
                         </div>
                         <p class="menu" style="font-style: italic"><slot name="quote"></slot></p>
-                        <div>
-                            <p class="menu">my approach</p>
-                            <div class="point-eight"></div>
-                            <p><slot name="approach"></slot></p>
-                        </div>
                         <div class="three-two-rem"></div>
                         <slot name="nav"></slot>
                     </div>

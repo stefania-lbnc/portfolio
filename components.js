@@ -36,18 +36,18 @@ class navBarContacts extends HTMLElement {
             <nav style="background-color: black">
                     <ul class="link-container">
                         <li>
-                        <button class="menu-btn">
+                            <button class="menu-btn">
                                 <a class="menu" href="index.html">home</a>
-                            </button>
-                        </li>
-                        <li>
-                             <button class="menu-btn">
-                                <a class="menu" href="index.html#about">about</a>
                             </button>
                         </li>
                          <li>
                             <button class="menu-btn">
                                 <a class="menu" href="index.html#projects">works</a>
+                            </button>
+                        </li>
+                        <li>
+                             <button class="menu-btn">
+                                <a class="menu" href="index.html#about">manifesto</a>
                             </button>
                         </li>
                     </ul>
