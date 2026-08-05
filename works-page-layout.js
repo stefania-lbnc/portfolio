@@ -73,7 +73,6 @@ class WorksPageLayout extends HTMLElement {
                         <div>
                             <p><slot name="brief"></slot></p>
                         </div>
-                        <p class="menu" style="font-style: italic"><slot name="quote"></slot></p>
                         <div class="three-two-rem"></div>
                         <slot name="nav"></slot>
                     </div>

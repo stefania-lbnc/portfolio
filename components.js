@@ -113,7 +113,6 @@ class arrowBtn extends HTMLElement {
         this.innerHTML = `
             <div class="button-container display">
                 <div style="position: relative;">
-                    <div class="corner-btn top-left"></div>
                     <div class="border-btn btn-content">
                         <p class="menu-btn" onclick="goBack()" style="text-align: left">Back</p>
                     </div>
@@ -124,7 +123,6 @@ class arrowBtn extends HTMLElement {
                     </div>
                 </div>
                 <div style="position: relative;">
-                    <div class="corner-btn bottom-right"></div>
                     <div class="border-btn btn-content">
                         <p class="menu-btn" onclick="goForward()">Next</p>
                     </div>
