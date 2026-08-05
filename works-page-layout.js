@@ -85,8 +85,14 @@ class WorksPageLayout extends HTMLElement {
 
     connectedCallback() {
         const heroImage = this.getAttribute('hero-image');
+        const heroContainer = this.shadowRoot.querySelector('.hero-container');
         if (heroImage) {
-            this.shadowRoot.querySelector('.hero-container img').src = heroImage;
+            heroContainer.querySelector('img').src = heroImage;
+        } else {
+            heroContainer.style.display = 'none';
+            if (heroContainer.previousElementSibling) {
+                heroContainer.previousElementSibling.style.display = 'none';
+            }
         }
     }
 }
