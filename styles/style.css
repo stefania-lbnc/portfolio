@@ -137,6 +137,8 @@ footer .corner{
 }
 .mockup-container{
     display: inline-flex;
+    column-gap: 1.6rem;
+    min-width: 0;
 }
 .mockup{
     width: 50%;
@@ -198,7 +200,7 @@ footer .corner{
 .project-columns {
     display: flex;
     align-items: flex-start;
-    gap: 3.2rem;
+    gap: 1.6rem;
 }
 .project-gallery {
     flex: 2;

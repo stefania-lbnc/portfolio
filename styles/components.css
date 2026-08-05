@@ -167,6 +167,28 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     aspect-ratio: 1 / 1;
     height: 4rem;
 }
+/* Color blocks — swatch grande con nome/hex in overlay, ispirato a
+   riferimento Behance (Kokkopi): blocco pieno invece di quadratino */
+.color-blocks {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    min-width: 0;
+}
+.color-block {
+    flex: 1;
+    min-width: 0;
+    height: 18rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.6rem;
+}
+.color-block p {
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    text-align: left;
+}
 /* bar - usability test */
 .chart-container {
     display: grid;
@@ -271,11 +293,26 @@ td{
     padding: 0;
 }
 /**Typeface showcase**/
-.menu .comfortaa,
-.type-alphabet .comfortaa {
+.menu.comfortaa,
+.type-alphabet.comfortaa {
     font-family: "Comfortaa", sans-serif;
 }
-.menu .source,
-.type-alphabet .source {
+.menu.source,
+.type-alphabet.source {
     font-family: "Source Sans 3", sans-serif;
+}
+.menu.caslon,
+.type-alphabet.caslon,
+.caslon {
+    font-family: "Libre Caslon Display", serif;
+}
+.menu.lato,
+.type-alphabet.lato,
+.lato {
+    font-family: "Lato", sans-serif;
+}
+.menu.poppins,
+.type-alphabet.poppins,
+.poppins {
+    font-family: "Poppins", sans-serif;
 }

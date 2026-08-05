@@ -1,42 +1,45 @@
-# Aggiornamento — colori aggiunti
+# Aggiornamento
 
-Equipe: swatch #414D75 / #EEB91D aggiunti dopo il logo.
-Frimm: swatch Group #8E8F94 / Real Estate #711135 aggiunti come apertura della gallery.
-Gap `.presentation` ridotto a 1.6rem (style.css).
-Bottoni uniformati a bordo semplice, niente angoli (vedi risposta precedente).
+## Bug corretto — index.html
+`</div>` di troppo subito dopo il blocco commentato di Blindex, chiudeva .project-columns un colpo prima del dovuto e spingeva il pannello preview fuori dal contenitore a due colonne. Rimosso.
 
-Tipografia non ancora aggiunta: in attesa di conferma sui font sostitutivi (vedi chat).
+## Bug corretto — components.css (preesistente)
+I selettori dello specimen tipografico (.menu .comfortaa, .type-alphabet .comfortaa) avevano uno spazio, quindi non facevano mai match con l'HTML reale (classi sullo stesso elemento, non annidate). Risultato: lo specimen di Blindex mostrava sempre Montserrat invece dei font veri. Corretto in selettori composti (.menu.comfortaa ecc.), aggiunte anche versioni standalone per uso più flessibile.
 
-# Aggiornamento — riepilogo
+## Equipe — tipografia aggiunta
+Specimen completo stile Blindex: Adobe Caslon Pro (sostituito con Libre Caslon Display, free/Google Fonts) per titoli, Montserrat per corpo testo. Font caricato nell'head.
 
-## Bug corretto
-`works-page-layout.js` non renderizzava più lo slot "approach", ma blindex.html assegnava ancora contenuto vero a quello slot — la frase su "Dynamic Flow" sarebbe sparita dal sito pubblicato senza errori visibili. Corretto unendo quel contenuto nel campo "brief" di Blindex, stesso schema di tutte le altre pagine.
+## Frimm — tipografia aggiunta
+Versione leggera: solo nome font + una riga di esempio nel font vero, niente alfabeto completo. Gill Sans sostituito con Lato (free/Google Fonts, l'alternativa più vicina secondo più fonti indipendenti).
 
-## Blindex
-- Testo di brief unificato (brief + quote + approach uniti in un blocco solo)
-- Tolti slot="quote" e slot="approach" — anche dal componente, dato che ora nessuna pagina li usa più
-- Rimossi i paragrafi esplicativi dalla colonna immagini, mantenuti i quattro titoli-slogan brevi come marcatori tra le immagini
+## Terraviva — tipografia allineata
+Tolte le immagini statiche font_comfortaa.webp/font_poppins.webp, sostituite con lo specimen dal vivo (stessa formula di Equipe/Blindex): Comfortaa Bold per i titoli, Poppins per il corpo. Font caricati nell'head.
 
-## Terraviva
-- Rimossi i due paragrafi rimasti nella colonna immagini — il testo era già nel campo brief ma non era ancora stato tolto da lì, quindi la storia veniva raccontata due volte
+## Tipografia — sezione isolata rimossa (Opzione C)
+Tolto lo specimen tipografico da Equipe, Frimm, Terraviva e Blindex — il font ora si vede solo nei mockup applicati, non più come blocco a sé stante. Rimossi anche i font-import ormai inutilizzati (Libre Caslon Display, Lato, Comfortaa, Poppins, Source Sans 3) dalle rispettive pagine.
 
-## Løpe
-- Testo aggiornato alla versione finale concordata, tolte le etichette interne "Main Problem / Our Goal / Concept Design"
-- Bottone "See It in Action!" rinominato in "View prototype"
+## In sospeso
+Presentazione colore: in attesa di riferimento visivo (screenshot o descrizione) prima di modificare — Behance blocca l'accesso automatico alle immagini.
 
-## Bottoni uniformati
-- Back / All works / Next (sidebar pagine progetto) e "View prototype" (Løpe) hanno ora tutti lo stesso trattamento: bordo nero sottile 1px, angoli squadrati, niente parentesi decorative
-- Tolte le parentesi d'angolo (corner-btn) da components.js (arrow-btn) e da lope.html
-- Rimosse da components.css le regole ormai inutilizzate .corner-btn/.top-left/.bottom-right
+## Colore — blocchi grandi (rif. Behance/Kokkopi)
+Sostituiti i quadratini piccoli con blocchi colore grandi (aspect-ratio 2:3), nome/hex in overlay, testo bianco o nero calcolato per contrasto su ogni colore. Applicato a Blindex, Equipe, Terraviva, Frimm. Løpe non toccato — resta il vecchio formato swatch, non è una pagina brand identity.
 
-## Non toccato
-- Tutti gli altri file (equipe, frimm, iccrom, magazine, index, contacts) restano quelli che hai caricato
+Nota: non ho replicato la fascia colore accento sotto ogni blocco (come nel riferimento) — richiede decidere quale colore accoppiare a quale come "secondario", e per Equipe/Terraviva non ho nomi/ruoli assegnati ai colori. Se la vuoi, dimmi gli abbinamenti.
 
-## Hero rimosso dalle pagine brand
-Equipe, Terraviva, Blindex, Frimm: tolto l'hero-image in cima (era ridondante col Logo che ora apre comunque la gallery — Blindex ripeteva letteralmente lo stesso file due volte). Il componente ora nasconde lo spazio hero in modo pulito quando l'attributo non è presente, invece di lasciare un vuoto. Iccrom, A.D.E. Magazine e Løpe mantengono il loro hero, nessun conflitto lì.
+## Fix — gap verticale tra le righe colore di Blindex
+Il contenitore che impila la riga "anchor colors" e quella "breathing colors" non aveva un gap specificato, quindi ereditava i 3.2rem globali come spazio verticale. Impostato a 0.
 
-## Frimm — placeholder logo
-Aggiunto un blocco segnaposto come primo elemento della gallery (src="assets/frimm/LOGO-PLACEHOLDER.jpg", con commento HTML) — sostituiscilo con lo scatto vero del logo quando lo hai pronto.
+## Fix — Blindex sforava sulla colonna info
+`.color-block` aveva `flex:1` insieme ad `aspect-ratio`, senza `min-width:0` — un classico caso in cui i flex item non si restringono correttamente e il contenuto spinge oltre il contenitore. Aggiunto `min-width: 0`.
 
-## Hero rimosso ovunque
-Tolto anche da Iccrom, A.D.E. Magazine e Løpe — ora nessuna pagina progetto ha l'hero in cima, tutte partono direttamente da titolo/descrizione e vanno alla gallery.
+## Gap colonne — 3.2 → 1.6
+`.project-columns` (gallery/sidebar, condiviso da tutte le pagine progetto) era ancora a 3.2rem nonostante `.presentation` fosse già stato ridotto. Allineato a 1.6rem.
+
+## column-gap su mockup-container
+Aggiunto `column-gap: 1.6rem` a `.mockup-container` (prima ereditava i 3.2rem globali).
+
+## Fix — Blindex sforava ancora
+Lo stesso bug del giro precedente, ma un livello più su: non solo `.color-block` aveva bisogno di `min-width:0`, anche `.mockup-container` (come grid item di `.presentation`) e `.color-blocks` (come flex item di `.mockup-container`) avevano lo stesso problema di default — nessuno dei tre si restringeva sotto la propria dimensione di contenuto. Aggiunto `min-width: 0` a tutti e tre i livelli.
+
+## Fix — blocchi colore troppo alti a due
+Sostituito `aspect-ratio: 2/3` con `height: 18rem` fissa su `.color-block` — ora l'altezza resta uguale che ci siano 2 o 6 blocchi nella riga, cambia solo la larghezza.
