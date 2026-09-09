@@ -255,9 +255,9 @@ body.black a:visited {
 }
 
 /**Hero: pin + passaggio animato, poi la card scura per il resto della home**/
-.hero-pin{ height:160vh; position:relative; }
+.hero-pin{ height:160vh; position:relative; width:100vw; }
 .hero-stage{
-    position:sticky; top:0; height:100vh; z-index:1;
+    position:sticky; top:0; height:100vh; width:100vw; z-index:1;
     display:flex; justify-content:center;
 }
 .hero-slide{
