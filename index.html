@@ -22,28 +22,41 @@
     <title>Stefania Lo Bianco</title>
 </head>
 <body class="vanilla-custard">
-<nav-bar></nav-bar>
-    <div class="pin-wrap">
-        <section id="firsts-section">
-            <div class="content-width">
-                <div class="logo-name">
-                    <div class="role">Design begins with curiosity</div>
-                </div>
-            </div>
-            <div class="scroll-hint">
-                <p>scroll down</p>
-                <span class="material-symbols-outlined">keyboard_arrow_down</span>
-            </div>
-        </section>
+
+<div class="bg-split" id="bgSplit"></div>
+
+<div class="frame-fixed" id="frameFixed">
+  <div class="scroll-track track-left"></div>
+  <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
+  <div class="scroll-marker marker-left" id="markerLeft"></div>
+  <div class="scroll-track track-right"></div>
+  <div class="scroll-fill fill-right" id="scrollFillRight"></div>
+  <div class="scroll-marker marker-right" id="markerRight"></div>
+</div>
+
+<footer class="site-footer" id="siteFooter">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">Manifesto</a>
+  <span class="chevron">⌄</span>
+  <a href="index.html#projects">Works</a>
+  <a href="contacts.html">Contact</a>
+</footer>
+
+<svg class="sweep-line"><line id="sweepLine" x1="0" y1="0" x2="0" y2="0"></line></svg>
+
+<div class="hero-pin" id="heroPin">
+  <div class="hero-stage">
+    <div class="hero-slide" id="heroSlide1">
+      <p class="menu">Stefania Lo Bianco</p>
+      <h1 class="role">Design begins with curiosity</h1>
     </div>
-    <div id="seconds-section">
-        <section class="hero-second">
-            <div class="content-width">
-                <div class="logo-name">
-                    <div class="role">and is built with method.</div>
-                </div>
-            </div>
-        </section>
+    <div class="hero-slide" id="heroSlide2">
+      <h1 class="role">and is built with method.</h1>
+    </div>
+  </div>
+</div>
+
+<div class="dark-card">
     <div class="content-width">
         <div id="profile"></div>
         <div id="about"></div>
@@ -120,17 +133,17 @@
                             </a>
                         </div>
                     </div>
-                    <!--<div id="blindex" class="my-projects">
+                    <div id="blindex" class="my-projects" data-preview="assets/blindex/detail02.png">
                         <div class="my-works work-item">
-                            <a href="">
-                                <div class="areas four-columns">blindex</div>
+                            <a href="blindex.html">
+                                <div class="areas four-columns">Blindex</div>
                                 <div class="work-meta">
                                     <p class="work-category">Brand Identity · 2026</p>
                                     <p class="work-desc">Full brand identity | Commission</p>
                                 </div>
                             </a>
                         </div>
-                    </div>-->
+                    </div>
                     <div id="terraviva" class="my-projects" data-preview="assets/terraviva/hero-mobile.webp">
                         <div class="my-works work-item">
                             <a href="terraviva.html">
@@ -142,7 +155,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="equipe" class="my-projects" data-preview="assets/equipe/03-bc.webp">
+                    <div id="equipe" class="my-projects" data-preview="assets/equipe/BC02.webp">
                         <div class="my-works work-item">
                             <a href="equipe.html">
                                 <div class="areas four-columns">EQUIPE</div>
@@ -164,7 +177,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="Iccrom" class="my-projects" data-preview="assets/iccrom/01.jpg">
+                    <div id="Iccrom" class="my-projects" data-preview="assets/iccrom/presentazione.png">
                         <div class="my-works work-item">
                             <a href="iccrom.html">
                                 <div class="areas four-columns">ICCROM</div>
@@ -187,17 +200,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<div id="Blindex" class="my-projects" data-preview="assets/">
-                        <div class="my-works work-item">
-                            <a href="blindex.html">
-                                <div class="areas four-columns">Blindex</div>
-                                <div class="work-meta">
-                                    <p class="work-category">Brand Identity · 2026</p>
-                                    <p class="work-desc">Full Brand Identity | Commission</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>-->
                 <div class="works-preview project-info project-sticky">
                     <img id="works-preview-img" src="" alt="">
                 </div>
@@ -206,8 +208,7 @@
         </section> <!-- Projects -->
     </div>
     <div class="one-two-rem"></div>
-    <foot-home></foot-home>
-    </div><!-- chiude seconds-section -->
+    </div><!-- chiude dark-card -->
 <script src="components.js"></script>
 </body>
 </html>

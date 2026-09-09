@@ -3,67 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Full brand identity for Equipe Studio Architettura, a commissioned project.">
-    <meta property="og:title" content="EQUIPE — Stefania Lo Bianco">
-    <meta property="og:description" content="Full brand identity for Equipe Studio Architettura, a commissioned project.">
-    <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/equipe/03-Velvetty-Poster-Mockup.jpg">
+    <meta property="og:title" content="Equipe — Stefania Lo Bianco">
     <meta property="og:type" content="website">
-    <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!--Google Icons-->
-    <!--Style Sheets-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components.css">
-    <!--Media Queries-->
     <link rel="stylesheet" href="styles/media-queries.css">
-    <!--favIcon-->
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>EQUIPE</title>
+    <title>Equipe</title>
+    <style>
+      :root{ --accent:#EEB91D; }
+      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
+      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
+      .color-block p{ font-size:0.7rem; line-height:1.4; }
+      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
+      .logo-frame img{ width:auto; max-height:5rem; }
+      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
+    </style>
 </head>
 <body class="porcelain">
-<nav-bar></nav-bar>
-<works-page-layout>
-    <span slot="title">EQUIPE</span>
-    <span slot="year" style="text-align: right">2023</span>
-    <span slot="description">Full brand identity | Commission</span>
-    <span slot="type">Brand Identity</span>
-    <span slot="clients">Equipe Studio Architettura</span>
-    <span slot="role">Graphic Designer</span>
-    <span slot="deliverables">Logo, Visual Identity</span>
-    <span slot="highlight">strength meets grace</span>
-    <span slot="brief">The logo takes its shape from the classical arch — structural by nature, built the same way Equipe designs its spaces: functional first, considered always.
 
-Made to last, the way the studio's work is made to last.</span>
-    <div slot="images">
-        <div class="presentation">
-            <div class="mockup-container">
-                <img src="assets/equipe/01-logo.webp">
-            </div>
-            <div class="mockup-container">
-                <div class="color-blocks">
-                    <div class="color-block" style="background:#414D75">
-                        <p style="color:#FFFFFF">#414D75</p>
-                    </div>
-                    <div class="color-block" style="background:#EEB91D">
-                        <p style="color:#111111">#EEB91D</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mockup-container">
-                <img src="assets/equipe/02-bc.webp">
-            </div>
-            <div class="mockup-container">
-                <img src="assets/equipe/03-bc.webp">
-            </div>
-        </div>
+<div class="frame-fixed half" id="frameFixed">
+  <div class="scroll-track track-left"></div>
+  <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
+  <div class="scroll-marker marker-left" id="markerLeft"></div>
+</div>
+
+<header class="project-header">
+  <h1 class="big-p">Equipe</h1>
+  <p class="menu">Full brand identity | Commission — 2023</p>
+</header>
+
+<div class="outcome-banner">
+  <span class="menu tag">Outcome</span>
+  <span class="p">Logo approved and adopted by the client.</span>
+</div>
+
+<div class="meta-row">
+  <div class="item"><span>Type</span><span>Brand Identity</span></div>
+  <div class="item"><span>Clients</span><span>Equipe Studio Architettura</span></div>
+  <div class="item"><span>Role</span><span>Graphic Designer</span></div>
+  <div class="item"><span>Deliverables</span><span>Logo, Visual Identity</span></div>
+</div>
+
+<div class="project-body">
+<div class="project-columns">
+  <div class="works-list project-gallery">
+    <div class="gallery-group">
+      <p class="menu gallery-label">Idea</p>
+      <img src="assets/equipe-01-logo.webp" alt="Equipe logo on navy background">
     </div>
-    <arrow-btn slot="nav"></arrow-btn>
-</works-page-layout>
-<foot-works></foot-works>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Execution</p>
+      <div class="color-blocks">
+        <div class="color-block" style="background:#414D75;"><p style="color:#FFFFFF">#414D75<br>#414D75</p></div>
+        <div class="color-block" style="background:#EEB91D;"><p style="color:#111111">#EEB91D<br>#EEB91D</p></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Outcome</p>
+      <img src="assets/equipe-BC01.webp" alt="Equipe business card mockup">
+      <div style="height:1.6rem;"></div>
+      <img src="assets/equipe-BC02.webp" alt="Equipe business card detail">
+    </div>
+  </div>
+
+  <div class="project-info project-sticky">
+    <div class="story-block tension">
+      <p class="menu story-label">Tension</p>
+      <p class="story-text">strength meets grace</p>
+    </div>
+    <div class="story-block idea">
+      <p class="menu story-label">Idea</p>
+      <p class="p story-text">The logo takes its shape from the classical arch — structural by nature, built the same way Equipe designs its spaces: functional first, considered always.</p>
+    </div>
+    <div class="story-block execution">
+      <p class="menu story-label">Execution</p>
+      <p class="p story-text">Made to last, the way the studio's work is made to last.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="project-footer">
+  <a href="index.html">Home</a>
+  <div class="project-nav">
+    <a href="terraviva.html">← Terraviva</a>
+    <a href="lope.html">LØPE →</a>
+  </div>
+  <a href="contacts.html">Contact</a>
+</footer>
+
 <script src="components.js"></script>
-<script src="works-page-layout.js"></script>
 </body>
 </html>

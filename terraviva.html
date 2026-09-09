@@ -3,77 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TerraViva brand identity contest entry, self-initiated in collaboration with Leandro Marin.">
-    <meta property="og:title" content="TERRAVIVA — Stefania Lo Bianco">
-    <meta property="og:description" content="TerraViva brand identity contest entry, self-initiated in collaboration with Leandro Marin.">
-    <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/terraviva/01-hero.jpg">
+    <meta property="og:title" content="Terraviva — Stefania Lo Bianco">
     <meta property="og:type" content="website">
-    <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!--Google Icons-->
-    <!--Style Sheets-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components.css">
-    <!--Media Queries-->
     <link rel="stylesheet" href="styles/media-queries.css">
-    <!--favIcon-->
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>TERRAVIVA</title>
+    <title>Terraviva</title>
+    <style>
+      :root{ --accent:#277C77; }
+      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
+      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
+      .color-block p{ font-size:0.7rem; line-height:1.4; }
+      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
+      .logo-frame img{ width:auto; max-height:5rem; }
+      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
+    </style>
 </head>
 <body class="porcelain">
-<nav-bar></nav-bar>
-<works-page-layout>
-    <span slot="title">TERRAVIVA</span>
-    <span slot="year" style="text-align: right">2023</span>
-    <span slot="description">Brand identity contest | Self-initiated<br>
-    In collaboration with <a href="https://leandro-marin.github.io/projects-2024/">Leandro Marin</a></span>
-    <span slot="type">Brand Identity</span>
-    <span slot="clients">Self-initiated | Contest Entry</span>
-    <span slot="role">Graphic Designer</span>
-    <span slot="collaborators">Leandro Marin</span>
-    <span slot="deliverables">Logo, Visual Identity</span>
-    <span slot="highlight">The butterfly, a symbol of renewal.</span>
-    <span slot="brief">No leaf, no obvious eco-icon — the concept starts from TerraViva's own philosophy instead: innovative practices built around environmental and social sustainability.
-Crafted from golden triangles, the butterfly carries that idea directly — transformation, and the balance between nature and geometry. A modern, urban read on what sustainability can look like.
-<br>Typeface sets the tone before a single word is read. Comfortaa Bold gives it structure; Poppins keeps it grounded.
-<br>The result: a mark built on creativity, precision, and ecological awareness — TerraViva's own values, made visible.</span>
-    <div slot="images">
-        <div class="presentation">
-            <div class="mockup-container">
-                <img class="" src="assets/terraviva/hero.webp">
-            </div>
-            <div class="mockup-container">
-                <div class="color-blocks">
-                    <div class="color-block" style="background:#277C77"><p style="color:#FFFFFF">#277C77</p></div>
-                    <div class="color-block" style="background:#5D9D99"><p style="color:#FFFFFF">#5D9D99</p></div>
-                    <div class="color-block" style="background:#93BEBB"><p style="color:#111111">#93BEBB</p></div>
-                    <div class="color-block" style="background:#C9DEDD"><p style="color:#111111">#C9DEDD</p></div>
-                    <div class="color-block" style="background:#F84E58"><p style="color:#FFFFFF">#F84E58</p></div>
-                </div>
-            </div>
-            <div class="mockup-container">
-                <div class="mockup" style="justify-items: center;">
-                    <img src="assets/terraviva/02-mark.svg">
-                </div>
-                <div class="mockup">
-                    <img src="assets/terraviva/01-social.webp">
-                </div>
-            </div>
-            <div class="mockup-container">
-                <img src="assets/terraviva/02-social.webp">
-            </div>
-            <div class="mockup-container">
-                <img src="assets/terraviva/03_desktop.webp">
-            </div>
-        </div>
+
+<div class="frame-fixed half" id="frameFixed">
+  <div class="scroll-track track-left"></div>
+  <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
+  <div class="scroll-marker marker-left" id="markerLeft"></div>
+</div>
+
+<header class="project-header">
+  <h1 class="big-p">Terraviva</h1>
+  <p class="menu">Brand identity contest | Self-initiated, with Leandro Marin — 2024</p>
+</header>
+
+<div class="outcome-banner">
+  <span class="menu tag">Outcome</span>
+  <span class="p">Contest entry — not selected. The collaboration remains the strongest part of it.</span>
+</div>
+
+<div class="meta-row">
+  <div class="item"><span>Type</span><span>Brand Identity</span></div>
+  <div class="item"><span>Clients</span><span>Self-initiated · Contest Entry</span></div>
+  <div class="item"><span>Role</span><span>Graphic Designer</span></div>
+  <div class="item"><span>Deliverables</span><span>Logo, Visual Identity</span></div>
+</div>
+
+<div class="project-body">
+<div class="project-columns">
+  <div class="works-list project-gallery">
+    <div class="gallery-group">
+      <p class="menu gallery-label">Idea</p>
+      <div class="logo-frame" style="background:#277C77;"><img src="assets/terraviva-02-mark.svg" alt="Terraviva mark — butterfly from golden triangles"></div>
     </div>
-    <arrow-btn slot="nav"></arrow-btn>
-</works-page-layout>
-<foot-works></foot-works>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Execution</p>
+      <img src="assets/terraviva-hero.webp" alt="Terraviva logo lockup on brand texture">
+      <div style="height:1.6rem;"></div>
+      <div class="color-blocks">
+        <div class="color-block" style="background:#277C77;"><p style="color:#FFFFFF">#277C77<br>#277C77</p></div>
+        <div class="color-block" style="background:#5D9D99;"><p style="color:#FFFFFF">#5D9D99<br>#5D9D99</p></div>
+        <div class="color-block" style="background:#93BEBB;"><p style="color:#111111">#93BEBB<br>#93BEBB</p></div>
+        <div class="color-block" style="background:#C9DEDD;"><p style="color:#111111">#C9DEDD<br>#C9DEDD</p></div>
+        <div class="color-block" style="background:#F84E58;"><p style="color:#FFFFFF">#F84E58<br>#F84E58</p></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Outcome</p>
+      <img src="assets/terraviva-01-social.webp" alt="Terraviva Instagram application">
+      <div style="height:1.6rem;"></div>
+      <img src="assets/terraviva-02-social.webp" alt="Terraviva social cards">
+      <div style="height:1.6rem;"></div>
+      <img src="assets/terraviva-03-desktop.webp" alt="Terraviva website application">
+    </div>
+  </div>
+
+  <div class="project-info project-sticky">
+    <div class="story-block tension">
+      <p class="menu story-label">Tension</p>
+      <p class="story-text">No leaf, no obvious eco-icon.</p>
+    </div>
+    <div class="story-block idea">
+      <p class="menu story-label">Idea</p>
+      <p class="p story-text">The concept starts from TerraViva's own philosophy instead: innovative practices built around environmental and social sustainability. Crafted from golden triangles, the butterfly carries that idea directly — transformation, and the balance between nature and geometry. A modern, urban read on what sustainability can look like.</p>
+    </div>
+    <div class="story-block execution">
+      <p class="menu story-label">Execution</p>
+      <p class="p story-text">Typeface sets the tone before a single word is read. Comfortaa Bold gives it structure; Poppins keeps it grounded. The result: a mark built on creativity, precision, and ecological awareness — TerraViva's own values, made visible.
+      <span class="credit">Co-created with Leandro Marin.</span></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="project-footer">
+  <a href="index.html">Home</a>
+  <div class="project-nav">
+    <a href="blindex.html">← Blindex</a>
+    <a href="equipe.html">Equipe →</a>
+  </div>
+  <a href="contacts.html">Contact</a>
+</footer>
+
 <script src="components.js"></script>
-<script src="works-page-layout.js"></script>
 </body>
 </html>

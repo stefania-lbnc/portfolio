@@ -1,0 +1,309 @@
+:root{
+    --ui-color: #110E03;
+    --ui-bg: #EDDCA0;
+    --gutter: clamp(4.5rem, 9vw, 10rem);
+}
+*{
+    margin: 0;
+    padding: 0;
+    /**text-align: justify;**/
+    gap: 3.2rem;
+    font-family: Montserrat, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #110E03;
+    overflow-x: hidden;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+li{
+    list-style: none;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/** Hover and Visited transition **/
+a:link{text-decoration:none; text-decoration-color: #110E03;}
+a:hover{color: #EBE6D6;}
+a:visited{text-decoration:none; color: #110E03;}
+a:link {color: #110E03;}
+a:visited {color: #110E03;}
+a{transition: all 500ms ease;}
+/**Brand Color**/
+.pitch-black{
+    background-color: #110E03;
+}
+.black{
+    background-color: #000000;
+}
+.vanilla-custard{
+    background-color: #EDDCA0;
+}
+.floral-white{
+    background-color: #FCF9EE;
+}
+.porcelain{
+    background-color: #FEFCF7;
+}
+/**Text Properties**/
+p{
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: justify;
+}
+.menu{
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.name{
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    /**line-height: 80%;**/
+}
+.areas{
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.big-p{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+.role{
+    font-size: 7.2rem;
+    font-weight: 900;
+    line-height: 6rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+footer .corner{
+    color: #EBE6D6;
+}
+/**General Properties**/
+.mobile{
+    display: none;
+}
+.display{
+    display: grid;
+}
+.content-width{
+    width: 80vw;
+}
+.hero-container{
+    width: 80vw;
+    height: 56vh;
+}
+.hero-logo{
+    top: 6vh;
+    position: absolute;
+    z-index: 1;
+    object-fit: contain;
+}
+.hero{
+    z-index: -1;
+}
+.presentation{
+    display: grid;
+    width: 100%;
+    gap: 1.6rem;
+}
+.projects-width{
+    display: inline-flex;
+    column-gap: 3.2rem;
+    width: 80vw;
+}
+.logo-name{
+    display: grid;
+    padding-top:32vh;
+    /*width: 80vw;*/
+    justify-items: start;
+    justify-content: left;
+}
+.link-container{
+    /**padding-left: 8vw;
+    padding-right: 8vw;**/
+    display: inline-flex;
+    grid-column-gap: 1.6rem;
+}
+.mockup-container{
+    display: inline-flex;
+    column-gap: 1.6rem;
+    min-width: 0;
+}
+.mockup{
+    width: 50%;
+}
+.brand-color{
+    height: 24vh;
+    align-items: baseline;
+}
+.screen-container{
+    /**grid-gap: 1.2rem;**/
+    grid-template-columns: repeat(5, auto);
+}
+.background {
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    position: relative; /* Ensures positioning context for absolute elements */
+    z-index: 1;
+    width: 100%;
+    height: 15vh;
+}
+.logo {
+    position: absolute; /* Keeps logo fixed in place within the .hero */
+    z-index: 2;
+    width: 20vw; /* Adjust the width as needed */
+    object-fit: contain; /* Ensures the logo retains aspect ratio */
+}
+/**Divider Properties**/
+.point-eight{
+    height: 0.8rem;
+}
+.one-two-rem{
+    height: 1.2rem;
+}
+.one-six-rem{
+    height: 1.6rem;
+}
+.three-two-rem{
+    height: 3.2rem;
+}
+.five-six-rem{
+    height: 5.6rem;
+}
+.seven-two-rem{
+    height: 7.2rem;
+}
+.a-third{
+    height: 30vh;
+}
+.a-half{
+    height: 60vh;
+}
+.line-solid{
+    border-top: 10px solid;
+    border-color: black;
+}
+
+/**Layout a due colonne condiviso tra pagine progetto e lista lavori in home**/
+.project-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+.project-gallery {
+    flex: 2;
+    min-width: 0;
+}
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+.project-sticky {
+    position: sticky;
+    top: 8vh;
+}
+
+/**Lista lavori a schermo diviso (home): il pannello si allunga a piena
+   altezza solo qui, senza toccare project-info nelle pagine progetto
+   (che ha bisogno di flex-start per restare sticky) **/
+.works-preview {
+    align-self: stretch;
+    overflow: hidden;
+}
+.works-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.works-preview img.active {
+    opacity: 1;
+}
+
+/**Pagina contatti: testo e link chiari su sfondo scuro, una sola
+   regola invece di ripetere color inline su ogni elemento**/
+body.black {
+    color: #FFFEF2;
+}
+body.black a:link,
+body.black a:visited {
+    color: #FFFEF2;
+}
+.email-link {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/**Hero: pin + passaggio animato, poi la card scura per il resto della home**/
+.hero-pin{ height:160vh; position:relative; }
+.hero-stage{
+    position:sticky; top:0; height:100vh; z-index:1;
+    display:flex; justify-content:center;
+}
+.hero-slide{
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:0 var(--gutter); text-align:center;
+}
+.hero-slide .menu{ opacity:0.75; margin-bottom:1.2rem; }
+.hero-slide .role{ text-align:center; max-width:14ch; }
+#heroSlide1{ color:#110E03; }
+#heroSlide2{ color:#FCF9EE; }
+
+.dark-card{ position:relative; z-index:2; color:#FCF9EE; }
+.dark-card a:link,
+.dark-card a:visited{ color:#FCF9EE; }
+.bg-split{ position:fixed; inset:0; z-index:0; background:#110E03; pointer-events:none; }
+
+/**Cornice fissa: due linee laterali animate con lo scroll, stesso
+   segno su ogni pagina del sito**/
+.frame-fixed{ position:fixed; inset:0; pointer-events:none; z-index:40; color:#110E03; transition:color 0.2s ease; }
+.frame-fixed.on-dark{ color:#FCF9EE; }
+.scroll-track, .scroll-fill{ position:absolute; width:1px; top:6rem; height:50vh; }
+.scroll-track{ background:currentColor; opacity:0.2; }
+.scroll-fill{ background:currentColor; opacity:0.9; height:0; }
+.scroll-marker{
+    position:absolute; width:7px; height:7px; border-radius:50%;
+    border:1px solid currentColor; background:#FCF9EE; transform:translate(-50%,-50%);
+}
+.track-left, .fill-left{ left:2.6rem; }
+.track-right, .fill-right{ right:2.6rem; }
+.marker-left{ left:calc(2.6rem + 0.5px); }
+.marker-right{ right:calc(2.6rem - 3.5px); }
+
+.sweep-line{ position:fixed; inset:0; z-index:41; pointer-events:none; }
+.sweep-line line{ stroke:currentColor; stroke-width:1; opacity:0.6; }
+
+/**Footer fisso, unica navigazione del sito: Home / Manifesto / freccia / Works / Contact**/
+.site-footer{
+    position:fixed; left:0; right:0; bottom:0; z-index:42; background:transparent;
+    padding:1.6rem var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:1.6rem;
+    color:#110E03; transition:color 0.2s ease;
+}
+.site-footer.on-dark{ color:#FCF9EE; }
+.site-footer a{ color:inherit; text-decoration:none; font-weight:400; font-size:0.75rem; line-height:1.6; }
+.site-footer .chevron{ font-size:1.2rem; }
+
+/* Pagine interamente scure (contatti): cornice e footer chiari di default,
+   niente bisogno del contrasto calcolato via JS che serve solo sull'hero */
+body.black .frame-fixed{ color:#FCF9EE; }
+body.black .site-footer{ color:#FCF9EE; }

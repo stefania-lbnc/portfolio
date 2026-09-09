@@ -3,160 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="LØPE app design, a self-initiated UX/UI project built for the Google UX Design Certificate.">
     <meta property="og:title" content="LØPE — Stefania Lo Bianco">
-    <meta property="og:description" content="LØPE app design, a self-initiated UX/UI project built for the Google UX Design Certificate.">
-    <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/lope/01.jpg">
     <meta property="og:type" content="website">
-    <!--family font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--Google Icons-->
-    <!--Style Sheets-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components.css">
-    <!--Media Queries-->
     <link rel="stylesheet" href="styles/media-queries.css">
-    <!--favIcon-->
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
     <title>LØPE</title>
+    <style>
+      :root{ --accent:#D66BB5; }
+      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
+      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
+      .color-block p{ font-size:0.7rem; line-height:1.4; }
+      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
+      .logo-frame img{ width:auto; max-height:5rem; }
+      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
+    </style>
 </head>
 <body class="porcelain">
-<nav-bar></nav-bar>
-<works-page-layout>
-    <span slot="title">LØPE</span>
-    <span slot="year" style="text-align: right">2022</span>
-    <span slot="description">App design | Self-initiated<br>
-    Google Ux Design Certificate at Coursera</span>
-    <span slot="type">UX/UI Design</span>
-    <span slot="clients">Self-initiated</span>
-    <span slot="role">UX/UI Designer</span>
-    <span slot="deliverables">App Concept, UI Design, Prototype</span>
-    <span slot="highlight">We aim to create a community where users can communicate</span>
-    <span slot="brief">Right now, an app like this gets used once — to pre-order the album — then forgotten. The goal: give fans a reason to keep opening it, with a space to talk about the band built into the app itself.
-The design stays minimal — a page built around very few elements, with the album cover taking over as a full background whenever possible, keeping the band's visual identity front and center.</span>
-    <div slot="images">
-        <div class="presentation">
-            <div class="mockup-container">
-                <div class="color-blocks">
-                    <div class="color-block" style="background:#02011C"><p style="color:#FFFFFF">#02011C</p></div>
-                    <div class="color-block" style="background:#003268"><p style="color:#FFFFFF">#003268</p></div>
-                    <div class="color-block" style="background:#DFEBF4"><p style="color:#111111">#DFEBF4</p></div>
-                    <div class="color-block" style="background:#D66BB5"><p style="color:#FFFFFF">#D66BB5</p></div>
-                </div>
-            </div>
-            <div class="mockup-container display" >
-                <img src="assets/lope/01-wireframes.webp">
-            </div>
-            <div class="mockup-container display" >
-                <p class="menu">Usability Test</p>
-            </div>
-            <div class="mockup-container display">
-                <div style="width: 80%">
-                    <div class="chart-container">
-                        <div class="chart">
-                            <p style="font-weight: 500">Ease of Navigation</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 50%;"></li>
-                                <li class="bar" style="width: 80%;"></li>
-                            </ol>
-                        </div>
-                        <div class="chart">
-                            <p style="font-weight: 500">Easy to Use</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 40%;"></li>
-                                <li class="bar" style="width: 30%;"></li>
-                                <li class="bar" style="width: 70%;"></li>
-                            </ol>
-                        </div>
-                        <div class="chart">
-                            <p style="font-weight: 500">Well Integrated Functions</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 20%;"></li>
-                                <li class="bar" style="width: 50%;"></li>
-                                <li class="bar" style="width: 60%;"></li>
-                            </ol>
-                        </div>
-                        <div class="chart">
-                            <p style="font-weight: 500">Unnecessarily Complex</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 80%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 20%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                            </ol>
-                        </div>
-                        <div class="chart">
-                            <p style="font-weight: 500">Support Needed</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 80%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                            </ol>
-                        </div>
-                        <div class="chart">
-                            <p style="font-weight: 500">Inconsistency</p>
-                            <ol class="bar-container">
-                                <li class="bar" style="width: 30%;"></li>
-                                <li class="bar" style="width: 20%;"></li>
-                                <li class="bar" style="width: 30%;"></li>
-                                <li class="bar" style="width: 50%;"></li>
-                                <li class="bar" style="width: 0%;"></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div style="width: 20%">
-                    <div class="findings">
-                        <p class="menu">FINDINGS</p>
-                        <p>1. Most usability study participants need help finding the product they want because of the page organization.</p>
-                        <p>2. Most usability study participants prefer to recheck their data before confirming the purchase.</p>
-                        <p>3. They also prefer to have a complete recall of their purchase during the checkout.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="screen-container display">
-                <div><img class="screen" src="assets/lope/02-01-screen.webp"></div>
-                <div><img class="screen" src="assets/lope/02-02-screen.webp"></div>
-                <div><img class="screen" src="assets/lope/02-03-screen.webp"></div>
-                <div><img class="screen" src="assets/lope/02-04-screen.webp"></div>
-                <div><img class="screen" src="assets/lope/02-05-screen.webp"></div>
-            </div>
-            <div class="mockup-container" >
-                <img src="assets/lope/03-vinyl-record.jpg">
-            </div>
-            <div class="mockup-container">
-                <div class="mockup a-half">
-                    <img src="assets/lope/01---iPhone-with-Stones-Mockup-DKgoodart.jpg">
-                </div>
-                <div class="mockup a-half">
-                    <img src="assets/lope/02---iPhone-16-Pro-Mockup-DKgoodart.jpg">
-                </div>
-            </div>
-            <div class="prototype-container">
-                <div class="bracket-container">
-                    <div class="border-btn btn-content">
-                        <div class="menu-btn menu" onclick="window.open('https://www.figma.com/proto/MqvVFolTokaiqt64VEU5T6/pre-order-album-app-(after)-(Copy)?embed_host=share&amp;kind=proto&amp;node-id=393-1131&amp;page-id=391%3A1130&amp;scaling=scale-down&amp;starting-point-node-id=393%3A1131&amp;t=Sj1nEgMJkmDcu93k-1&amp;type=design&amp;mode=design')">View prototype</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<div class="frame-fixed half" id="frameFixed">
+  <div class="scroll-track track-left"></div>
+  <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
+  <div class="scroll-marker marker-left" id="markerLeft"></div>
+</div>
+
+<header class="project-header">
+  <h1 class="big-p">LØPE</h1>
+  <p class="menu">App design | Self-initiated — Google UX Design Certificate at Coursera — 2022</p>
+</header>
+
+<div class="outcome-banner">
+  <span class="menu tag">Outcome</span>
+  <span class="p">Interactive prototype built in Figma.</span>
+</div>
+
+<div class="meta-row">
+  <div class="item"><span>Type</span><span>UX/UI Design</span></div>
+  <div class="item"><span>Clients</span><span>Self-initiated</span></div>
+  <div class="item"><span>Role</span><span>UX/UI Designer</span></div>
+  <div class="item"><span>Deliverables</span><span>App Concept, UI Design, Prototype</span></div>
+</div>
+
+<div class="project-body">
+<div class="project-columns">
+  <div class="works-list project-gallery">
+    <div class="gallery-group">
+      <p class="menu gallery-label">Idea</p>
+      <img src="assets/lope-01-wireframes.webp" alt="LØPE wireframes">
     </div>
-    <arrow-btn slot="nav"></arrow-btn>
-</works-page-layout>
-<foot-works></foot-works>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Execution</p>
+      <div class="color-blocks">
+        <div class="color-block" style="background:#02011C;"><p style="color:#FFFFFF">#02011C<br>#02011C</p></div>
+        <div class="color-block" style="background:#003268;"><p style="color:#FFFFFF">#003268<br>#003268</p></div>
+        <div class="color-block" style="background:#DFEBF4;"><p style="color:#111111">#DFEBF4<br>#DFEBF4</p></div>
+        <div class="color-block" style="background:#D66BB5;"><p style="color:#FFFFFF">#D66BB5<br>#D66BB5</p></div>
+      </div>
+      <div style="height:1.6rem;"></div>
+      <img src="assets/lope-02-01-screen.webp" alt="LØPE app screen 1">
+      <img src="assets/lope-02-02-screen.webp" alt="LØPE app screen 2">
+      <img src="assets/lope-02-03-screen.webp" alt="LØPE app screen 3">
+      <img src="assets/lope-02-04-screen.webp" alt="LØPE app screen 4">
+      <img src="assets/lope-02-05-screen.webp" alt="LØPE app screen 5">
+      <div style="height:1.6rem;"></div>
+      <a class="prototype-link" href="https://www.figma.com/proto/MqvVFolTokaiqt64VEU5T6/pre-order-album-app--after---Copy-?embed_host=share&kind=proto&node-id=393-1131&page-id=391%3A1130&scaling=scale-down&starting-point-node-id=393%3A1131&t=pGt3ppwWbvaXkXxZ-1&type=design" target="_blank">View Prototype →</a>
+    </div>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Outcome</p>
+      <img src="assets/lope-03-vinyl-record.jpg" alt="LØPE vinyl record mockup">
+      <div style="height:1.6rem;"></div>
+      <div style="display:flex; gap:1.6rem;"><img src="assets/lope-01-iphone-stones.jpg" alt="LØPE iPhone mockup on stones"><img src="assets/lope-02-iphone-16pro.jpg" alt="LØPE iPhone 16 Pro mockup"></div>
+    </div>
+  </div>
+
+  <div class="project-info project-sticky">
+    <div class="story-block tension">
+      <p class="menu story-label">Tension</p>
+      <p class="story-text">We aim to create a community where users can communicate</p>
+    </div>
+    <div class="story-block idea">
+      <p class="menu story-label">Idea</p>
+      <p class="p story-text">Right now, an app like this gets used once — to pre-order the album — then forgotten. The goal: give fans a reason to keep opening it, with a space to talk about the band built into the app itself.</p>
+    </div>
+    <div class="story-block execution">
+      <p class="menu story-label">Execution</p>
+      <p class="p story-text">The design stays minimal — a page built around very few elements, with the album cover taking over as a full background whenever possible, keeping the band's visual identity front and center.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="project-footer">
+  <a href="index.html">Home</a>
+  <div class="project-nav">
+    <a href="equipe.html">← Equipe</a>
+    <a href="iccrom.html">Iccrom →</a>
+  </div>
+  <a href="contacts.html">Contact</a>
+</footer>
+
 <script src="components.js"></script>
-<script src="works-page-layout.js"></script>
 </body>
 </html>

@@ -3,47 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Editorial redesign of A.D.E. Magazine for the Egyptian Academy in Rome.">
-    <meta property="og:title" content="A.D.E. MAGAZINE — Stefania Lo Bianco">
-    <meta property="og:description" content="Editorial redesign of A.D.E. Magazine for the Egyptian Academy in Rome.">
-    <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/magazine/01.jpg">
+    <meta property="og:title" content="A.D.E. Magazine — Stefania Lo Bianco">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/media-queries.css">
     <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>A.D.E. MAGAZINE</title>
+    <title>A.D.E. Magazine</title>
+    <style>
+      :root{ --accent:#7A918D; }
+      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
+      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
+      .color-block p{ font-size:0.7rem; line-height:1.4; }
+      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
+      .logo-frame img{ width:auto; max-height:5rem; }
+      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
+    </style>
 </head>
 <body class="porcelain">
-<nav-bar></nav-bar>
-<works-page-layout>
-    <span slot="title">A.D.E. MAGAZINE</span>
-    <span slot="year" style="text-align: right">2021</span>
-    <span slot="description">Editorial redesign | Egyptian Academy in Rome</span>
-    <span slot="type">Editorial Design</span>
-    <span slot="clients">Egyptian Academy in Rome</span>
-    <span slot="role">Graphic Designer</span>
-    <span slot="deliverables">Magazine Layout, Editorial Design</span>
-    <span slot="highlight">Inspiring unforgettable journeys</span>
-    <span slot="brief">The magazine promotes tourism through Egypt's ancient sites and living culture, alongside a look back at the Academy's exhibitions and events from the year before.
-    <br><br>The redesign moved toward something cleaner and more contemporary: a simplified grid, more breathing room on the page, and a typographic hierarchy built to guide the eye rather than crowd it.
-    <br>Issue after issue, it reads considered rather than assembled.</span>
-    <div slot="images" style="gap: 0rem">
-        <div class="mockup-container"><img src="assets/magazine/01.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/02.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/03.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/03bis.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/04.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/05.jpg"></div>
-        <div class="mockup-container"><img src="assets/magazine/06.jpg"></div>
+
+<div class="frame-fixed half" id="frameFixed">
+  <div class="scroll-track track-left"></div>
+  <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
+  <div class="scroll-marker marker-left" id="markerLeft"></div>
+</div>
+
+<header class="project-header">
+  <h1 class="big-p">A.D.E. Magazine</h1>
+  <p class="menu">Editorial redesign | Egyptian Academy in Rome — 2021</p>
+</header>
+
+<div class="outcome-banner">
+  <span class="menu tag">Outcome</span>
+  <span class="p">Redesign carried through four+ published issues.</span>
+</div>
+
+<div class="meta-row">
+  <div class="item"><span>Type</span><span>Editorial Design</span></div>
+  <div class="item"><span>Clients</span><span>Egyptian Academy in Rome</span></div>
+  <div class="item"><span>Role</span><span>Graphic Designer</span></div>
+  <div class="item"><span>Deliverables</span><span>Magazine Layout, Editorial Design</span></div>
+</div>
+
+<div class="project-body">
+<div class="project-columns">
+  <div class="works-list project-gallery">
+    <div class="gallery-group">
+      <p class="menu gallery-label">Idea</p>
+      <img src="assets/magazine-01.jpg" alt="A.D.E. Magazine cover">
     </div>
-    <arrow-btn slot="nav"></arrow-btn>
-</works-page-layout>
-<foot-works></foot-works>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Execution</p>
+      <img src="assets/magazine-02.jpg" alt="A.D.E. Magazine spread 2">
+      <img src="assets/magazine-03.jpg" alt="A.D.E. Magazine spread 3">
+      <img src="assets/magazine-03bis.jpg" alt="A.D.E. Magazine spread — Philae detail">
+      <img src="assets/magazine-04.jpg" alt="A.D.E. Magazine spread — Santa Caterina">
+    </div>
+    <div class="gallery-group">
+      <p class="menu gallery-label">Outcome</p>
+      <img src="assets/magazine-05.jpg" alt="A.D.E. Magazine spread — Wadi Al Hitan">
+      <img src="assets/magazine-06.jpg" alt="Accademia d'Egitto a Roma Volume I">
+    </div>
+  </div>
+
+  <div class="project-info project-sticky">
+    <div class="story-block tension">
+      <p class="menu story-label">Tension</p>
+      <p class="story-text">Giving an institution with decades of history a look that feels current.</p>
+    </div>
+    <div class="story-block idea">
+      <p class="menu story-label">Idea</p>
+      <p class="p story-text">The magazine promotes tourism through Egypt's ancient sites and living culture, alongside a look back at the Academy's exhibitions and events from the year before.</p>
+    </div>
+    <div class="story-block execution">
+      <p class="menu story-label">Execution</p>
+      <p class="p story-text">The redesign moved toward something cleaner and more contemporary: a simplified grid, more breathing room on the page, and a typographic hierarchy built to guide the eye rather than crowd it.<br><br>Issue after issue, it reads considered rather than assembled.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="project-footer">
+  <a href="index.html">Home</a>
+  <div class="project-nav">
+    <a href="frimm.html">← Frimm</a>
+    <a href="blindex.html">Blindex →</a>
+  </div>
+  <a href="contacts.html">Contact</a>
+</footer>
+
 <script src="components.js"></script>
-<script src="works-page-layout.js"></script>
 </body>
 </html>
