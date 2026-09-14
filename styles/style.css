@@ -1,6 +1,7 @@
 :root{
     --ui-color: #110E03;
     --ui-bg: #EDDCA0;
+    --gutter: clamp(4.5rem, 9vw, 10rem);
 }
 *{
     margin: 0;
@@ -253,51 +254,57 @@ body.black a:visited {
     max-width: 100%;
 }
 
-/**Hero: pin + cover (home)**/
-.pin-wrap {
-    position: relative;
-    height: 200vh;
-    width: 100vw;
+/**Hero: pin + passaggio animato, poi la card scura per il resto della home**/
+.hero-pin{ height:160vh; position:relative; width:100vw; }
+.hero-stage{
+    position:sticky; top:0; height:100vh; width:100vw; z-index:1;
+    display:flex; justify-content:center;
 }
-#firsts-section {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    overflow: hidden;
+.hero-slide{
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:0 var(--gutter); text-align:center;
 }
-.scroll-hint {
-    position: absolute;
-    bottom: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+.hero-slide .menu{ opacity:0.75; margin-bottom:1.2rem; }
+.hero-slide .role{ text-align:center; max-width:14ch; }
+#heroSlide1{ color:#110E03; }
+#heroSlide2{ color:#FCF9EE; }
+
+.dark-card{ position:relative; z-index:2; color:#FCF9EE; }
+.dark-card a:link,
+.dark-card a:visited{ color:#FCF9EE; }
+.bg-split{ position:fixed; inset:0; z-index:0; background:#110E03; pointer-events:none; }
+
+/**Cornice fissa: due linee laterali animate con lo scroll, stesso
+   segno su ogni pagina del sito**/
+.frame-fixed{ position:fixed; inset:0; pointer-events:none; z-index:40; color:#110E03; transition:color 0.2s ease; }
+.frame-fixed.on-dark{ color:#FCF9EE; }
+.scroll-track, .scroll-fill{ position:absolute; width:1px; top:6rem; height:50vh; }
+.scroll-track{ background:currentColor; opacity:0.2; }
+.scroll-fill{ background:currentColor; opacity:0.9; height:0; }
+.scroll-marker{
+    position:absolute; width:7px; height:7px; border-radius:50%;
+    border:1px solid currentColor; background:#FCF9EE; transform:translate(-50%,-50%);
 }
-#seconds-section {
-    position: relative;
-    z-index: 2;
-    margin-top: -100vh;
-    width: 100vw;
-    background-color: #110E03;
-    color: #FFFEF2;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
+.track-left, .fill-left{ left:2.6rem; }
+.track-right, .fill-right{ right:2.6rem; }
+.marker-left{ left:calc(2.6rem + 0.5px); }
+.marker-right{ right:calc(2.6rem - 3.5px); }
+
+.sweep-line{ position:fixed; inset:0; z-index:41; pointer-events:none; }
+.sweep-line line{ stroke:currentColor; stroke-width:1; opacity:0.6; }
+
+/**Footer fisso, unica navigazione del sito: Home / Manifesto / freccia / Works / Contact**/
+.site-footer{
+    position:fixed; left:0; right:0; bottom:0; z-index:42; background:transparent;
+    padding:1rem var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:1.6rem;
+    color:#110E03; transition:color 0.2s ease;
+    height:auto; border-top:none; box-sizing:border-box;
 }
-#seconds-section .hero-second {
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-}
-/* a:link è un colore scuro fisso qui sopra: lo correggo solo dentro
-   il pannello scuro, senza toccare il resto del sito */
-#seconds-section a:link,
-#seconds-section a:visited {
-    color: #FFFEF2;
-}
+.site-footer.on-dark{ color:#FCF9EE; }
+.site-footer a{ color:inherit; text-decoration:none; font-weight:400; font-size:0.75rem; line-height:1.6; }
+.site-footer .chevron{ font-size:1.2rem; }
+
+/* Pagine interamente scure (contatti): cornice e footer chiari di default,
+   niente bisogno del contrasto calcolato via JS che serve solo sull'hero */
+body.black .frame-fixed{ color:#FCF9EE; }
+body.black .site-footer{ color:#FCF9EE; }

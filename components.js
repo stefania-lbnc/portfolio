@@ -288,21 +288,25 @@ if (pinWrap) {
     window.addEventListener('scroll', updateUiColor);
     window.addEventListener('resize', updateUiColor);
 }
-
 /* ====================================================================
    Hero animato + cornice fissa + footer — solo sulle pagine che hanno
    #heroPin (oggi: index.html). Sulle altre pagine questo blocco non
    fa nulla, il resto del sito non viene toccato.
+   Completamente reversibile: dal primo scroll in poi tutto e' guidato
+   dalla posizione di scroll, in entrambe le direzioni — tornare su
+   riporta davvero l'hero al punto di partenza, non solo la cornice.
    ==================================================================== */
 (function () {
     const heroPin = document.getElementById('heroPin');
     if (!heroPin) return;
 
     function lerp(a, b, t) { return a + (b - a) * t; }
+    function clamp01(t) { return Math.min(Math.max(t, 0), 1); }
 
     const bgSplit = document.getElementById('bgSplit');
     const frameFixed = document.getElementById('frameFixed');
     const siteFooter = document.getElementById('siteFooter');
+    const footerEls = siteFooter.querySelectorAll('a, .chevron');
     const fillLeft = document.getElementById('scrollFillLeft');
     const fillRight = document.getElementById('scrollFillRight');
     const trackLeft = document.querySelector('.track-left');
@@ -311,29 +315,35 @@ if (pinWrap) {
     const sweepLine = document.getElementById('sweepLine');
     const slide1 = document.getElementById('heroSlide1');
     const slide2 = document.getElementById('heroSlide2');
-    const footerEls = siteFooter.querySelectorAll('a, .chevron');
 
+    // Aggiorna tutto (testo, puntini, linea, sfondo, footer) in base a un
+    // singolo pct 0->1. Usata sia dall'autoplay che dallo scroll: e' la
+    // stessa funzione che disegna avanti e indietro, per questo tornare
+    // su con lo scroll riporta l'hero esattamente al punto di partenza.
     function update(pct) {
         const trackTop = trackLeft.offsetTop;
         const trackHeight = trackLeft.getBoundingClientRect().height;
+        const trackBottom = trackTop + trackHeight;
 
-        // un'unica linea per tutto: puntini, linea visibile, testo, sfondo.
-        // il centro si muove da sotto al testo a sopra; l'inclinazione
-        // (dal reale andamento opposto dei due lati) conta solo a meta' passaggio
+        // confine del testo: copre l'intero schermo, con un'inclinazione
+        // tra i due lati per l'effetto diagonale (puo' uscire da 0-100%,
+        // normale per un clip-path a schermo intero)
         const centerY = lerp(0.95, 0.05, pct) * window.innerHeight;
-        const halfTilt = (trackHeight / 2) * (1 - 2 * pct);
-        const leftY = centerY - halfTilt;
-        const rightY = centerY + halfTilt;
+        const halfTilt = (trackHeight / 4) * (1 - 2 * pct);
+        const textLeftY = centerY - halfTilt;
+        const textRightY = centerY + halfTilt;
+
+        // puntini: restano sempre dentro la traccia visibile
+        const leftY = lerp(trackBottom, trackTop, pct);
+        const rightY = lerp(trackTop, trackBottom, pct);
 
         markerLeft.style.top = leftY + 'px';
         markerLeft.style.bottom = 'auto';
         markerRight.style.top = rightY + 'px';
         markerRight.style.bottom = 'auto';
 
-        const fillPxLeft = Math.min(Math.max(leftY - trackTop, 0), trackHeight);
-        const fillPxRight = Math.min(Math.max((trackTop + trackHeight) - rightY, 0), trackHeight);
-        fillLeft.style.height = fillPxLeft + 'px';
-        fillRight.style.height = fillPxRight + 'px';
+        fillLeft.style.height = Math.min(Math.max(leftY - trackTop, 0), trackHeight) + 'px';
+        fillRight.style.height = Math.min(Math.max(trackBottom - rightY, 0), trackHeight) + 'px';
 
         const leftX = markerLeft.getBoundingClientRect().left + 3.5;
         const rightX = markerRight.getBoundingClientRect().left + 3.5;
@@ -343,42 +353,42 @@ if (pinWrap) {
         sweepLine.setAttribute('y2', rightY);
         sweepLine.style.opacity = (pct > 0.001 && pct < 0.999) ? '1' : '0';
 
-        const leftYpct = (leftY / window.innerHeight) * 100;
-        const rightYpct = (rightY / window.innerHeight) * 100;
-
+        const leftYpct = (textLeftY / window.innerHeight) * 100;
+        const rightYpct = (textRightY / window.innerHeight) * 100;
         const clipBelow = `polygon(0% ${leftYpct}%, 100% ${rightYpct}%, 100% 100%, 0% 100%)`;
         slide1.style.clipPath = `polygon(0% 0%, 100% 0%, 100% ${rightYpct}%, 0% ${leftYpct}%)`;
         slide2.style.clipPath = clipBelow;
-        bgSplit.style.clipPath = pct <= 0.001
-            ? 'polygon(0% 110%, 100% 110%, 100% 110%, 0% 110%)'
-            : (pct >= 0.999 ? 'none' : clipBelow);
+        bgSplit.style.clipPath = clipBelow;
 
         slide1.style.transform = `scale(${1 - 0.18 * pct})`;
         slide2.style.transform = `scale(${0.82 + 0.18 * pct})`;
 
-        function boundaryYat(x) { return leftY + (rightY - leftY) * (x - trackLeft.getBoundingClientRect().left) / (window.innerWidth - 2 * trackLeft.getBoundingClientRect().left); }
         footerEls.forEach(el => {
             const r = el.getBoundingClientRect();
             const cx = r.left + r.width / 2;
-            const onLight = pct >= 0.999 || (pct > 0.001 && r.top > boundaryYat(cx));
-            el.style.color = onLight ? '#110E03' : '#FCF9EE';
+            const boundaryY = leftY + (rightY - leftY) * (cx - leftX) / (rightX - leftX);
+            el.style.color = (r.top > boundaryY) ? '#FCF9EE' : '#110E03';
         });
-
         frameFixed.classList.toggle('on-dark', pct > 0.5);
     }
 
-    // Animazione a tempo: tempo per leggere ciascuna frase, poi il passaggio.
+    // quanta corsa di scroll copre l'hero (il tratto in cui e' sticky):
+    // scrollY diviso per questo, saturato 0-1, e' il pct — bidirezionale
+    // per costruzione, nessuno stato "bloccato" da annullare tornando su
+    function introRange() { return Math.max(heroPin.offsetHeight - window.innerHeight, 1); }
+
     const HOLD_1 = 2600;
     const SWEEP = 1100;
     function easeInOut(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
 
     let lastPct = 0;
-    let heroIntroDone = false;
+    let userTookOver = false;
     let startTime = null;
-    let leftYatIntroEnd = 0, rightYatIntroEnd = 0, scrollYAtIntroEnd = 0;
-    let wedgeLeftPct = 0, wedgeRightPct = 0;
 
-    function frame(now) {
+    // Autoplay: gira finche' l'utente non scrolla. Al primo scroll si ferma
+    // da solo (controllo in cima al frame) e da li' in poi decide lo scroll.
+    function autoplayFrame(now) {
+        if (userTookOver) return;
         if (startTime === null) startTime = now;
         const elapsed = now - startTime;
 
@@ -390,57 +400,66 @@ if (pinWrap) {
         lastPct = pct;
         update(pct);
 
-        if (elapsed < HOLD_1 + SWEEP + 50) {
-            requestAnimationFrame(frame);
-        } else {
-            heroIntroDone = true;
-            leftYatIntroEnd = parseFloat(markerLeft.style.top);
-            rightYatIntroEnd = parseFloat(markerRight.style.top);
-            wedgeLeftPct = (leftYatIntroEnd / window.innerHeight) * 100;
-            wedgeRightPct = (rightYatIntroEnd / window.innerHeight) * 100;
-            scrollYAtIntroEnd = window.scrollY;
-            updateLinesFromScroll();
+        if (elapsed < HOLD_1 + SWEEP + 400) {
+            requestAnimationFrame(autoplayFrame);
         }
+        // finita la corsa, l'hero resta fermo li' se l'utente non scrolla
+        // mai — pronto comunque a rispondere appena inizia a farlo
     }
-    requestAnimationFrame(frame);
-    window.addEventListener('resize', () => heroIntroDone ? updateLinesFromScroll() : update(lastPct));
+    requestAnimationFrame(autoplayFrame);
 
-    // Dopo l'intro, le linee continuano dallo stesso punto (non si azzerano)
-    // e seguono lo scroll fino in fondo alla pagina.
-    function updateLinesFromScroll() {
-        const trackTop = trackLeft.offsetTop;
+    // Oltre l'hero-pin (l'utente ha scrollato piu' in la' del tratto sticky):
+    // il cuneo finisce di chiudersi e lo sfondo/footer restano scuri.
+    // Anche questo e' reversibile: risalendo, il cuneo si riapre.
+    // il confine del testo, allo stesso pct=1 con cui finisce l'hero:
+    // il cuneo qui sotto deve ripartire esattamente da questi valori,
+    // non da 0%/100% — con l'inclinazione non coincidono mai
+    function textBoundaryAtEnd() {
         const trackHeight = trackLeft.getBoundingClientRect().height;
-        const trackBottom = trackTop + trackHeight;
+        const centerY = 0.05 * window.innerHeight;
+        const halfTilt = (trackHeight / 4) * (1 - 2);
+        const leftYpct = ((centerY - halfTilt) / window.innerHeight) * 100;
+        const rightYpct = ((centerY + halfTilt) / window.innerHeight) * 100;
+        return { leftYpct, rightYpct };
+    }
 
-        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
-        const remaining = Math.max(totalScrollable - scrollYAtIntroEnd, 1);
-        const extraScroll = Math.max(window.scrollY - scrollYAtIntroEnd, 0);
-        const pct2 = Math.min(extraScroll / remaining, 1);
+    function updatePastHero() {
+        const rect = heroPin.getBoundingClientRect();
+        const pastPx = Math.max(-rect.bottom, 0);
+        const closeRange = window.innerHeight * 0.4;
+        const closeProgress = clamp01(pastPx / closeRange);
 
-        const leftY = lerp(leftYatIntroEnd, trackBottom, pct2);
-        const rightY = lerp(rightYatIntroEnd, trackTop, pct2);
+        if (pastPx <= 0) return; // ancora dentro l'hero-pin: ci pensa update() dentro onScroll
 
-        fillLeft.style.height = Math.max(leftY - trackTop, 0) + 'px';
-        markerLeft.style.top = leftY + 'px';
-        markerLeft.style.bottom = 'auto';
-
-        fillRight.style.height = Math.max(trackBottom - rightY, 0) + 'px';
-        markerRight.style.top = rightY + 'px';
-        markerRight.style.bottom = 'auto';
-
-        sweepLine.style.opacity = '0';
-
-        const wedgeProgress = Math.min(pct2 * 3, 1);
-        if (wedgeProgress >= 1) {
+        if (closeProgress >= 1) {
             bgSplit.style.clipPath = 'none';
         } else {
-            const wl = lerp(wedgeLeftPct, -10, wedgeProgress);
-            const wr = lerp(wedgeRightPct, -10, wedgeProgress);
+            const end = textBoundaryAtEnd();
+            const wl = lerp(end.leftYpct, -15, closeProgress);
+            const wr = lerp(end.rightYpct, -15, closeProgress);
             bgSplit.style.clipPath = `polygon(0% ${wl}%, 100% ${wr}%, 100% 100%, 0% 100%)`;
         }
+        sweepLine.style.opacity = '0';
+        frameFixed.classList.add('on-dark');
+        footerEls.forEach(el => { el.style.color = '#FCF9EE'; });
     }
-    window.addEventListener('scroll', () => { if (heroIntroDone) updateLinesFromScroll(); });
+
+    function onScroll() {
+        userTookOver = true;
+        const scrollY = window.scrollY;
+        const range = introRange();
+
+        if (scrollY <= range) {
+            const pct = clamp01(scrollY / range);
+            lastPct = pct;
+            update(pct);
+        }
+        updatePastHero();
+    }
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', () => update(lastPct));
 })();
+
 
 /* ====================================================================
    Linee della cornice, versione semplice: per le pagine che hanno

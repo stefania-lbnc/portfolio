@@ -9,12 +9,10 @@ nav{
     justify-items: end;
     display: inline-flex;
     justify-content: end;
-    /**width: 100vw;**/
 }
 footer{
     display: inline-flex;
     border-top: black 1px solid;
-    /**width: 100vw;**/
     padding: 2vh 8vw;
     justify-content: space-between;
     align-items: center;
@@ -25,32 +23,9 @@ footer{
     right: 0;
     z-index: 13;
 }
-/* Sfondo e testo di nav/footer in home, guidati da --ui-progress e
-   --ui-color (aggiornate in continuo dallo scroll in components.js) */
-body.vanilla-custard nav {
-    background-color: var(--ui-bg, #EDDCA0) !important;
-}
-body.vanilla-custard footer {
-    background-color: var(--ui-bg, #EDDCA0) !important;
-}
-body.vanilla-custard nav a.menu,
-body.vanilla-custard nav a.menu:link,
-body.vanilla-custard nav a.menu:visited {
-    color: var(--ui-color, #110E03) !important;
-}
-body.vanilla-custard footer a,
-body.vanilla-custard footer a:link,
-body.vanilla-custard footer a:visited,
-body.vanilla-custard footer p {
-    color: var(--ui-color, #110E03) !important;
-}
-/* Solo nelle pagine progetto (body.porcelain): sfondo porcelain
-   esplicito, stesso colore di .porcelain, così resta un fondo
-   pieno anche quando le immagini della gallery scorrono sotto */
 body.porcelain nav {
     background-color: #FEFCF7;
 }
-/**Button Properties**/
 button {
     border: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -67,7 +42,6 @@ button {
     display: flex;
     align-items: end;
 }
-/**Bracket**/
 .project-title{
     padding-top: 8vh;
     align-items: end;
@@ -76,7 +50,6 @@ button {
 }
 .profile-width {
     display: grid;
-    /*width: 50vw;*/
     position: relative;
 }
 .four-columns {
@@ -108,9 +81,6 @@ button {
     display: inline-flex;
     padding: 0 8vh;
 }
-/* arrow-btn nidificato dentro works-page-layout (sidebar destra):
-   riga orizzontale invece che larga 90vw, ma stesso trattamento a
-   bottone (bordo + parentesi d'angolo) del resto del sito */
 works-page-layout arrow-btn .button-container {
     width: 100%;
     flex-direction: row;
@@ -146,7 +116,6 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     border-top: none;
     transform: rotate(45deg);
 }
-/*brand color*/
 .swatches {
     display: flex;
     gap: 0;
@@ -160,15 +129,13 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     gap: 0.8rem;
 }
 .swatch:last-child {
-    flex: 1.5; /* 0.8 più largo = rapporto 1.5 : 1 */
+    flex: 1.5;
 }
 .swatch-color {
     width: 100%;
     aspect-ratio: 1 / 1;
     height: 4rem;
 }
-/* Color blocks — swatch grande con nome/hex in overlay, ispirato a
-   riferimento Behance (Kokkopi): blocco pieno invece di quadratino */
 .color-blocks {
     display: flex;
     gap: 0;
@@ -189,7 +156,6 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     line-height: 1.3;
     text-align: left;
 }
-/* bar - usability test */
 .chart-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,8 +191,6 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
 }
 .screen{
     border-radius: 5px;
-    /*width: 20%;*/
-    /*height: fit-content;*/
 }
 .my-projects{
     display: block;
@@ -238,24 +202,23 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
     width: 100%;
     padding: 0.8rem 0;
 }
-/* List — counter lives here */
 .works-list {
     display: grid;
     gap: 0;
     counter-reset: works;
 }
 .my-projects:not(:last-child) .my-works {
-    border-bottom: 1px solid rgba(17, 14, 3, 0.1);
+    border-bottom: 1px solid rgba(252, 249, 238, 0.15);
 }
-/* Auto-number via CSS counter */
+/* numero, categoria, descrizione: vivono dentro alla card scura,
+   quindi Floral White a opacita' variabile, non Pitch Black */
 .work-item::before {
     counter-increment: works;
     content: counter(works, decimal-leading-zero);
     font-size: 0.8rem;
     font-weight: normal;
-    color: #999;
+    color: rgba(252, 249, 238, 0.45);
 }
-/* ── Hover states: categoria/anno/descrizione compaiono insieme sotto il titolo ── */
 .work-meta {
     max-height: 0;
     opacity: 0;
@@ -270,14 +233,13 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
 .work-category {
     font-size: 0.75rem;
     text-transform: uppercase;
-    color: #999;
+    color: rgba(252, 249, 238, 0.6);
 }
 .work-desc {
     font-size: 0.75rem;
-    color: #777;
+    color: rgba(252, 249, 238, 0.75);
     margin-top: 0.15rem;
 }
-/**Table styles**/
 table{
     border-block: 1px solid black;
 }
@@ -292,7 +254,6 @@ tr {
 td{
     padding: 0;
 }
-/**Typeface showcase**/
 .menu.comfortaa,
 .type-alphabet.comfortaa {
     font-family: "Comfortaa", sans-serif;
@@ -315,4 +276,62 @@ td{
 .type-alphabet.poppins,
 .poppins {
     font-family: "Poppins", sans-serif;
+}
+
+/**Pagine progetto — nuovo schema: header, poi due colonne: galleria
+   a gruppi (Idea/Execution/Outcome) e sidebar con tutte le info
+   (outcome, meta, storia Tension/Idea/Execution), mezza cornice,
+   footer con prev/next**/
+.project-header{ padding:6rem var(--gutter) 0; width:100vw; box-sizing:border-box; }
+.project-header .menu{ opacity:0.7; margin-top:0.6rem; }
+
+.project-info .outcome-banner{
+    margin:0 0 1.6rem; padding:1rem 1.2rem; border-left:3px solid var(--accent, #A63D40);
+}
+.project-info .outcome-banner .tag{ opacity:0.55; display:block; margin-bottom:0.3rem; }
+.project-info .outcome-banner .p{ font-size:0.8rem; }
+
+.project-info .meta-row{
+    margin:0 0 2rem; padding-bottom:1.6rem; border-bottom:1px solid rgba(17,14,3,0.12);
+    display:flex; flex-direction:column; gap:0.8rem;
+}
+.project-info .meta-row .item{ display:flex; gap:0.5rem; align-items:baseline; font-size:0.75rem; }
+.project-info .meta-row .item span:first-child{ opacity:0.5; font-style:italic; min-width:6rem; }
+
+.project-body{ padding:3rem var(--gutter) 8rem; width:100vw; box-sizing:border-box; }
+.gallery-group{ margin-bottom:2.4rem; min-width:0; }
+.gallery-group:last-child{ margin-bottom:0; }
+.gallery-label{ opacity:0.5; margin-bottom:0.8rem; }
+.gallery-group img{ width:100%; height:auto; display:block; }
+.gallery-group .img-row{ display:flex; gap:1.6rem; }
+.gallery-group .img-row img{ width:auto; flex:1; min-width:0; }
+
+.story-block{ margin-bottom:2rem; }
+.story-block:last-child{ margin-bottom:0; }
+.story-label{ opacity:0.5; margin-bottom:0.5rem; }
+.story-block.tension .story-text{ font-weight:700; text-transform:uppercase; font-size:1.05rem; line-height:1.25; }
+.story-block.idea .story-text,
+.story-block.execution .story-text{ opacity:0.85; }
+.story-block .credit{ opacity:0.6; font-style:italic; margin-top:0.8rem; display:block; }
+
+.project-footer{
+    position:fixed; left:0; right:0; bottom:0; z-index:42; background:#FEFCF7;
+    padding:1.2rem var(--gutter); display:flex; align-items:center; justify-content:space-between;
+    gap:1.6rem; border-top:1px solid rgba(17,14,3,0.12);
+}
+.project-footer a{ color:inherit; text-decoration:none; font-weight:400; font-size:0.75rem; }
+.project-footer .project-nav{ display:flex; gap:2rem; }
+
+/**Mezza cornice sulle pagine progetto: solo la linea sinistra,
+   animata con lo stesso meccanismo dell'home**/
+.frame-fixed.half .track-right,
+.frame-fixed.half .fill-right,
+.frame-fixed.half .marker-right{ display:none; }
+
+@media (max-width: 900px){
+    .project-columns{ flex-direction:column; }
+    .project-sticky{ position:static; }
+}
+@media (max-width: 1300px){
+    .project-footer{ flex-wrap:wrap; gap:0.8rem; padding:1rem var(--gutter); }
 }

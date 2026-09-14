@@ -14,12 +14,6 @@
     .intro, .skills{
         flex-direction: column;
     }
-    .project-columns{
-        flex-direction: column;
-    }
-    .project-sticky{
-        position: static;
-    }
     .works-preview{
         display: none;
     }
@@ -78,3 +72,53 @@
     }
 }
 
+/**Le due colonne (galleria + sidebar) reggono bene fino a schermi
+   piuttosto stretti — 1300px era una soglia ereditata da altri
+   elementi della pagina, troppo alta per questo layout specifico:
+   impilava anche su laptop normali con finestra non massimizzata**/
+@media (max-width: 900px) {
+    .project-columns{
+        flex-direction: column;
+    }
+    .project-sticky{
+        position: static;
+    }
+}
+
+/**Hero animata, cornice, footer fissi — regole mobile.
+   La cornice si nasconde sotto i 720px: è un dettaglio decorativo,
+   su schermi stretti ruba spazio senza aggiungere niente di utile.**/
+@media (max-width: 720px) {
+    .hero-slide .role{
+        font-size: clamp(2.4rem, 9vw, 4rem);
+        line-height: 1.05;
+        max-width: 16ch;
+    }
+    .frame-fixed{
+        display: none;
+    }
+    .sweep-line{
+        display: none;
+    }
+    .site-footer,
+    .project-footer{
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        padding: 1rem 6vw;
+    }
+    .project-footer .project-nav{
+        gap: 1rem;
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .outcome-banner,
+    .meta-row,
+    .project-header{
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    .meta-row{
+        gap: 1.2rem;
+    }
+}
