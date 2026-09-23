@@ -162,7 +162,7 @@ works-page-layout arrow-btn .button-container > div:nth-child(3) .menu-btn::afte
 .color-block {
     flex: 1;
     min-width: 0;
-    height: 18rem;
+    height: 6rem;
     display: flex;
     align-items: flex-end;
     padding: 1.6rem;
