@@ -142,6 +142,60 @@
     if (navigator.clipboard) navigator.clipboard.writeText('lobiancostefania@gmail.com').then(done, done); else done();
   });
 
+  // Footer: glide to each section so the hero and the frame move along with it
+  var afterHeroEl = document.querySelector('.after-hero'), wrapEl = document.querySelector('.after-hero > .wrap');
+  function targetY(hash) {
+    if (hash === '#top') return 0;
+    if (hash === '#about') return $('about').getBoundingClientRect().top + window.scrollY - 64;
+    if (hash === '#projects') return afterHeroEl.offsetTop + wrapEl.offsetTop + wrapEl.offsetHeight;
+    if (hash === '#contact') return afterHeroEl.offsetTop + card.offsetTop + window.innerHeight * 0.12;
+    return null;
+  }
+  var glide = null;
+  function cancelGlide() { if (glide) { cancelAnimationFrame(glide); glide = null; } }
+  ['wheel', 'touchstart', 'keydown'].forEach(function (e) { window.addEventListener(e, cancelGlide, { passive: true }); });
+  function glideTo(hash) {
+      var to = targetY(hash);
+      if (to === null) return false;
+      took = true;
+      cancelGlide();
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      to = Math.min(Math.max(to, 0), max);
+      history.replaceState(null, '', hash);
+      if (reduced) { window.scrollTo({ top: to, behavior: 'instant' }); return; }
+      var from = window.scrollY, dist = Math.abs(to - from);
+      var dur = Math.min(Math.max(dist * 0.35, 600), 1400), t0 = null;
+      var easeIO = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+      var step = function (now) {
+        if (t0 === null) t0 = now;
+        var t = Math.min((now - t0) / dur, 1);
+        window.scrollTo({ top: from + (to - from) * easeIO(t), behavior: 'instant' });
+        glide = t < 1 ? requestAnimationFrame(step) : null;
+      };
+      glide = requestAnimationFrame(step);
+      return true;
+  }
+  document.querySelectorAll('#siteFooter a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (glideTo(a.getAttribute('href'))) e.preventDefault();
+    });
+  });
+
+  // Contact card rising from a project: inside the sheet and on arrival, sit exactly on the card
+  function jumpTo(hash) {
+    var go = function () { measure(); var y = targetY(hash); if (y !== null) window.scrollTo({ top: y, behavior: 'instant' }); onScroll(); };
+    go(); setTimeout(go, 100); window.addEventListener('load', go, { once: true });
+  }
+  if (embedded && new URLSearchParams(location.search).get('pt') === 'contact') jumpTo('#contact');
+  if (window.__ptArrived === 'fwd' && location.hash) jumpTo(location.hash);
+
+  // Arriving from a project page via Manifesto / Works: start where the index was left, then glide
+  if (window.__ptArrived === 'back' && !embedded) {
+    var pendingHash = null;
+    try { pendingHash = sessionStorage.getItem('pt-home-hash'); sessionStorage.removeItem('pt-home-hash'); } catch (e) {}
+    if (pendingHash) setTimeout(function () { measure(); glideTo(pendingHash); }, 260);
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', function () { measure(); onScroll(); });
   window.addEventListener('load', function () { measure(); onScroll(); });

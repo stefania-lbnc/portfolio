@@ -8,8 +8,9 @@
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cache = {};
 
-  function frame(url, layout) {
-    if (cache[url]) return cache[url];
+  function frame(url, layout, bg) {
+    var key = layout + ' ' + url;
+    if (cache[key]) return cache[key];
     var el = document.createElement('div');
     el.setAttribute('aria-hidden', 'true');
     el.setAttribute('data-pt', '');
@@ -20,9 +21,9 @@
     f.setAttribute('scrolling', 'no');
     if (layout === 'rise') {
       // 12vh taller than the viewport; the diagonal lives in that extra strip, so only transform animates
-      el.style.cssText = 'position:fixed;left:0;right:0;top:0;height:' + (100 + CUT) + 'vh;z-index:9999;pointer-events:none;background:' + PAPER + ';' +
+      el.style.cssText = 'position:fixed;left:0;right:0;top:0;height:' + (100 + CUT) + 'vh;z-index:9999;pointer-events:none;background:' + (bg || PAPER) + ';' +
         'clip-path:polygon(0 0, 100% ' + CUT + 'vh, 100% 100%, 0 100%);transform:translate3d(0,100vh,0);visibility:hidden;will-change:transform;';
-      f.style.cssText = 'position:absolute;left:0;top:' + CUT + 'vh;width:100%;height:100vh;border:0;background:' + PAPER + ';';
+      f.style.cssText = 'position:absolute;left:0;top:' + CUT + 'vh;width:100%;height:100vh;border:0;background:' + (bg || PAPER) + ';';
     } else {
       el.style.cssText = 'position:fixed;inset:0;z-index:9999;pointer-events:none;visibility:hidden;';
       f.style.cssText = 'display:block;width:100%;height:100%;border:0;';
@@ -32,7 +33,7 @@
     });
     el.appendChild(f);
     document.body.appendChild(el);
-    cache[url] = el;
+    cache[key] = el;
     return el;
   }
 
@@ -45,8 +46,10 @@
     setTimeout(fin, DUR + 120);
   }
 
-  function rise(url) {
-    var el = frame(url, 'rise');
+  // opts.frame: page shown in the rising sheet (defaults to url); opts.bg: sheet colour
+  function rise(url, opts) {
+    opts = opts || {};
+    var el = frame(opts.frame || url, 'rise', opts.bg);
     el.style.pointerEvents = 'auto';
     within(el.ready, 800).then(function () {
       el.style.visibility = 'visible';
@@ -75,13 +78,14 @@
   }
 
   window.PageTransition = {
-    prefetch: function (url, dir) {
+    prefetch: function (url, dir, opts) {
       if (reduced || !document.body) return;
-      frame(url, dir === 'back' ? 'wipe' : 'rise');
+      opts = opts || {};
+      if (dir === 'back') frame(url, 'wipe'); else frame(opts.frame || url, 'rise', opts.bg);
     },
-    go: function (url, dir) {
+    go: function (url, dir, opts) {
       if (reduced) { location.href = url; return; }
-      if (dir === 'back') wipeBack(url); else rise(url);
+      if (dir === 'back') wipeBack(url); else rise(url, opts);
     }
   };
 
