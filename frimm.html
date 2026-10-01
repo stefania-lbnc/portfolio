@@ -1,99 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Frimm — Stefania Lo Bianco">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/media-queries.css">
-    <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>Frimm</title>
-    <style>
-      :root{ --accent:#711135; }
-      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
-      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
-      .color-block p{ font-size:0.7rem; line-height:1.4; }
-      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
-      .logo-frame img{ width:auto; max-height:5rem; }
-      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frimm — Stefania Lo Bianco</title>
+  <meta name="description" content="In use across the agency's branch network.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Frimm — Stefania Lo Bianco">
+  <meta property="og:description" content="In use across the agency's branch network.">
+  <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/og/og-frimm.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
+  <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
+  <script src="transition.js"></script>
 </head>
-<body class="porcelain">
+<body class="porcelain project" data-sync>
 
-<div class="frame-fixed half" id="frameFixed">
+<div class="frame-fixed half" aria-hidden="true">
   <div class="scroll-track track-left"></div>
   <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
   <div class="scroll-marker marker-left" id="markerLeft"></div>
 </div>
 
 <header class="project-header">
+  <p class="menu project-meta">07 / 07 — Logo · 2017</p>
   <h1 class="big-p">Frimm</h1>
-  <p class="menu">Event communication | Walk In Advertising Agency — 2017</p>
+  <p class="tension">One group, many branches, one hand.</p>
+  <div class="narrow-only"><div class="data-row"><div><span>Client</span><span>FRIMM — via Walk In Advertising</span></div><div><span>Scope</span><span>Group and Real Estate logos, brochure cover, business cards</span></div></div></div>
 </header>
 
-<div class="project-body">
-<div class="project-columns">
-  <div class="works-list project-gallery">
-    <div class="gallery-group">
-      <p class="menu gallery-label">Idea</p>
-      <div style="display:flex; background:#F5F1EC;"><div class="logo-frame" style="flex:1;"><img src="assets/frimm/frimm-logo-group.svg" alt="Frimm Gruppo logo"></div><div class="logo-frame" style="flex:1;"><img src="assets/frimm/frimm-logo-real-estate.svg" alt="Frimm Real Estate logo"></div></div>
+<main class="project-body">
+  <div class="project-columns">
+    <div class="project-gallery">
+      <section class="phase" data-phase="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <div class="narrow-only"><p class="phase-text">FRIMM is a real estate agency working across the group and its individual branches — each with its own logo, built from the same core identity.</p></div>
+        <figure class="block"><div class="logo-grid"><div class="logo-frame"><img src="assets/frimm/frimm-logo-group.svg" alt="Frimm Gruppo logo" loading="lazy"></div><div class="logo-frame"><img src="assets/frimm/frimm-logo-real-estate.svg" alt="Frimm Real Estate logo" loading="lazy"></div></div><figcaption>Group and Real Estate.</figcaption></figure>
+      </section>
+      <section class="phase" data-phase="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <div class="narrow-only"><p class="phase-text">Each branch keeps the structure of the group mark and takes its own colour. Same commitment, same hand, different scale.</p></div>
+        <figure class="block"><div class="color-blocks"><div class="color-row"><div class="color-block" style="background:#8E8F94;color:#FFFFFF;"><p>Group<br>#8E8F94</p></div><div class="color-block" style="background:#711135;color:#FFFFFF;"><p>Real Estate<br>#711135</p></div></div></div></figure>
+        <figure class="block"><img src="assets/frimm/frimm-02-brochure.webp" alt="Frimm brochure mockup" loading="lazy"><figcaption>Brochure cover.</figcaption></figure>
+      </section>
+      <section class="phase" data-phase="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <div class="narrow-only"><p class="phase-text is-outcome">In use across the agency's branch network.</p></div>
+        <figure class="block"><img src="assets/frimm/frimm-01-bc.webp" alt="Frimm business card mockup" loading="lazy"><figcaption>Business cards.</figcaption></figure>
+      </section>
     </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Execution</p>
-      <div class="color-blocks">
-        <div class="color-block" style="background:#8E8F94;"><p style="color:#FFFFFF">Group<br>#8E8F94</p></div>
-        <div class="color-block" style="background:#711135;"><p style="color:#FFFFFF">Real Estate<br>#711135</p></div>
+    <aside class="project-info wide-only">
+      <div class="data-row"><div><span>Client</span><span>FRIMM — via Walk In Advertising</span></div><div><span>Scope</span><span>Group and Real Estate logos, brochure cover, business cards</span></div></div>
+      <div class="story-block" data-story="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <p class="phase-text">FRIMM is a real estate agency working across the group and its individual branches — each with its own logo, built from the same core identity.</p>
       </div>
-      <div style="height:1.6rem;"></div>
-      <img src="assets/frimm/frimm-02-brochure.webp" alt="Frimm brochure mockup">
-    </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Outcome</p>
-      <img src="assets/frimm/frimm-01-bc.webp" alt="Frimm business card mockup">
-    </div>
+      <div class="story-block" data-story="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <p class="phase-text">Each branch keeps the structure of the group mark and takes its own colour. Same commitment, same hand, different scale.</p>
+      </div>
+      <div class="story-block" data-story="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <p class="phase-text is-outcome">In use across the agency's branch network.</p>
+      </div>
+    </aside>
   </div>
-
-  <div class="project-info project-sticky">
-<div class="outcome-banner">
-  <span class="menu tag">Outcome</span>
-  <span class="p">Logo adopted across the agency's branch network.</span>
-</div>
-<div class="meta-row">
-  <div class="item"><span>Type</span><span>Logo Design</span></div>
-  <div class="item"><span>Clients</span><span>FRIMM</span></div>
-  <div class="item"><span>Role</span><span>Graphic Designer, Walk In Advertising Agency</span></div>
-  <div class="item"><span>Deliverables</span><span>Logo, Event Materials</span></div>
-</div>
-    <div class="story-block tension">
-      <p class="menu story-label">Tension</p>
-      <p class="story-text">Each branch needed its own logo — without losing the group's core identity.</p>
-    </div>
-    <div class="story-block idea">
-      <p class="menu story-label">Idea</p>
-      <p class="p story-text">FRIMM is a real estate agency working across the group and its individual branches — each with its own logo, built from the same core identity.</p>
-    </div>
-    <div class="story-block execution">
-      <p class="menu story-label">Execution</p>
-      <p class="p story-text">Same commitment, same hand, different scale.</p>
-    </div>
-  </div>
-</div>
-</div>
+</main>
 
 <footer class="project-footer">
-  <a href="index.html">Home</a>
-  <div class="project-nav">
-    <a href="iccrom.html">← Iccrom</a>
-    <a href="magazine.html">A.D.E. Magazine →</a>
-  </div>
-  <a href="contacts.html">Contact</a>
+  <a href="index.html" data-pt="back">Home</a>
+  <nav class="project-nav">
+    <a href="iccrom.html" data-pt="fwd">← 06 ICCROM</a>
+    <a href="magazine.html" data-pt="fwd">01 A.D.E. Magazine →</a>
+  </nav>
+  <a href="index.html#contact">Contact</a>
 </footer>
 
-<script src="components.js"></script>
+<script src="project.js"></script>
 </body>
 </html>
