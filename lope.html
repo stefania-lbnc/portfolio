@@ -1,111 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="LØPE — Stefania Lo Bianco">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/media-queries.css">
-    <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>LØPE</title>
-    <style>
-      :root{ --accent:#D66BB5; }
-      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
-      .color-block{ flex:1; min-width:0; height:11rem; display:flex; align-items:flex-end; padding:1rem; }
-      .color-block p{ font-size:0.7rem; line-height:1.4; }
-      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
-      .logo-frame img{ width:auto; max-height:5rem; }
-      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LØPE — Stefania Lo Bianco</title>
+  <meta name="description" content="Case study with an interactive Figma prototype.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LØPE — Stefania Lo Bianco">
+  <meta property="og:description" content="Case study with an interactive Figma prototype.">
+  <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/og/og-lope.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
+  <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
+  <script src="transition.js"></script>
 </head>
-<body class="porcelain">
+<body class="porcelain project" data-sync>
 
-<div class="frame-fixed half" id="frameFixed">
+<div class="frame-fixed half" aria-hidden="true">
   <div class="scroll-track track-left"></div>
   <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
   <div class="scroll-marker marker-left" id="markerLeft"></div>
 </div>
 
 <header class="project-header">
+  <p class="menu project-meta">04 / 07 — UX/UI · 2022</p>
   <h1 class="big-p">LØPE</h1>
-  <p class="menu">App design | Self-initiated — Google UX Design Certificate at Coursera — 2022</p>
+  <p class="tension">How do you keep fans opening an app after the pre-order?</p>
+  <div class="narrow-only"><div class="data-row"><div><span>Client</span><span>Self-initiated — Google UX Design Certificate</span></div><div><span>Scope</span><span>App concept, user research, UI, prototype</span></div></div></div>
 </header>
 
-<div class="project-body">
-<div class="project-columns">
-  <div class="works-list project-gallery">
-    <div class="gallery-group">
-      <p class="menu gallery-label">Idea</p>
-      <img src="assets/lope/lope-01-wireframes.webp" alt="LØPE wireframes">
+<main class="project-body">
+  <div class="project-columns">
+    <div class="project-gallery">
+      <section class="phase" data-phase="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <div class="narrow-only"><p class="phase-text">Right now, an app like this gets used once — to pre-order the album — then forgotten. The goal: give fans a reason to keep opening it, with a space to talk about the band built into the app itself. Research was based on interviews: who the users are, and what would bring them back after the first purchase.</p></div>
+        <figure class="block"><img src="assets/lope/lope-01-wireframes.webp" alt="LØPE wireframes" loading="lazy"><figcaption>Wireframes: the cover leads, the community is one tap away.</figcaption></figure>
+        <figure class="block"><img src="assets/lope/lope-logo-dark.svg" alt="LØPE logo" loading="lazy"></figure>
+        <figure class="block"><img src="assets/lope/01-font.webp" alt="Montserrat SemiBold Italic" loading="lazy"></figure>
+        <figure class="block"><div class="color-blocks"><div class="color-row"><div class="color-block" style="background:#02011C;color:#FFFFFF;"><p>#02011C</p></div><div class="color-block" style="background:#003268;color:#FFFFFF;"><p>#003268</p></div><div class="color-block" style="background:#DFEBF4;color:#111111;"><p>#DFEBF4</p></div><div class="color-block" style="background:#D66BB5;color:#FFFFFF;"><p>#D66BB5</p></div></div></div><figcaption>Logo, typeface, palette.</figcaption></figure>
+      </section>
+      <section class="phase" data-phase="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <div class="narrow-only"><p class="phase-text">The usability test changed the layout. Repeating the same button on every page annoyed most testers, so it moved into the app bar — breaking the symmetry to pull attention to the action. The rest stays minimal: very few elements, the album cover as a full background whenever possible.</p>
+          <div class="findings"><span class="findings-label">Usability findings</span><div class="finding"><span>01</span><span>Most participants needed help finding the product — the page organisation got in the way.</span></div><div class="finding"><span>02</span><span>Most wanted to recheck their details before confirming the purchase.</span></div><div class="finding"><span>03</span><span>They wanted a full recap of their order at checkout.</span></div></div></div>
+        <figure class="block"><div class="img-row"><img src="assets/lope/lope-02-01-screen.webp" alt="LØPE app screen 1" loading="lazy"><img src="assets/lope/lope-02-02-screen.webp" alt="LØPE app screen 2" loading="lazy"><img src="assets/lope/lope-02-03-screen.webp" alt="LØPE app screen 3" loading="lazy"><img src="assets/lope/lope-02-04-screen.webp" alt="LØPE app screen 4" loading="lazy"><img src="assets/lope/lope-02-05-screen.webp" alt="LØPE app screen 5" loading="lazy"></div><figcaption>Final screens, after the test.</figcaption></figure>
+        <figure class="block"><a class="prototype-link" href="https://www.figma.com/proto/MqvVFolTokaiqt64VEU5T6/pre-order-album-app--after---Copy-?embed_host=share&amp;kind=proto&amp;node-id=393-1131&amp;page-id=391%3A1130&amp;scaling=scale-down&amp;starting-point-node-id=393%3A1131&amp;t=pGt3ppwWbvaXkXxZ-1&amp;type=design" target="_blank" rel="noopener">Open the prototype ↗</a></figure>
+      </section>
+      <section class="phase" data-phase="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <div class="narrow-only"><p class="phase-text is-outcome">Case study with an interactive Figma prototype.</p></div>
+        <figure class="block"><img src="assets/lope/lope-03-vinyl-record.jpg" alt="LØPE vinyl record mockup" loading="lazy"></figure>
+        <figure class="block"><div class="img-row"><img src="assets/lope/lope-01-iphone-stones.jpg" alt="LØPE iPhone mockup on stones" loading="lazy"><img src="assets/lope/lope-02-iphone-16pro.jpg" alt="LØPE iPhone 16 Pro mockup" loading="lazy"></div><figcaption>The band, front and centre.</figcaption></figure>
+      </section>
     </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Execution</p>
-      <div class="color-blocks">
-        <div class="color-block" style="background:#02011C;"><p style="color:#FFFFFF">#02011C<br>#02011C</p></div>
-        <div class="color-block" style="background:#003268;"><p style="color:#FFFFFF">#003268<br>#003268</p></div>
-        <div class="color-block" style="background:#DFEBF4;"><p style="color:#111111">#DFEBF4<br>#DFEBF4</p></div>
-        <div class="color-block" style="background:#D66BB5;"><p style="color:#FFFFFF">#D66BB5<br>#D66BB5</p></div>
+    <aside class="project-info wide-only">
+      <div class="data-row"><div><span>Client</span><span>Self-initiated — Google UX Design Certificate</span></div><div><span>Scope</span><span>App concept, user research, UI, prototype</span></div></div>
+      <div class="story-block" data-story="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <p class="phase-text">Right now, an app like this gets used once — to pre-order the album — then forgotten. The goal: give fans a reason to keep opening it, with a space to talk about the band built into the app itself. Research was based on interviews: who the users are, and what would bring them back after the first purchase.</p>
       </div>
-      <div style="height:1.6rem;"></div>
-      <div class="img-row">
-        <img src="assets/lope/lope-02-01-screen.webp" alt="LØPE app screen 1">
-        <img src="assets/lope/lope-02-02-screen.webp" alt="LØPE app screen 2">
-        <img src="assets/lope/lope-02-03-screen.webp" alt="LØPE app screen 3">
-        <img src="assets/lope/lope-02-04-screen.webp" alt="LØPE app screen 4">
-        <img src="assets/lope/lope-02-05-screen.webp" alt="LØPE app screen 5">
+      <div class="story-block" data-story="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <p class="phase-text">The usability test changed the layout. Repeating the same button on every page annoyed most testers, so it moved into the app bar — breaking the symmetry to pull attention to the action. The rest stays minimal: very few elements, the album cover as a full background whenever possible.</p>
+          <div class="findings"><span class="findings-label">Usability findings</span><div class="finding"><span>01</span><span>Most participants needed help finding the product — the page organisation got in the way.</span></div><div class="finding"><span>02</span><span>Most wanted to recheck their details before confirming the purchase.</span></div><div class="finding"><span>03</span><span>They wanted a full recap of their order at checkout.</span></div></div>
       </div>
-      <div style="height:1.6rem;"></div>
-      <a class="prototype-link" href="https://www.figma.com/proto/MqvVFolTokaiqt64VEU5T6/pre-order-album-app--after---Copy-?embed_host=share&kind=proto&node-id=393-1131&page-id=391%3A1130&scaling=scale-down&starting-point-node-id=393%3A1131&t=pGt3ppwWbvaXkXxZ-1&type=design" target="_blank">View Prototype →</a>
-    </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Outcome</p>
-      <img src="assets/lope/lope-03-vinyl-record.jpg" alt="LØPE vinyl record mockup">
-      <div style="height:1.6rem;"></div>
-      <div class="img-row"><img src="assets/lope/lope-01-iphone-stones.jpg" alt="LØPE iPhone mockup on stones"><img src="assets/lope/lope-02-iphone-16pro.jpg" alt="LØPE iPhone 16 Pro mockup"></div>
-    </div>
+      <div class="story-block" data-story="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <p class="phase-text is-outcome">Case study with an interactive Figma prototype.</p>
+      </div>
+    </aside>
   </div>
-
-  <div class="project-info project-sticky">
-<div class="outcome-banner">
-  <span class="menu tag">Outcome</span>
-  <span class="p">Interactive prototype built in Figma.</span>
-</div>
-<div class="meta-row">
-  <div class="item"><span>Type</span><span>UX/UI Design</span></div>
-  <div class="item"><span>Clients</span><span>Self-initiated</span></div>
-  <div class="item"><span>Role</span><span>UX/UI Designer</span></div>
-  <div class="item"><span>Deliverables</span><span>App Concept, UI Design, Prototype</span></div>
-</div>
-    <div class="story-block tension">
-      <p class="menu story-label">Tension</p>
-      <p class="story-text">We aim to create a community where users can communicate</p>
-    </div>
-    <div class="story-block idea">
-      <p class="menu story-label">Idea</p>
-      <p class="p story-text">Right now, an app like this gets used once — to pre-order the album — then forgotten. The goal: give fans a reason to keep opening it, with a space to talk about the band built into the app itself.</p>
-    </div>
-    <div class="story-block execution">
-      <p class="menu story-label">Execution</p>
-      <p class="p story-text">The design stays minimal — a page built around very few elements, with the album cover taking over as a full background whenever possible, keeping the band's visual identity front and center.</p>
-    </div>
-  </div>
-</div>
-</div>
+</main>
 
 <footer class="project-footer">
-  <a href="index.html">Home</a>
-  <div class="project-nav">
-    <a href="equipe.html">← Equipe</a>
-    <a href="iccrom.html">Iccrom →</a>
-  </div>
-  <a href="contacts.html">Contact</a>
+  <a href="index.html" data-pt="back">Home</a>
+  <nav class="project-nav">
+    <a href="equipe.html" data-pt="fwd">← 03 Equipe</a>
+    <a href="terraviva.html" data-pt="fwd">05 Terraviva →</a>
+  </nav>
+  <a href="index.html#contact">Contact</a>
 </footer>
 
-<script src="components.js"></script>
+<script src="project.js"></script>
 </body>
 </html>

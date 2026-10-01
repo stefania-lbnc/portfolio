@@ -1,104 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Iccrom — Stefania Lo Bianco">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/media-queries.css">
-    <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
-    <title>Iccrom</title>
-    <style>
-      :root{ --accent:#C9752E; }
-      .color-blocks{ display:flex; gap:0; width:100%; min-width:0; }
-      .color-block{ flex:1; min-width:0; height:6rem; display:flex; align-items:flex-end; padding:1rem; }
-      .color-block p{ font-size:0.7rem; line-height:1.4; }
-      .logo-frame{ background:#F5F1EC; padding:3rem; display:flex; justify-content:center; }
-      .logo-frame img{ width:auto; max-height:5rem; }
-      .prototype-link{ display:inline-block; padding:0.9rem 1.6rem; border:1px solid #110E03; color:inherit; text-decoration:none; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICCROM — Stefania Lo Bianco</title>
+  <meta name="description" content="Printed and used at the event.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ICCROM — Stefania Lo Bianco">
+  <meta property="og:description" content="Printed and used at the event.">
+  <meta property="og:image" content="https://stefania-lbnc.github.io/portfolio/assets/og/og-iccrom.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
+  <link rel="icon" href="assets/yellow-fav-icon.svg" type="image/svg+xml">
+  <script src="transition.js"></script>
 </head>
-<body class="porcelain">
+<body class="porcelain project" data-sync>
 
-<div class="frame-fixed half" id="frameFixed">
+<div class="frame-fixed half" aria-hidden="true">
   <div class="scroll-track track-left"></div>
   <div class="scroll-fill fill-left" id="scrollFillLeft"></div>
   <div class="scroll-marker marker-left" id="markerLeft"></div>
 </div>
 
 <header class="project-header">
-  <h1 class="big-p">Iccrom</h1>
-  <p class="menu">Event communication | Egyptian Academy in Rome — 2019</p>
+  <p class="menu project-meta">06 / 07 — Poster · 2018</p>
+  <h1 class="big-p">ICCROM</h1>
+  <p class="tension">How can we involve African youth in heritage?</p>
+  <div class="narrow-only"><div class="data-row"><div><span>Client</span><span>ICCROM × Egyptian Academy in Rome</span></div><div><span>Scope</span><span>Event poster, workshop report layout</span></div></div></div>
 </header>
 
-<div class="project-body">
-<div class="project-columns">
-  <div class="works-list project-gallery">
-    <div class="gallery-group">
-      <p class="menu gallery-label">Idea</p>
-      <div><img src="assets/iccrom/iccrom-presentazione.png" alt="ICCROM event title statement"></div>
-      <div style="height:1.6rem;"></div>
+<main class="project-body">
+  <div class="project-columns">
+    <div class="project-gallery">
+      <section class="phase" data-phase="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <div class="narrow-only"><p class="phase-text">Young professionals from across Africa, brought together to talk about who leads the next chapter of heritage conservation. Organized by ICCROM with the Egyptian Academy in Rome, the event made room for youth voices and reinforced something simple: Africa is already leading on protecting its own heritage.</p></div>
+        <figure class="block"><img src="assets/iccrom/iccrom-presentazione.png" alt="ICCROM event title statement" loading="lazy"><figcaption>The statement the event was built on.</figcaption></figure>
+      </section>
+      <section class="phase" data-phase="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <div class="narrow-only"><p class="phase-text">The poster carries that message through a collage of faces — young African heritage professionals, photographed with all the diversity and energy the event itself was built on. The workshop report follows the same language.</p></div>
+        <figure class="block"><img src="assets/iccrom/iccrom-01-poster-mockup.jpg" alt="ICCROM poster mockup — collage of faces" loading="lazy"><figcaption>The poster.</figcaption></figure>
+        <figure class="block"><img src="assets/iccrom/iccrom-07-workshop.jpg" alt="Workshop report layout" loading="lazy"><figcaption>Workshop report.</figcaption></figure>
+      </section>
+      <section class="phase" data-phase="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <div class="narrow-only"><p class="phase-text is-outcome">Printed and used at the event.</p></div>
+        <figure class="block"><div class="img-row"><img src="assets/iccrom/iccrom-04-workshop.jpg" alt="Workshop ideation board" loading="lazy"><img src="assets/iccrom/iccrom-05-event.jpg" alt="Event meeting" loading="lazy"></div></figure>
+        <figure class="block"><img src="assets/iccrom/iccrom-06-event.jpg" alt="Event space with poster displayed" loading="lazy"></figure>
+        <figure class="block"><img src="assets/iccrom/iccrom-03-event.jpg" alt="Roundtable with poster stands" loading="lazy"><figcaption>At the event.</figcaption></figure>
+      </section>
     </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Execution</p>
-      <img src="assets/iccrom/iccrom-01-poster-mockup.jpg" alt="ICCROM poster mockup — collage of faces">
-        <div style="height:1.6rem;"></div>
-        <img src="assets/iccrom/iccrom-07-workshop.jpg" alt="Workshop report leyout">
-    </div>
-    <div class="gallery-group">
-      <p class="menu gallery-label">Outcome</p>
-        <div class="img-row">
-            <img src="assets/iccrom/iccrom-04-workshop.jpg" alt="Workshop ideation board">
-            <img src="assets/iccrom/iccrom-05-event.jpg" alt="Event meeting">
-        </div>
-      <div style="height:1.6rem;"></div>
-      <img src="assets/iccrom/iccrom-06-event.jpg" alt="Event space with poster displayed">
-      <div style="height:1.6rem;"></div>
-      <img src="assets/iccrom/iccrom-03-event.jpg" alt="Roundtable with poster stands">
-    </div>
+    <aside class="project-info wide-only">
+      <div class="data-row"><div><span>Client</span><span>ICCROM × Egyptian Academy in Rome</span></div><div><span>Scope</span><span>Event poster, workshop report layout</span></div></div>
+      <div class="story-block" data-story="0">
+        <p class="menu phase-label">01 — Idea</p>
+        <p class="phase-text">Young professionals from across Africa, brought together to talk about who leads the next chapter of heritage conservation. Organized by ICCROM with the Egyptian Academy in Rome, the event made room for youth voices and reinforced something simple: Africa is already leading on protecting its own heritage.</p>
+      </div>
+      <div class="story-block" data-story="1">
+        <p class="menu phase-label">02 — Execution</p>
+        <p class="phase-text">The poster carries that message through a collage of faces — young African heritage professionals, photographed with all the diversity and energy the event itself was built on. The workshop report follows the same language.</p>
+      </div>
+      <div class="story-block" data-story="2">
+        <p class="menu phase-label">03 — Outcome</p>
+        <p class="phase-text is-outcome">Printed and used at the event.</p>
+      </div>
+    </aside>
   </div>
-
-  <div class="project-info project-sticky">
-<div class="outcome-banner">
-  <span class="menu tag">Outcome</span>
-  <span class="p">Printed and displayed at the event.</span>
-</div>
-<div class="meta-row">
-  <div class="item"><span>Type</span><span>Event Communication</span></div>
-  <div class="item"><span>Clients</span><span>ICCROM, Egyptian Academy in Rome</span></div>
-  <div class="item"><span>Role</span><span>Graphic Designer</span></div>
-  <div class="item"><span>Deliverables</span><span>Poster</span></div>
-</div>
-    <div class="story-block tension">
-      <p class="menu story-label">Tension</p>
-      <p class="story-text">How can we involve African youth in heritage?</p>
-    </div>
-    <div class="story-block idea">
-      <p class="menu story-label">Idea</p>
-      <p class="p story-text">Young professionals from across Africa, brought together to talk about who leads the next chapter of heritage conservation. Organized by ICCROM with the Egyptian Academy in Rome, the event made room for youth voices and reinforced something simple: Africa is already leading on protecting its own heritage.</p>
-    </div>
-    <div class="story-block execution">
-      <p class="menu story-label">Execution</p>
-      <p class="p story-text">The poster carries that message through a collage of faces — young African heritage professionals, photographed with all the diversity and energy the event itself was built on.</p>
-    </div>
-  </div>
-</div>
-</div>
+</main>
 
 <footer class="project-footer">
-  <a href="index.html">Home</a>
-  <div class="project-nav">
-    <a href="lope.html">← LØPE</a>
-    <a href="frimm.html">Frimm →</a>
-  </div>
-  <a href="contacts.html">Contact</a>
+  <a href="index.html" data-pt="back">Home</a>
+  <nav class="project-nav">
+    <a href="terraviva.html" data-pt="fwd">← 05 Terraviva</a>
+    <a href="frimm.html" data-pt="fwd">07 Frimm →</a>
+  </nav>
+  <a href="index.html#contact">Contact</a>
 </footer>
 
-<script src="components.js"></script>
+<script src="project.js"></script>
 </body>
 </html>
