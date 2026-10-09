@@ -112,6 +112,19 @@
   var list = document.querySelector('.works-list');
   var imgs = document.querySelectorAll('.preview-frame img');
   var label = $('previewLabel');
+  var preview = $('worksPreview');
+  var current = document.querySelector('.work-row[href]');
+  function openProject(e, href) {
+    if (!window.PageTransition || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    try { sessionStorage.setItem('pt-home-y', String(window.scrollY)); } catch (err) {}
+    window.PageTransition.go(href, 'fwd');
+  }
+  preview.addEventListener('mouseleave', function () {
+    list.classList.remove('is-hovering');
+    if (current) current.classList.remove('is-hover');
+  });
+  preview.addEventListener('click', function (e) { openProject(e, preview.getAttribute('href')); });
   document.querySelectorAll('.work-row[href]').forEach(function (row) {
     var i = Number(row.getAttribute('data-i'));
     var enter = function () {
@@ -119,20 +132,20 @@
       row.classList.add('is-hover');
       imgs.forEach(function (im, k) { im.classList.toggle('is-active', k === i); });
       label.textContent = String(i + 1).padStart(2, '0') + ' — ' + row.querySelector('.areas').textContent;
+      preview.setAttribute('href', row.getAttribute('href'));
+      current = row;
       if (window.PageTransition) window.PageTransition.prefetch(row.getAttribute('href'));
     };
-    var leave = function () { list.classList.remove('is-hovering'); row.classList.remove('is-hover'); };
+    var leave = function (e) {
+      if (e && e.relatedTarget && preview.contains(e.relatedTarget)) return;
+      list.classList.remove('is-hovering'); row.classList.remove('is-hover');
+    };
     row.addEventListener('mouseenter', enter);
     row.addEventListener('focus', enter);
     row.addEventListener('touchstart', enter, { passive: true });
     row.addEventListener('mouseleave', leave);
     row.addEventListener('blur', leave);
-    row.addEventListener('click', function (e) {
-      if (!window.PageTransition || e.metaKey || e.ctrlKey || e.shiftKey) return;
-      e.preventDefault();
-      try { sessionStorage.setItem('pt-home-y', String(window.scrollY)); } catch (err) {}
-      window.PageTransition.go(row.getAttribute('href'), 'fwd');
-    });
+    row.addEventListener('click', function (e) { openProject(e, row.getAttribute('href')); });
   });
 
   // Contact: copy email

@@ -66,7 +66,9 @@
 .work-disc span + span { font-size: 0.75rem; line-height: 1.4; color: rgba(252, 249, 238, 0.6); }
 .work-th .work-disc, .work-th .work-year { padding-top: 0; }
 .work-year { font-size: 0.8rem; padding-top: 0.55rem; text-align: right; }
-.works-preview { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+.works-preview { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.8rem; cursor: pointer; }
+.works-preview:hover .preview-cta { color: var(--floral); }
+.preview-cta { transition: color 0.3s ease; }
 .preview-frame { position: relative; flex: 1; min-height: 20rem; overflow: hidden; }
 .preview-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s ease 0.12s; }
 .preview-frame img.is-active { opacity: 1; }
