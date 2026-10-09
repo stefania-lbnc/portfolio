@@ -1,4 +1,4 @@
-/* Project page: footer, left scroll marker, sidebar phase sync, page transitions */
+/* Project page: footer, left scroll marker, page transitions */
 (function () {
   // Footer — edit here once, every project page updates. Order = order of the works index.
   var PROJECTS = [
@@ -34,10 +34,6 @@
 
   var fill = document.getElementById('scrollFillLeft');
   var marker = document.getElementById('markerLeft');
-  var phases = document.querySelectorAll('[data-phase]');
-  var stories = document.querySelectorAll('[data-story]');
-  var sync = document.body.hasAttribute('data-sync');
-  var current = -1;
 
   function onScroll() {
     var max = document.documentElement.scrollHeight - window.innerHeight;
@@ -45,13 +41,6 @@
     var h = window.innerHeight * 0.5 * p;
     fill.style.height = h + 'px';
     marker.style.top = 'calc(6rem + ' + h + 'px)';
-    if (!sync) return;
-    var mid = window.innerHeight * 0.5, phase = Number(phases[0] && phases[0].getAttribute('data-phase')) || 0;
-    phases.forEach(function (el) { if (el.getBoundingClientRect().top < mid) phase = Number(el.getAttribute('data-phase')); });
-    if (phase !== current) {
-      current = phase;
-      stories.forEach(function (s) { s.classList.toggle('is-current', Number(s.getAttribute('data-story')) === phase); });
-    }
   }
 
   document.querySelectorAll('a[data-pt]').forEach(function (a) {

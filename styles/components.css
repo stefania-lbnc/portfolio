@@ -66,7 +66,9 @@
 .work-disc span + span { font-size: 0.75rem; line-height: 1.4; color: rgba(252, 249, 238, 0.6); }
 .work-th .work-disc, .work-th .work-year { padding-top: 0; }
 .work-year { font-size: 0.8rem; padding-top: 0.55rem; text-align: right; }
-.works-preview { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+.works-preview { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.8rem; cursor: pointer; }
+.works-preview:hover .preview-cta { color: var(--floral); }
+.preview-cta { transition: color 0.3s ease; }
 .preview-frame { position: relative; flex: 1; min-height: 20rem; overflow: hidden; }
 .preview-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s ease 0.12s; }
 .preview-frame img.is-active { opacity: 1; }
@@ -100,7 +102,8 @@
 .project-gallery { flex: 2; min-width: 0; display: grid; gap: 4.8rem; }
 .phase { display: grid; gap: 1.6rem; min-width: 0; }
 .phase-label { opacity: 0.5; }
-.phase-text.is-outcome { font-weight: 700; text-align: left; }
+.phase-text.is-outcome { text-align: left; }
+.project-gallery .phase-label { display: none; }
 .block { margin: 0; display: grid; gap: 0.6rem; min-width: 0; }
 .block > img { width: 100%; height: auto; display: block; }
 .block figcaption { font-size: 0.75rem; opacity: 0.6; }
@@ -109,7 +112,12 @@
 .img-row img { flex: 1; min-width: 0; width: 100%; height: auto; display: block; }
 .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.6rem; }
 .logo-frame { background: var(--sand); padding: 3rem; display: flex; justify-content: center; align-items: center; }
-.logo-frame img { width: auto; max-width: 100%; max-height: 5rem; }
+.logo-frame img { width: auto; height: auto; max-width: 100%; max-height: 5rem; }
+.logo-set { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.6rem; }
+.logo-side { display: grid; gap: 1.6rem; }
+.logo-side .logo-frame { padding: 2.4rem; }
+.logo-main { padding: 0; }
+.logo-main img { width: 100%; max-height: none; display: block; }
 .color-blocks { display: grid; }
 .color-row { display: flex; width: 100%; min-width: 0; }
 .color-block { flex: 1; min-width: 0; height: 4.8rem; display: flex; align-items: flex-end; padding: 0.8rem 1rem; }
@@ -117,9 +125,7 @@
 .prototype-link { justify-self: start; padding: 0.9rem 1.6rem; border: 1px solid var(--ink); font-size: 0.8rem; text-transform: uppercase; }
 .porcelain .prototype-link:hover { background: var(--ink); color: var(--paper); }
 .project-info { flex: 1; min-width: 0; position: sticky; top: 8vh; display: grid; gap: 2rem; }
-.story-block { display: grid; gap: 0.5rem; transition: opacity 0.3s ease; }
-body[data-sync] .story-block { opacity: 0.3; }
-body[data-sync] .story-block.is-current { opacity: 1; }
+.story-block { display: grid; gap: 0.5rem; }
 .findings { display: grid; gap: 0.4rem; margin-top: 0.6rem; }
 .findings-label { font-size: 0.75rem; font-style: italic; opacity: 0.5; }
 .finding { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: 0.4rem; font-size: 0.75rem; line-height: 1.5; }
