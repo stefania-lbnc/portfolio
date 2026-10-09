@@ -1,80 +1,25 @@
-@media (max-width: 1300px) {
-    .logo-name, .project-btn, .mockup-container,
-    .bracket-container, .mockup, .screen-container, .button-container{
-        width: 80vw;
-    }
-    .chart-container{
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-    }
-    .four-columns, .two-columns{
-        width: 75vw;
-    }
-    .intro, .skills{
-        flex-direction: column;
-    }
-    .project-columns{
-        flex-direction: column;
-    }
-    .project-sticky{
-        position: static;
-    }
-    .works-preview{
-        display: none;
-    }
-    .half-mobile{
-        width: 40vw;
-    }
-    .hero-logo {
-        width: 60vw;
-    }
-    .link-container{
-        width: 80vw;
-        justify-content: space-between;
-    }
-    .social-container{
-        width: 30vw;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-    .projects-width, .mockup-container{
-        display: grid;
-    }
-    .mobile-mockup-container{
-        display: inline-flex;
-    }
-    .mobile, .my-projects{
-        display: grid;
-    }
-    .work-meta{
-        max-height: none !important;
-        opacity: 1 !important;
-        margin-top: 0.4rem !important;
-    }
-    .display{
-        display: none;
-    }
-    .brand-color{
-        height: 7vh;
-    }
-    .menu-li {
-        padding-right: 10vw;
-        padding-top: 2vh;
-    }
-    .profile-width, .presentation{
-        width: auto;
-    }
-    .skills.active{
-        display: block;
-    }
-}
-@media (max-width: 1300px) {
-    .name{
-        font-size: 2.4rem;
-    }
-    .menu{
-        font-size: 1.6rem;
-    }
+/* Works index: two columns below 1300px */
+@media (max-width: 1299px) {
+  .work-row { grid-template-columns: 2.4rem minmax(0, 1fr); }
+  .work-disc, .work-year { display: none; }
+  .work-inline { display: block; }
+  .works-preview { display: none; }
 }
 
+/* Project page: sidebar folds into the flow below 900px */
+@media (max-width: 900px) {
+  .wide-only { display: none; }
+  .narrow-only { display: grid; gap: 0.6rem; }
+  .project-header .narrow-only { display: block; }
+  .project-gallery .phase-label { display: block; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  :root { --side: 1.4rem; --inset: 1rem; }
+  .role { font-size: clamp(2.4rem, 9vw, 4rem); line-height: 1.05; max-width: 16ch; }
+  .tension { font-size: 1.2rem; }
+  .project-footer { flex-wrap: wrap; gap: 0.8rem 1.6rem; }
+  .project-nav { gap: 1.2rem; }
+  .img-row { gap: 0.8rem; }
+}
